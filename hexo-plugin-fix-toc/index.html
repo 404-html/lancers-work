@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="author" content="bulma">
+    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+    <link rel="dns-prefetch" href="//googleads4.g.doubleclick.net">
+    <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
+    <link rel="dns-prefetch" href="//www.gstatic.com">
+    
+
+    
+    <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～ | フリーランサーとして生きる道</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Node.js,Hexo">
+    
+    <meta name="description" content="KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。 そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。 なお、この修正は管理人の環境、管理人仕様的なところがあります。 gitにもnpmにも上げていませんし、プラグイン">
+<meta name="keywords" content="Node.js,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～">
+<meta property="og:url" content="https://lancers.work/hexo-plugin-fix-toc/index.html">
+<meta property="og:site_name" content="フリーランサーとして生きる道">
+<meta property="og:description" content="KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。 そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。 なお、この修正は管理人の環境、管理人仕様的なところがあります。 gitにもnpmにも上げていませんし、プラグイン">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://lancers.work/thumbnail/hexo-toc-fix.jpg">
+<meta property="og:updated_time" content="2019-04-05T14:24:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～">
+<meta name="twitter:description" content="KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。 そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。 なお、この修正は管理人の環境、管理人仕様的なところがあります。 gitにもnpmにも上げていませんし、プラグイン">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/hexo-toc-fix.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="フリーランサーとして生きる道" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/../../images/ico.png">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css?">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-137271270-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1>
+                        <a href="/" class="title">フリーランサーとして生きる道</a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">令和元年の目標はNode.jsを極めるというSE</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">ホーム</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/アプリ/">アプリ</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/アプリの素/">アプリの素</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ナレッジ/">ナレッジ</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="検索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="入力してください">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '記事',
+            PAGES: 'ページ',
+            CATEGORIES: 'カテゴリー',
+            TAGS: 'タグ',
+            UNTITLED: '（名称未設定）',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+                <p style="margin:10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <p class="header">
+    
+    <a class="page-title-link" href="/categories/ナレッジ/">ナレッジ</a>
+    </p>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-hexo-plugin-fix-toc" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/hexo-plugin-fix-toc/" class="article-date">
+            <time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/hexo-toc-fix.jpg" alt></p>
+<p>KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。</p>
+<p>ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。</p>
+<p>そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。</p>
+<p>なお、この修正は管理人の環境、管理人仕様的なところがあります。</p>
+<p>gitにもnpmにも上げていませんし、プラグインが更新されるとまた修正しなければいけませんし、修正版を公開するところまで至っていません。</p>
+<p>また、プラグインの使い方が間違っているよ！ということもあるかもしれません。</p>
+<p>以上を踏まえて、修正される方の参考になれば幸いです。</p>
+<div class="toc-title">目　次</div><div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#hexo-toc-不具合の症状">hexo-toc 不具合の症状</a></li>
+<li><a href="#hexo-toc-不具合の解消">hexo-toc 不具合の解消</a><ul>
+<li><a href="#修正対象ファイルlibfilterjs">修正対象ファイル：lib/filter.js</a></li>
+<li><a href="#おまけ">おまけ</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+
+<h2><span id="hexo-toc-不具合の症状">hexo-toc 不具合の症状</span></h2><p>言わずとしれた、ブログに目次を自動で付けてくれるプラグインです。</p>
+<a href="https://www.npmjs.com/package/hexo-toc" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img src="https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png"></div><div class="descriptions"><div class="og-title">hexo-toc</div><div class="og-description">Insert a markdown TOC(Table Of Content) before posts be rendered. </div></div></div></a>
+<p>目次自体は<code>&lt;！-- toc --&gt;</code>を記事内に記述することで表示はできました。</p>
+<p>しかし、<code>_config.yml</code>に記述したオプションが効かないのです。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">toc:</span><br><span class="line">  maxdepth: 3</span><br><span class="line">  class: toc</span><br><span class="line">  slugify: transliteration</span><br><span class="line">  decodeEntities: <span class="literal">false</span></span><br><span class="line">  anchor:</span><br><span class="line">    position: after</span><br><span class="line">    symbol: <span class="string">'#'</span></span><br><span class="line">    style: header-anchor</span><br></pre></td></tr></table></figure>
+<p>特に目次のデザインを調整したくclassをあてたかったので、class<code>toc</code>を追加するよう修正していきます。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2><span id="hexo-toc-不具合の解消">hexo-toc 不具合の解消</span></h2><p>プラグインの実体は<code>node_modules</code>フォルダ内にあります。</p>
+<p>hexo-tocの場合、そのまんま<code>hexo-toc</code>フォルダになります。</p>
+<p>不具合解消の基本的な流れとして、オプションでclassが指定されていたらその指定値をclass名とするという仕様ですので、オプションの指定に関わらず、class<code>toc</code>を追加します。</p>
+<h3><span id="修正対象ファイルlibfilterjs">修正対象ファイル：lib/filter.js</span></h3><p>※コードのブログでの表示上、大文字になっている箇所があります。</p>
+<p>9行目～12行目</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// add class option</span><br><span class="line">if (options.class) &#123;</span><br><span class="line">  data.content = data.content.replace("<span class="tag">&lt;<span class="name">！--</span> <span class="attr">toc</span> <span class="attr">--</span>&gt;</span>", '<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"' + options.class + 'Start"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">！--</span> <span class="attr">toc</span> <span class="attr">--</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"' + options.class + 'End"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>これを、</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// add class option</span><br><span class="line">data.content = data.content.replace("<span class="tag">&lt;<span class="name">！--</span> <span class="attr">toc</span> <span class="attr">--</span>&gt;</span>", '<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tocStart"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">！--</span> <span class="attr">toc</span> <span class="attr">--</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tocEnd"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</span><br></pre></td></tr></table></figure>
+<p>54行目～57行目</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// add class option</span><br><span class="line">if (options.class) &#123;</span><br><span class="line">  data.content = data.content.replace('<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"' + options.class + 'Start"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>', '<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"' + options.class + '"</span>&gt;</span>').replace('<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"' + options.class + 'End"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>', '<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>これを</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// add class option</span><br><span class="line">data.content = data.content.replace('<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tocStart"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>', '<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"toc"</span>&gt;</span>').replace('<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tocEnd"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>', '<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</span><br></pre></td></tr></table></figure>
+<p>これでclass<code>toc</code>が当たりますので、あとはCSSでお好きなデザインにカスタマイズしてみてください。</p>
+<h3><span id="おまけ">おまけ</span></h3><p>目次のタイトルの修正も合わせて行いました。</p>
+<p>タイトルのidが<code>&lt;span id=&quot;目次&quot;&gt;</code>となってしまっていたことと、その度tocタグの上に<code>目次</code>と入力するのが面倒なので、上の修正箇所を更に修正して、</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// add class option</span><br><span class="line">data.content = data.content.replace('<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tocStart"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>', '<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"toc-title"</span>&gt;</span>目　次<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"toc"</span>&gt;</span>').replace('<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tocEnd"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>', '<span class="tag">&lt;/<span class="name">div</span>&gt;</span>');</span><br></pre></td></tr></table></figure>
+<p>というように<code>目次</code>というテキストとclassを予め付加しました。</p>
+<p>汎用性がなくなる記述ですが、目次のタイトルは<strong>目次</strong>ですし、class（id）も日本語でなくなるので、超個人的ではありますが、このブログではこちらを使っていきます。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://lancers.work/hexo-plugin-fix-toc/" data-id="cju4zreg10006vfrtqs2ox86d" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "bulma"
+        },
+        "headline": "Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～",
+        "image": "https://lancers.work/thumbnail/hexo-toc-fix.jpg",
+        "keywords": "Node.js Hexo",
+        "genre": "ナレッジ",
+        "datePublished": "2019-04-01",
+        "dateCreated": "2019-04-01",
+        "dateModified": "2019-04-05",
+        "url": "https://lancers.work/hexo-plugin-fix-toc/",
+        "description": "
+KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。
+ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。
+そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。
+なお、この修正は管理人の環境、管理人仕様的なところがあります。
+gitにもnpmにも上げていませんし、プラグイン"
+        "wordCount": 354
+    }
+</script>
+
+    <p>関連記事</p>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li></ul>
+</article>
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>フォロー:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/revomiya" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/hexo-hueman-list-archives-date/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">次の記事</strong>
+        <p class="article-nav-title">
+        
+            Hexoのサイドバーのアーカイブ日付表示の変更方法
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/hexo-plugin-fix-tag-link-preview/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">前の記事</strong>
+        <p class="article-nav-title">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                <h3 class="popular-widget-title">人気の記事</h3>
+
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/pref-city-form.jpg"></div><div class="popular-posts-title"><h3><a href="/pref-city-form-jquery-json/" title="都道府県・市区町村フォームをできる限り少ない行数で書いてみる" rel="bookmark">都道府県・市区町村フォームをできる限り少ない行数で書いてみる</a></h3></div></li></ul>
+            
+                <p style="padding: 10px 0 0 0">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sidebar -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9726890326" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新の記事</h3>
+        <div class="widget">
+            <ul id="recent-post" class>
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers3/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
+                            <p class="item-title"><a href="/numbers3/" class="title">ナンバーズ3アプリ</a></p>
+                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers4/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
+                            <p class="item-title"><a href="/numbers4/" class="title">ナンバーズ4アプリ</a></p>
+                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/vmware-esxi65-realtek-nic.jpg)" alt="VMware ESXi「No Network Adapters」エラー時の対処法" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/vmware-esxi65-realtek-nic/" class="title">VMware ESXi「No Network Adapters」エラー時の対処法</a></p>
+                            <p class="item-date"><time datetime="2019-04-04T02:10:00.000Z" itemprop="datePublished">2019-04-04</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/wordpress-custom-rewrite-rule.jpg)" alt="WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/wordpress-custom-rewrite-rule/" class="title">WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-03T22:55:00.000Z" itemprop="datePublished">2019-04-04</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers-2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers-2.jpg)" alt="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリの素/">アプリの素</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/numbers-2/" class="title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-03T09:40:00.000Z" itemprop="datePublished">2019-04-03</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                        </ul>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                        <ul id="recent-post" class>
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers-1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers-1.jpg)" alt="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリの素/">アプリの素</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/numbers-1/" class="title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-03T09:39:00.000Z" itemprop="datePublished">2019-04-03</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-hueman-list-archives-date/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/archives-list-date-fix.jpg)" alt="Hexoのサイドバーのアーカイブ日付表示の変更方法" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-hueman-list-archives-date/" class="title">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></p>
+                            <p class="item-date"><time datetime="2019-04-02T04:40:00.000Z" itemprop="datePublished">2019-04-02</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-plugin-fix-toc/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-plugin-fix-toc/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-plugin-fix-tag-link-preview/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-on-kusanagi/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-on-kusanagi.jpg)" alt="KUSANAGIのLAMP環境にHexoを構築" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-on-kusanagi/" class="title">KUSANAGIのLAMP環境にHexoを構築</a></p>
+                            <p class="item-date"><time datetime="2019-03-29T22:10:00.000Z" itemprop="datePublished">2019-03-30</time></p>
+                        </div>
+                    </li>
+                    
+                
+            </ul>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">カテゴリー</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/アプリ/">アプリ</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/アプリの素/">アプリの素</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ナレッジ/">ナレッジ</a><span class="category-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">タグ</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESXi/">ESXi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KUSANAGI/">KUSANAGI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware/">VMware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let-s-encrypt/">let's encrypt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仮想化/">仮想化</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">タグクラウド</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Express/" style="font-size: 16.67px;">Express</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/KUSANAGI/" style="font-size: 10px;">KUSANAGI</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/VMware/" style="font-size: 10px;">VMware</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/jQuery/" style="font-size: 13.33px;">jQuery</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/let-s-encrypt/" style="font-size: 10px;">let's encrypt</a> <a href="/tags/仮想化/" style="font-size: 10px;">仮想化</a>
+        </div>
+    </div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sidebar -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9726890326" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">アーカイブ</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">2019年04月</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">2019年03月</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">リンク</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="footer-menu">
+            <ul>
+                    <li><b>このサイトについて</b></li>
+                    <li><a href="../../sitemap.xml">サイトマップ</a></li>
+                    <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
+                    <li><a href="https://www.secure-cloud.jp/sf/1553850936ULHSBAZY">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="credit">
+
+                <p>&copy; 2019 <a href="/">フリーランサーとして生きる道</a></p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">hueman</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

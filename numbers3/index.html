@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="author" content="bulma">
+    <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+    <link rel="dns-prefetch" href="//googleads4.g.doubleclick.net">
+    <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
+    <link rel="dns-prefetch" href="//www.gstatic.com">
+    
+
+    
+    <title>ナンバーズ3アプリ | フリーランサーとして生きる道</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Node.js,Express,jQuery">
+    
+    <meta name="description" content="ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて ナンバーズアプリの使い方 ナンバーズ予想 実験方法 このアプリを支えているNode.js製WEBアプリ       ナンバーズア">
+<meta name="keywords" content="Node.js,Express,jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ナンバーズ3アプリ">
+<meta property="og:url" content="https://lancers.work/numbers3/index.html">
+<meta property="og:site_name" content="フリーランサーとして生きる道">
+<meta property="og:description" content="ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて ナンバーズアプリの使い方 ナンバーズ予想 実験方法 このアプリを支えているNode.js製WEBアプリ       ナンバーズア">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="https://lancers.work/thumbnail/numbers3.jpg">
+<meta property="og:updated_time" content="2019-04-05T13:03:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ナンバーズ3アプリ">
+<meta name="twitter:description" content="ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて ナンバーズアプリの使い方 ナンバーズ予想 実験方法 このアプリを支えているNode.js製WEBアプリ       ナンバーズア">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/numbers3.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="フリーランサーとして生きる道" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/../../images/ico.png">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css?">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-137271270-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1>
+                        <a href="/" class="title">フリーランサーとして生きる道</a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">令和元年の目標はNode.jsを極めるというSE</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">ホーム</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/アプリ/">アプリ</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/アプリの素/">アプリの素</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ナレッジ/">ナレッジ</a></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="検索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="入力してください">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '記事',
+            PAGES: 'ページ',
+            CATEGORIES: 'カテゴリー',
+            TAGS: 'タグ',
+            UNTITLED: '（名称未設定）',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+                <p style="margin:10px 0;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <p class="header">
+    
+    <a class="page-title-link" href="/categories/アプリ/">アプリ</a>
+    </p>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-numbers3" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        ナンバーズ3アプリ
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/numbers3/" class="article-date">
+            <time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Express/">Express</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>, <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><a href="https://lancers.work/numbers4/">ナンバーズ4はこちら</a></p>
+<h2><span id="ナンバーズ3-過去10回の当選数字">ナンバーズ3 過去<span class="selected-tit">10</span>回の当選数字</span></h2>
+
+<p>集計回数<select id="tit"></select></p>
+<table id="win-result"></table>
+
+<h2><span id="ナンバーズ3-過去10回の当選数字出現回数">ナンバーズ3 過去<span class="selected-tit">10</span>回の当選数字出現回数</span></h2>
+
+<table id="win-count"></table>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<div class="toc-title">目　次</div><div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#ナンバーズアプリについて">ナンバーズアプリについて</a><ul>
+<li><a href="#ナンバーズアプリの使い方">ナンバーズアプリの使い方</a></li>
+<li><a href="#ナンバーズ予想-実験方法">ナンバーズ予想 実験方法</a></li>
+<li><a href="#このアプリを支えているnodejs製webアプリ">このアプリを支えているNode.js製WEBアプリ</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+
+<h2><span id="ナンバーズアプリについて">ナンバーズアプリについて</span></h2><h3><span id="ナンバーズアプリの使い方">ナンバーズアプリの使い方</span></h3><p>直近回から過去30回までの当選番号、出現回数を調べることができます</p>
+<p>集計回数を絞り込むと下段の「当選数字出現回数」も自動的に集計し直されます。</p>
+<h3><span id="ナンバーズ予想-実験方法">ナンバーズ予想 実験方法</span></h3><p>某テレビ番組で「月の最初の2週間の当選数字」に出現していない数字を中心に残り2週間ナンバーズを買い続けるという必勝法が紹介されていました。<br>※テレビ放映では当選確率100％と言っていて、本当に当選していました。（購入口数もそれなりに必要だったみたいですが・・・）</p>
+<p>本アプリでは、この放映内容を元に直近2週間分（10回分）の当選数字を集計して、どの数字が出ていないかチェックすることができます。</p>
+<p>具体的な購入数字の組み合わせはこのアプリでは提供されませんので、このアプリの先からはあなたの運におまかせします！</p>
+<p>ナンバーズは偏りはあるものの所詮確率論と考えていますので、最終的にはすべての組み合わせ・数字が等しく出現するハズとの考え方を尊重しています。</p>
+<h3><span id="このアプリを支えているnodejs製webアプリ">このアプリを支えているNode.js製WEBアプリ</span></h3><p>本アプリで使用しているナンバーズの当選番号データは、Node.jsで作成したWEBアプリでスクレイピングにより取得しています。<br>（スクレイピンは1日1回行っています。スクレイピングをする際は対象サイトに迷惑をかけないように行いましょう。）</p>
+<p>Node.jsアプリのエッセンスは下記記事に書いています。</p>
+<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<p><a href="https://lancers.work/numbers4/">ナンバーズ4はこちら</a></p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<style>
+#tit {font-size: large;} #win-result th, #win-result td {text-align: center; width: 25%;}
+</style>
+
+<script>
+function createTable(c) {
+  var t = '<tr><th>回分</th><th>回別</th><th>抽選日</th><th>当選数字</th></tr>';
+  var ca = [];
+  $.getJSON('../../json/numbers3.json', function(d) {
+    for(var i=0; i<c; i++) {
+      var num = Number(i) + 1;
+      t += '<tr><td>'+num+'</td><td>'+d[i].tit+'</td><td>'+d[i].date+'</td><td>'+d[i].win+'</td></tr>';
+      ca.push(strToArray(d[i].win));
+    }
+    $('#win-result').append(t);
+    t = makeCountTable(ca);
+    $('#win-count').append(t);
+  });
+  $('.selected-tit').text(c);
+}
+
+function makeCountTable(c) {
+  var ct = countNumber(c);
+  ct.sort(function(a,b) {
+    if(a.count < b.count) return -1;
+    if(a.count > b.count) return 1;
+    return 0;
+  });
+  var t = '<tr><th width="50%">当選数字（出現回数少ない順）</th>';
+  ct.forEach(function(d) {
+    t += '<th width="5%">'+d.num+'</th>';
+  });
+  t += '</tr><tr><td width="50%">出現回数</td>';
+  ct.forEach(function(d) {
+    t += '<td width="5%">'+d.count+'</td>';
+  });
+  t += '<tr>';
+  return t;
+}
+
+function strToArray(s) {
+  var s1 = s.split('');
+  var a = [];
+  s1.forEach(function(d) {
+    a.push(d);
+  });
+  return a;
+}
+
+function countNumber(a) {
+  var c = [0,0,0,0,0,0,0,0,0,0];
+  a.forEach(function(d1) {
+    d1.forEach(function(d2) {
+      c[d2]++;
+    });
+  });
+  var r = [];
+  for(var i=0; i<10; i++) {
+    r.push({"num":i, "count":c[i]})
+  }
+  return r;
+}
+
+$(function() {
+  $('#tit').on('change', function() {
+    $('#win-result tr').remove();
+    $('#win-count tr').remove();
+    var t = $('#tit').val();
+    createTable(t);
+  });
+});
+
+$(function() {
+  var base = 10;
+  for(var i=1; i<31; i++) {
+    if(i == base) {
+      var s = ' selected';
+    } else {
+      var s = '';
+    }
+    $('#tit').append('<option value="'+i+'"'+s+'>過去'+i+'回分</option>');
+  }
+  createTable(base);
+});
+</script>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://lancers.work/numbers3/" data-id="cju4zregh000ivfrthakakwui" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "bulma"
+        },
+        "headline": "ナンバーズ3アプリ",
+        "image": "https://lancers.work/thumbnail/numbers3.jpg",
+        "keywords": "Node.js Express jQuery",
+        "genre": "アプリ",
+        "datePublished": "2019-04-05",
+        "dateCreated": "2019-04-05",
+        "dateModified": "2019-04-05",
+        "url": "https://lancers.work/numbers3/",
+        "description": "ナンバーズ4はこちら
+ナンバーズ3 過去10回の当選数字
+
+集計回数
+
+
+ナンバーズ3 過去10回の当選数字出現回数
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+目　次
+
+
+
+ナンバーズアプリについて
+ナンバーズアプリの使い方
+ナンバーズ予想 実験方法
+このアプリを支えているNode.js製WEBアプリ
+
+
+
+
+
+
+ナンバーズア"
+        "wordCount": 391
+    }
+</script>
+
+    <p>関連記事</p>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/images/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li></ul>
+</article>
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>フォロー:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/revomiya" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/numbers4/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">前の記事</strong>
+        <p class="article-nav-title">ナンバーズ4アプリ</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                <h3 class="popular-widget-title">人気の記事</h3>
+
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li></ul>
+            
+                <p style="padding: 10px 0 0 0">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sidebar -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9726890326" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新の記事</h3>
+        <div class="widget">
+            <ul id="recent-post" class>
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers3/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
+                            <p class="item-title"><a href="/numbers3/" class="title">ナンバーズ3アプリ</a></p>
+                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers4/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
+                            <p class="item-title"><a href="/numbers4/" class="title">ナンバーズ4アプリ</a></p>
+                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/vmware-esxi65-realtek-nic.jpg)" alt="VMware ESXi「No Network Adapters」エラー時の対処法" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/vmware-esxi65-realtek-nic/" class="title">VMware ESXi「No Network Adapters」エラー時の対処法</a></p>
+                            <p class="item-date"><time datetime="2019-04-04T02:10:00.000Z" itemprop="datePublished">2019-04-04</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/wordpress-custom-rewrite-rule.jpg)" alt="WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/wordpress-custom-rewrite-rule/" class="title">WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-03T22:55:00.000Z" itemprop="datePublished">2019-04-04</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers-2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers-2.jpg)" alt="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリの素/">アプリの素</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/numbers-2/" class="title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-03T09:40:00.000Z" itemprop="datePublished">2019-04-03</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                        </ul>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                        <ul id="recent-post" class>
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers-1/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers-1.jpg)" alt="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリの素/">アプリの素</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/numbers-1/" class="title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-03T09:39:00.000Z" itemprop="datePublished">2019-04-03</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-hueman-list-archives-date/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/archives-list-date-fix.jpg)" alt="Hexoのサイドバーのアーカイブ日付表示の変更方法" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-hueman-list-archives-date/" class="title">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></p>
+                            <p class="item-date"><time datetime="2019-04-02T04:40:00.000Z" itemprop="datePublished">2019-04-02</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-plugin-fix-toc/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-plugin-fix-toc/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-plugin-fix-tag-link-preview/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/hexo-on-kusanagi/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-on-kusanagi.jpg)" alt="KUSANAGIのLAMP環境にHexoを構築" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-on-kusanagi/" class="title">KUSANAGIのLAMP環境にHexoを構築</a></p>
+                            <p class="item-date"><time datetime="2019-03-29T22:10:00.000Z" itemprop="datePublished">2019-03-30</time></p>
+                        </div>
+                    </li>
+                    
+                
+            </ul>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">カテゴリー</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/アプリ/">アプリ</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/アプリの素/">アプリの素</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ナレッジ/">ナレッジ</a><span class="category-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">タグ</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESXi/">ESXi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KUSANAGI/">KUSANAGI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware/">VMware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let-s-encrypt/">let's encrypt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仮想化/">仮想化</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">タグクラウド</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Express/" style="font-size: 16.67px;">Express</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 16.67px;">Hexo</a> <a href="/tags/KUSANAGI/" style="font-size: 10px;">KUSANAGI</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/VMware/" style="font-size: 10px;">VMware</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/jQuery/" style="font-size: 13.33px;">jQuery</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/let-s-encrypt/" style="font-size: 10px;">let's encrypt</a> <a href="/tags/仮想化/" style="font-size: 10px;">仮想化</a>
+        </div>
+    </div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sidebar -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9726890326" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">アーカイブ</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">2019年04月</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">2019年03月</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">リンク</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="footer-menu">
+            <ul>
+                    <li><b>このサイトについて</b></li>
+                    <li><a href="../../sitemap.xml">サイトマップ</a></li>
+                    <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
+                    <li><a href="https://www.secure-cloud.jp/sf/1553850936ULHSBAZY">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="credit">
+
+                <p>&copy; 2019 <a href="/">フリーランサーとして生きる道</a></p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">hueman</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -2,13 +2,13 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://lancers.work</loc>
+        <loc>https://mihiro-git.github.io/lancers-work</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>https://lancers.work/numbers-1/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/numbers-1/</loc>
         <lastmod>2019-04-06T03:38:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -16,7 +16,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/numbers-2/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/numbers-2/</loc>
         <lastmod>2019-04-06T03:36:57.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -24,7 +24,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/pref-city-form-jquery-json/</loc>
         <lastmod>2019-04-06T03:15:20.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -32,7 +32,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-plugin-fix-toc/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/hexo-plugin-fix-toc/</loc>
         <lastmod>2019-04-05T14:24:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,7 +40,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/numbers4/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/numbers4/</loc>
         <lastmod>2019-04-05T13:03:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -48,7 +48,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/numbers3/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/numbers3/</loc>
         <lastmod>2019-04-05T13:03:33.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -56,7 +56,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/vmware-esxi65-realtek-nic/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/vmware-esxi65-realtek-nic/</loc>
         <lastmod>2019-04-04T02:28:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -64,7 +64,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/wordpress-custom-rewrite-rule/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/wordpress-custom-rewrite-rule/</loc>
         <lastmod>2019-04-03T23:48:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -72,7 +72,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-plugin-fix-tag-link-preview/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/hexo-plugin-fix-tag-link-preview/</loc>
         <lastmod>2019-04-03T12:27:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -80,7 +80,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-on-kusanagi/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/hexo-on-kusanagi/</loc>
         <lastmod>2019-04-03T12:27:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -88,7 +88,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-nodejs-blog/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/hexo-nodejs-blog/</loc>
         <lastmod>2019-04-03T12:27:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -96,7 +96,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-hueman-list-archives-date/</loc>
+        <loc>https://mihiro-git.github.io/lancers-work/hexo-hueman-list-archives-date/</loc>
         <lastmod>2019-04-03T12:27:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

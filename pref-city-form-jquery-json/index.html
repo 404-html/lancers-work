@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="ja"><head>
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="author" content="bulma">
     <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
@@ -6,7 +8,8 @@
     <link rel="dns-prefetch" href="//googleads4.g.doubleclick.net">
     <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.gstatic.com">
-    </head><body>
+    
+
     
     <title>都道府県・市区町村フォームをできる限り少ない行数で書いてみる | フリーランサーとして生きる道</title>
     
@@ -14,19 +17,19 @@
     
         <meta name="keywords" content="jQuery,json,HTML">
     
-    <meta name="description" content="目　次    基本データ（都道府県・市区町村 json形式データ） jQueryで都道府県・市区町村連動型フォームを作る サンプル jQueryソース HTMLソース       基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、 [{"01":{"id":"01″,"">
+    <meta name="description" content="目　次    基本データ（都道府県・市区町村 json形式データ） jQueryで都道府県・市区町村連動型フォームを作る サンプル jQueryソース HTMLソース       基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、 [{&amp;quot;01&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;01″,&amp;quot;">
 <meta name="keywords" content="jQuery,json,HTML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="都道府県・市区町村フォームをできる限り少ない行数で書いてみる">
 <meta property="og:url" content="https://lancers.work/pref-city-form-jquery-json/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="目　次    基本データ（都道府県・市区町村 json形式データ） jQueryで都道府県・市区町村連動型フォームを作る サンプル jQueryソース HTMLソース       基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、 [{"01":{"id":"01″,"">
+<meta property="og:description" content="目　次    基本データ（都道府県・市区町村 json形式データ） jQueryで都道府県・市区町村連動型フォームを作る サンプル jQueryソース HTMLソース       基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、 [{&amp;quot;01&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;01″,&amp;quot;">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/pref-city-form.jpg">
 <meta property="og:updated_time" content="2019-04-07T10:21:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="都道府県・市区町村フォームをできる限り少ない行数で書いてみる">
-<meta name="twitter:description" content="目　次    基本データ（都道府県・市区町村 json形式データ） jQueryで都道府県・市区町村連動型フォームを作る サンプル jQueryソース HTMLソース       基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、 [{"01":{"id":"01″,"">
+<meta name="twitter:description" content="目　次    基本データ（都道府県・市区町村 json形式データ） jQueryで都道府県・市区町村連動型フォームを作る サンプル jQueryソース HTMLソース       基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、 [{&amp;quot;01&amp;quot;:{&amp;quot;id&amp;quot;:&amp;quot;01″,&amp;quot;">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/pref-city-form.jpg">
     
 
@@ -45,13 +48,15 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
         <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
     
     
-        <meta name="generator" content="Hexo 3.8.0"><script type="text/javascript">
+        <script type="text/javascript">
 (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -61,112 +66,14 @@ ga('create', 'UA-137271270-1', 'auto');
 ga('send', 'pageview');
 
 </script>
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
     
     
 
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
-
-
-
+</head>
+</html>
+<body>
     <div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
@@ -201,7 +108,7 @@ ga('send', 'pageview');
         <input type="text" class="ins-search-input search-form-input" placeholder="検索">
         <button type="submit" class="search-form-submit"></button>
     </form>
-    <meta name="generator" content="Hexo 3.8.0"><div class="ins-search">
+    <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
@@ -229,56 +136,7 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
+<script src="/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -290,56 +148,7 @@ ga('send', 'pageview');
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-</p><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
+</p>
             </div>
         </div>
     </div>
@@ -360,7 +169,9 @@ ga('send', 'pageview');
     <div class="article-inner">
         
             <header class="article-header">
-                <h1 class="article-title" itemprop="name">
+                
+    
+        <h1 class="article-title" itemprop="name">
         都道府県・市区町村フォームをできる限り少ない行数で書いてみる
         </h1>
     
@@ -369,14 +180,17 @@ ga('send', 'pageview');
         
         
             <div class="article-meta">
-                <div class="article-date">
+                
+    <div class="article-date">
         <a href="/pref-city-form-jquery-json/" class="article-date">
             <time datetime="2019-03-29T06:53:00.000Z" itemprop="datePublished">2019-03-29</time>
         </a>
     </div>
 
 		
-                <div class="article-tag">
+
+                
+    <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/HTML/">HTML</a>, <a class="tag-link" href="/tags/jQuery/">jQuery</a>, <a class="tag-link" href="/tags/json/">json</a>
     </div>
@@ -385,7 +199,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img alt class="lazy" data-src="/images/pref-city-form.jpg"></p>
+            <p><img src="/images/pref-city-form.jpg" alt></p>
 <div class="toc-title">目　次</div><div class="toc">
 
 <!-- toc -->
@@ -402,7 +216,7 @@ ga('send', 'pageview');
 </div>
 
 <h2><span id="基本データ都道府県市区町村-json形式データ">基本データ（都道府県・市区町村 json形式データ）</span></h2><p>当ブログで用意している都道府県・市区町村のjsonデータの形式は、</p>
-<p><code>[{"01":{"id":"01″,"pref":"北海道","en":"hokkaido","city":[{"id":"01100″,"name":"札幌市"},{"id":"01101″,"name":"中央区"}, ・・・]</code></p>
+<p><code>[{&quot;01&quot;:{&quot;id&quot;:&quot;01″,&quot;pref&quot;:&quot;北海道&quot;,&quot;en&quot;:&quot;hokkaido&quot;,&quot;city&quot;:[{&quot;id&quot;:&quot;01100″,&quot;name&quot;:&quot;札幌市&quot;},{&quot;id&quot;:&quot;01101″,&quot;name&quot;:&quot;中央区&quot;}, ・・・]</code></p>
 <p>となっています。</p>
 <ul>
 <li>キー</li>
@@ -445,12 +259,12 @@ $('#select-pref').on('change', function() {
 });
 </script>
 
-<h3><span id="jqueryソース">jQueryソース</span></h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">script</span>></span><span class="undefined"></span></span><br><span class="line"><span class="undefined">// 都道府県フォーム生成</span></span><br><span class="line"><span class="undefined">$(function() {</span></span><br><span class="line"><span class="undefined">  $.getJSON('pref_city.json', function(data) {</span></span><br><span class="line"><span class="undefined">    for(var i=0; i<47; i++) {</span></span><br><span class="line"><span class="undefined">      var code = i+1;</span></span><br><span class="line"><span class="undefined">      code = ('00'+code).slice(-2);</span></span><br><span class="line"><span class="xml">      $('#select-pref').append('<span class="tag"><<span class="name">option</span> <span class="attr">value</span>=<span class="string">"'+code+'"</span>></span>'+data[i][code].pref+'<span class="tag"><!--<span class="name"-->option</span>></span>');</span><br><span class="line"><span class="undefined">    }</span></span><br><span class="line"><span class="undefined">  });</span></span><br><span class="line"><span class="undefined">});</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">// 市区町村フォーム連動</span></span><br><span class="line"><span class="undefined">$('#select-pref').on('change', function() {</span></span><br><span class="line"><span class="undefined">  $('#select-city option:nth-child(n+2)').remove(); // ※1 市区町村フォームクリア</span></span><br><span class="line"><span class="undefined">    var select_pref = ('00'+$('#select-pref option:selected').val()).slice(-2);</span></span><br><span class="line"><span class="undefined">    var key = Number(select_pref)-1;</span></span><br><span class="line"><span class="undefined">    $.getJSON('pref_city.json', function(data) {</span></span><br><span class="line"><span class="undefined">      for(var i=0; i<data[key][select_pref].city.length; i++){< span></data[key][select_pref].city.length;></span><br><span class="line"><span class="xml">        $('#select-city').append('<span class="tag"><<span class="name">option</span> <span class="attr">value</span>=<span class="string">"'+data[key][select_pref].city[i].id+'"</span>></span>'+data[key][select_pref].city[i].name+'<span class="tag"><!--<span class="name"-->option</span>></span>');</span></span><br><span class="line"><span class="undefined">      }</span></span><br><span class="line"><span class="undefined">  });</span></span><br><span class="line"><span class="undefined">});</span></span><br><span class="line"><span class="undefined"></span><span class="tag"><!--<span class="name"-->script</span>></span><br></pre></td></tr></tbody></table></figure>
-<p>4行目の<code>$.getJSON('pref_city.json', function(data) {</code>の<code>pref_city.json</code>（上記でダウンロードしたjsonファイル）は設置場所によって、適宜パスを加えてください。</p>
+<h3><span id="jqueryソース">jQueryソース</span></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">// 都道府県フォーム生成</span></span><br><span class="line"><span class="undefined">$(function() &#123;</span></span><br><span class="line"><span class="undefined">  $.getJSON('pref_city.json', function(data) &#123;</span></span><br><span class="line"><span class="undefined">    for(var i=0; i&lt;47; i++) &#123;</span></span><br><span class="line"><span class="undefined">      var code = i+1;</span></span><br><span class="line"><span class="undefined">      code = ('00'+code).slice(-2);</span></span><br><span class="line"><span class="xml">      $('#select-pref').append('<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"'+code+'"</span>&gt;</span>'+data[i][code].pref+'<span class="tag">&lt;/<span class="name">option</span>&gt;</span>');</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined">&#125;);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">// 市区町村フォーム連動</span></span><br><span class="line"><span class="undefined">$('#select-pref').on('change', function() &#123;</span></span><br><span class="line"><span class="undefined">  $('#select-city option:nth-child(n+2)').remove(); // ※1 市区町村フォームクリア</span></span><br><span class="line"><span class="undefined">    var select_pref = ('00'+$('#select-pref option:selected').val()).slice(-2);</span></span><br><span class="line"><span class="undefined">    var key = Number(select_pref)-1;</span></span><br><span class="line"><span class="undefined">    $.getJSON('pref_city.json', function(data) &#123;</span></span><br><span class="line"><span class="undefined">      for(var i=0; i&lt;data[key][select_pref].city.length; i++)&#123;</span></span><br><span class="line"><span class="xml">        $('#select-city').append('<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"'+data[key][select_pref].city[i].id+'"</span>&gt;</span>'+data[key][select_pref].city[i].name+'<span class="tag">&lt;/<span class="name">option</span>&gt;</span>');</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined">&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>4行目の<code>$.getJSON(&#39;pref_city.json&#39;, function(data) {</code>の<code>pref_city.json</code>（上記でダウンロードしたjsonファイル）は設置場所によって、適宜パスを加えてください。</p>
 <p>あとは、基本的に、jsonファイルを読み込んでfor文で回しながらデータを取得し、都道府県や市区町村のoptionを生成しています。</p>
 <p>（※key値と都道府県コードが1ずつずれているため余計な処理が入っているので、ここを調整すればもっとスッキリできると思います。<br>例）北海道：key=0,都道府県コード=01）</p>
 <p>都道府県を切り替えた時に、前に選択していた都道府県の市区町村がフォームに残るので、※1の箇所で1行目（「市区町村を選択してください」などの初期表示行）以外を削除しています。</p>
-<h3><span id="htmlソース">HTMLソース</span></h3><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">select</span> <span class="attr">id</span>=<span class="string">"select-pref"</span>></span><span class="tag"><<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>></span>都道府県を選択してください<span class="tag"><!--<span class="name"-->option</span>></span><span class="tag"><!--<span class="name"-->select</span>><br><span class="line"><span class="tag"><<span class="name">select</span> <span class="attr">id</span>=<span class="string">"select-city"</span>></span><span class="tag"><<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>></span>市区町村を選択してください<span class="tag"><!--<span class="name"-->option</span>></span><span class="tag"><!--<span class="name"-->select</span>><br></pre></td></tr></tbody></table></figure>
+<h3><span id="htmlソース">HTMLソース</span></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"select-pref"</span>&gt;</span><span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>都道府県を選択してください<span class="tag">&lt;/<span class="name">option</span>&gt;</span><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"select-city"</span>&gt;</span><span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>市区町村を選択してください<span class="tag">&lt;/<span class="name">option</span>&gt;</span><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>この「都道府県・市区町村連動フォーム」ってホントよく使いますよね。</p>
 <p>クライアント様やその時々の状況で、バラバラな書き方をしてきましたので、可能な限り統一して簡単に書いていきたいと思う今日このごろです。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -458,7 +272,11 @@ $('#select-pref').on('change', function() {
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
         <footer class="article-footer">
-            <meta name="generator" content="Hexo 3.8.0"><a data-url="https://lancers.work/pref-city-form-jquery-json/" data-id="cju6t5kqe000puhrtinz39u22" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+            
+
+
+
+    <a data-url="https://lancers.work/pref-city-form-jquery-json/" data-id="cju6t5kqe000puhrtinz39u22" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -516,55 +334,6 @@ $('#select-pref').on('change', function() {
             window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
         });
     })(jQuery);
-</script><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
 </script>
 
         </footer>
@@ -606,108 +375,10 @@ HTMLソース
         "wordCount": 385
     }
 </script>
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ" rel="bookmark">ナンバーズ3アプリ</a></h3></div></li></ul>
-</article><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ" rel="bookmark">ナンバーズ3アプリ</a></h3></div></li></ul>
+</article>
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -743,7 +414,8 @@ HTMLソース
         </ul>
     </div>
     
-        <nav id="article-nav">
+        
+<nav id="article-nav">
     
         <a href="/hexo-on-kusanagi/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">次の記事</strong>
@@ -769,10 +441,11 @@ HTMLソース
         
             
                 
+
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/hexo-toc-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-toc/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-toc-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-toc/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -793,10 +466,10 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-github-netlify-deploy/" class="thumbnail">
+                            <a href="/hexo-github-netlify-deploy/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
     
     
 </a>
@@ -805,7 +478,7 @@ HTMLソース
                         
                         <div class="item-inner">
                             <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
-                            <p class="item-title"><a href="/hexo-github-netlify-deploy/" class="title">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></p>
+                            <p class="item-title"><a href="/hexo-github-netlify-deploy/" class="title">Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説</a></p>
                             <p class="item-date"><time datetime="2019-04-06T22:59:00.000Z" itemprop="datePublished">2019-04-07</time></p>
                         </div>
                     </li>
@@ -815,7 +488,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers3/" class="thumbnail">
+                            <a href="/numbers3/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ" class="thumbnail-image"></span>
@@ -837,7 +510,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers4/" class="thumbnail">
+                            <a href="/numbers4/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ" class="thumbnail-image"></span>
@@ -859,7 +532,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
+                            <a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/vmware-esxi65-realtek-nic.jpg)" alt="VMware ESXi「No Network Adapters」エラー時の対処法" class="thumbnail-image"></span>
@@ -881,7 +554,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
+                            <a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/wordpress-custom-rewrite-rule.jpg)" alt="WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～" class="thumbnail-image"></span>
@@ -901,7 +574,7 @@ HTMLソース
                 
                     
                         </ul>
-                        <meta name="generator" content="Hexo 3.8.0"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
@@ -911,7 +584,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers-2/" class="thumbnail">
+                            <a href="/numbers-2/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers-2.jpg)" alt="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" class="thumbnail-image"></span>
@@ -933,7 +606,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers-1/" class="thumbnail">
+                            <a href="/numbers-1/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers-1.jpg)" alt="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" class="thumbnail-image"></span>
@@ -955,7 +628,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-hueman-list-archives-date/" class="thumbnail">
+                            <a href="/hexo-hueman-list-archives-date/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/archives-list-date-fix.jpg)" alt="Hexoのサイドバーのアーカイブ日付表示の変更方法" class="thumbnail-image"></span>
@@ -977,7 +650,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-plugin-fix-toc/" class="thumbnail">
+                            <a href="/hexo-plugin-fix-toc/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
@@ -999,7 +672,7 @@ HTMLソース
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
+                            <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
@@ -1018,65 +691,17 @@ HTMLソース
                     
                 
             </ul>
-            <meta name="generator" content="Hexo 3.8.0"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
 </script>
         </div>
     </div>
 
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">カテゴリー</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/アプリ/">アプリ</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/アプリの素/">アプリの素</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ナレッジ/">ナレッジ</a><span class="category-list-count">11</span></li></ul>
@@ -1085,7 +710,8 @@ HTMLソース
 
 
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">タグ</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESXi/">ESXi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KUSANAGI/">KUSANAGI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware/">VMware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let-s-encrypt/">let's encrypt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仮想化/">仮想化</a><span class="tag-list-count">1</span></li></ul>
@@ -1094,7 +720,8 @@ HTMLソース
 
 
             
-                <div class="widget-wrap widget-float">
+                
+    <div class="widget-wrap widget-float">
         <h3 class="widget-title">タグクラウド</h3>
         <div class="widget tagcloud">
             <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Express/" style="font-size: 15px;">Express</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/KUSANAGI/" style="font-size: 10px;">KUSANAGI</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/VMware/" style="font-size: 10px;">VMware</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/let-s-encrypt/" style="font-size: 10px;">let's encrypt</a> <a href="/tags/仮想化/" style="font-size: 10px;">仮想化</a>
@@ -1108,7 +735,8 @@ HTMLソース
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">2019年04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">2019年03月</a><span class="archive-list-count">3</span></li></ul>
@@ -1117,7 +745,8 @@ HTMLソース
 
 
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">リンク</h3>
         <div class="widget">
             <ul>
@@ -1130,56 +759,7 @@ HTMLソース
         </div>
     </div>
 
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
             
         
     </div>
@@ -1202,66 +782,23 @@ HTMLソース
             </div>
             <div class="credit">
 
-                <p>© 2019 <a href="/">フリーランサーとして生きる道</a></p>
+                <p>&copy; 2019 <a href="/">フリーランサーとして生きる道</a></p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">hueman</a></p>
             </div>
             <div class="footer-plugins">
-              <meta name="generator" content="Hexo 3.8.0"><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
+              
     
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
 
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
 
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
             </div>
         </div>
     </div>
 </footer>
-        <meta name="generator" content="Hexo 3.8.0">
-<meta name="generator" content="Hexo 3.8.0"><script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
         <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
         <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
         <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
@@ -1276,110 +813,11 @@ HTMLソース
     
     
 
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
 
 
+<!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
     </div>
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
-
-</body></html><!-- Custom Scripts -->
+</body>
+</html>

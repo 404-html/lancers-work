@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="ja"><head>
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="author" content="bulma">
     <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
@@ -6,7 +8,8 @@
     <link rel="dns-prefetch" href="//googleads4.g.doubleclick.net">
     <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.gstatic.com">
-    </head><body>
+    
+
     
     <title>Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～ | フリーランサーとして生きる道</title>
     
@@ -14,19 +17,19 @@
     
         <meta name="keywords" content="Node.js,Express">
     
-    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby… ナンバー">
+    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby… ナンバー">
 <meta name="keywords" content="Node.js,Express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～">
 <meta property="og:url" content="https://lancers.work/numbers-1/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby… ナンバー">
+<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby… ナンバー">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/numbers-1.jpg">
 <meta property="og:updated_time" content="2019-04-07T10:19:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～">
-<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby… ナンバー">
+<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby… ナンバー">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/numbers-1.jpg">
     
 
@@ -45,13 +48,15 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
         <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
     
     
-        <meta name="generator" content="Hexo 3.8.0"><script type="text/javascript">
+        <script type="text/javascript">
 (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -61,112 +66,14 @@ ga('create', 'UA-137271270-1', 'auto');
 ga('send', 'pageview');
 
 </script>
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
     
     
 
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
-
-
-
+</head>
+</html>
+<body>
     <div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
@@ -201,7 +108,7 @@ ga('send', 'pageview');
         <input type="text" class="ins-search-input search-form-input" placeholder="検索">
         <button type="submit" class="search-form-submit"></button>
     </form>
-    <meta name="generator" content="Hexo 3.8.0"><div class="ins-search">
+    <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
@@ -229,56 +136,7 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
+<script src="/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -290,56 +148,7 @@ ga('send', 'pageview');
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-</p><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
+</p>
             </div>
         </div>
     </div>
@@ -360,7 +169,9 @@ ga('send', 'pageview');
     <div class="article-inner">
         
             <header class="article-header">
-                <h1 class="article-title" itemprop="name">
+                
+    
+        <h1 class="article-title" itemprop="name">
         Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～
         </h1>
     
@@ -369,14 +180,17 @@ ga('send', 'pageview');
         
         
             <div class="article-meta">
-                <div class="article-date">
+                
+    <div class="article-date">
         <a href="/numbers-1/" class="article-date">
             <time datetime="2019-04-03T09:39:00.000Z" itemprop="datePublished">2019-04-03</time>
         </a>
     </div>
 
 		
-                <div class="article-tag">
+
+                
+    <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Express/">Express</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
     </div>
@@ -385,11 +199,11 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img alt class="lazy" data-src="/images/numbers-1.jpg"></p>
+            <p><img src="/images/numbers-1.jpg" alt></p>
 <p>※Node.jsアプリ作成の共有コーナーです。<br>※Node.jsアプリ作成にはExpressを使用しています。</p>
-<p>今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！</p>
-<a href="https://lancers.work/numbers3/" class="link-preview"><div class="link-area"><div class="og-image"><img class="lazy" data-src="https://lancers.work/thumbnail/numbers3.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ3アプリ</div><div class="og-description">ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
-<a href="https://lancers.work/numbers4/" class="link-preview"><div class="link-area"><div class="og-image"><img class="lazy" data-src="https://lancers.work/thumbnail/numbers4.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ4アプリ</div><div class="og-description">ナンバーズ3はこちら ナンバーズ4 過去10回の当選数字  集計回数   ナンバーズ4 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
+<p>今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！</p>
+<a href="https://lancers.work/numbers3/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers3.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ3アプリ</div><div class="og-description">ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
+<a href="https://lancers.work/numbers4/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers4.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ4アプリ</div><div class="og-description">ナンバーズ3はこちら ナンバーズ4 過去10回の当選数字  集計回数   ナンバーズ4 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
 <p>瞬時に直近○○回分の当選数字と当選回数を表示します！（直近30回分が対象）</p>
 <p>以前、KUSANAGIのWordPress上でPHPで組んだツールの焼き直しです。</p>
 <p>アプリの公開は後日追記しますので、本記事はプログラムの流れの備忘録です。</p>
@@ -411,14 +225,14 @@ ga('send', 'pageview');
 <p>スクレイピングのモジュールはcheerio-httpcliを使いました。</p>
 <p>今回はスクレイピングの結果を保存する関係で、同期処理にて組みました。</p>
 <p><code>cheerio-httpcli</code>の非同期処理の書き方</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var client = require(<span class="string">'cheerio-httpcli'</span>);</span><br><span class="line"></span><br><span class="line">client.fetch(<span class="string">'https://対象URL/'</span>, {}, <span class="keyword">function</span> (err, $, result) {</span><br><span class="line">  ・・・</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var client = require(<span class="string">'cheerio-httpcli'</span>);</span><br><span class="line"></span><br><span class="line">client.fetch(<span class="string">'https://対象URL/'</span>, &#123;&#125;, <span class="keyword">function</span> (err, $, result) &#123;</span><br><span class="line">  ・・・</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>普通にデータ収集・加工後にデータをまとめてjsonファイルに保存しようとすると、保存処理が先に走ってしまい、空のファイルが出来上がってしまいました。</p>
 <p>いろいろやり方はあると思いますが（教えてください！）、今回は同期処理にてスクレイピング → ファイル保存を行いました。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">var client = require(<span class="string">'cheerio-httpcli'</span>);</span><br><span class="line"></span><br><span class="line">var array = {};</span><br><span class="line">array.tit = [];</span><br><span class="line">array.date = [];</span><br><span class="line">array.win = [];</span><br><span class="line"></span><br><span class="line">var html = client.fetchSync(<span class="string">'https://某NUMBERS当選番号公開ページURL/'</span>);</span><br><span class="line"></span><br><span class="line">// 第○○回を取得</span><br><span class="line">html.$(<span class="string">'th'</span>).each(<span class="keyword">function</span> (idx) {</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text().match(<span class="string">'第'</span>)) {</span><br><span class="line">    array.tit.push(html.$(this).text());</span><br><span class="line">  }</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">// 抽選日を取得</span><br><span class="line">html.$(<span class="string">'td'</span>).each(<span class="keyword">function</span> (idx) {</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text().match(<span class="string">'/'</span>)) {</span><br><span class="line">    array.date.push(html.$(this).text());</span><br><span class="line">  }</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">// 当選番号を取得    </span><br><span class="line">html.$(<span class="string">'td'</span>).each(<span class="keyword">function</span> (idx) {</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text() < 1000) {</span><br><span class="line">    array.win.push(html.$(this).text());</span><br><span class="line">  }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">var client = require(<span class="string">'cheerio-httpcli'</span>);</span><br><span class="line"></span><br><span class="line">var array = &#123;&#125;;</span><br><span class="line">array.tit = [];</span><br><span class="line">array.date = [];</span><br><span class="line">array.win = [];</span><br><span class="line"></span><br><span class="line">var html = client.fetchSync(<span class="string">'https://某NUMBERS当選番号公開ページURL/'</span>);</span><br><span class="line"></span><br><span class="line">// 第○○回を取得</span><br><span class="line">html.$(<span class="string">'th'</span>).each(<span class="keyword">function</span> (idx) &#123;</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text().match(<span class="string">'第'</span>)) &#123;</span><br><span class="line">    array.tit.push(html.$(this).text());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 抽選日を取得</span><br><span class="line">html.$(<span class="string">'td'</span>).each(<span class="keyword">function</span> (idx) &#123;</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text().match(<span class="string">'/'</span>)) &#123;</span><br><span class="line">    array.date.push(html.$(this).text());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 当選番号を取得    </span><br><span class="line">html.$(<span class="string">'td'</span>).each(<span class="keyword">function</span> (idx) &#123;</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text() &lt; 1000) &#123;</span><br><span class="line">    array.win.push(html.$(this).text());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>このサイトの当選番号は<code>table</code>で表示しているのですが、抽選日ごとに<code>table</code>があったり、<code>th</code>や<code>td</code>などにclassがあてられてなかったり、かつ、データの並びをうまく整理できず、<code>eq(0)</code>などで正常に取得できなかったので、非常に原始的な処理にしました。</p>
 <ul>
 <li>第1234回という回数は<code>th</code>に<code>第</code>の文字が含まれていたら回数として取得</li>
@@ -428,13 +242,17 @@ ga('send', 'pageview');
 <p>こんな感じでターゲットのデータを取得し、配列に格納しています。</p>
 <p>PHPではスマートに書けけているので、もう少し考えてみようとは思っています。</p>
 <p>それでは長くなりましたので、今回はスクレイピングまでということで、その他のナレッジについては次回に続きます。</p>
-<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img class="lazy" data-src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
         <footer class="article-footer">
-            <meta name="generator" content="Hexo 3.8.0"><a data-url="https://lancers.work/numbers-1/" data-id="cju6t5kpx000auhrtwghnqkjb" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+            
+
+
+
+    <a data-url="https://lancers.work/numbers-1/" data-id="cju6t5kpx000auhrtwghnqkjb" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -492,55 +310,6 @@ ga('send', 'pageview');
             window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
         });
     })(jQuery);
-</script><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
 </script>
 
         </footer>
@@ -569,108 +338,10 @@ ga('send', 'pageview');
         "wordCount": 270
     }
 </script>
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ" rel="bookmark">ナンバーズ3アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li></ul>
-</article><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ" rel="bookmark">ナンバーズ3アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li></ul>
+</article>
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -706,7 +377,8 @@ ga('send', 'pageview');
         </ul>
     </div>
     
-        <nav id="article-nav">
+        
+<nav id="article-nav">
     
         <a href="/numbers-2/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">次の記事</strong>
@@ -732,10 +404,11 @@ ga('send', 'pageview');
         
             
                 
+
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -756,10 +429,10 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-github-netlify-deploy/" class="thumbnail">
+                            <a href="/hexo-github-netlify-deploy/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
     
     
 </a>
@@ -768,7 +441,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
-                            <p class="item-title"><a href="/hexo-github-netlify-deploy/" class="title">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></p>
+                            <p class="item-title"><a href="/hexo-github-netlify-deploy/" class="title">Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説</a></p>
                             <p class="item-date"><time datetime="2019-04-06T22:59:00.000Z" itemprop="datePublished">2019-04-07</time></p>
                         </div>
                     </li>
@@ -778,7 +451,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers3/" class="thumbnail">
+                            <a href="/numbers3/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ" class="thumbnail-image"></span>
@@ -800,7 +473,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers4/" class="thumbnail">
+                            <a href="/numbers4/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ" class="thumbnail-image"></span>
@@ -822,7 +495,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
+                            <a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/vmware-esxi65-realtek-nic.jpg)" alt="VMware ESXi「No Network Adapters」エラー時の対処法" class="thumbnail-image"></span>
@@ -844,7 +517,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
+                            <a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/wordpress-custom-rewrite-rule.jpg)" alt="WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～" class="thumbnail-image"></span>
@@ -864,7 +537,7 @@ ga('send', 'pageview');
                 
                     
                         </ul>
-                        <meta name="generator" content="Hexo 3.8.0"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
@@ -874,7 +547,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers-2/" class="thumbnail">
+                            <a href="/numbers-2/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers-2.jpg)" alt="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" class="thumbnail-image"></span>
@@ -896,7 +569,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers-1/" class="thumbnail">
+                            <a href="/numbers-1/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers-1.jpg)" alt="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" class="thumbnail-image"></span>
@@ -918,7 +591,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-hueman-list-archives-date/" class="thumbnail">
+                            <a href="/hexo-hueman-list-archives-date/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/archives-list-date-fix.jpg)" alt="Hexoのサイドバーのアーカイブ日付表示の変更方法" class="thumbnail-image"></span>
@@ -940,7 +613,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-plugin-fix-toc/" class="thumbnail">
+                            <a href="/hexo-plugin-fix-toc/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
@@ -962,7 +635,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
+                            <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
@@ -981,65 +654,17 @@ ga('send', 'pageview');
                     
                 
             </ul>
-            <meta name="generator" content="Hexo 3.8.0"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
 </script>
         </div>
     </div>
 
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">カテゴリー</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/アプリ/">アプリ</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/アプリの素/">アプリの素</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ナレッジ/">ナレッジ</a><span class="category-list-count">11</span></li></ul>
@@ -1048,7 +673,8 @@ ga('send', 'pageview');
 
 
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">タグ</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESXi/">ESXi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KUSANAGI/">KUSANAGI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware/">VMware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let-s-encrypt/">let's encrypt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仮想化/">仮想化</a><span class="tag-list-count">1</span></li></ul>
@@ -1057,7 +683,8 @@ ga('send', 'pageview');
 
 
             
-                <div class="widget-wrap widget-float">
+                
+    <div class="widget-wrap widget-float">
         <h3 class="widget-title">タグクラウド</h3>
         <div class="widget tagcloud">
             <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Express/" style="font-size: 15px;">Express</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/KUSANAGI/" style="font-size: 10px;">KUSANAGI</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/VMware/" style="font-size: 10px;">VMware</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/let-s-encrypt/" style="font-size: 10px;">let's encrypt</a> <a href="/tags/仮想化/" style="font-size: 10px;">仮想化</a>
@@ -1071,7 +698,8 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">2019年04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">2019年03月</a><span class="archive-list-count">3</span></li></ul>
@@ -1080,7 +708,8 @@ ga('send', 'pageview');
 
 
             
-                <div class="widget-wrap widget-list">
+                
+    <div class="widget-wrap widget-list">
         <h3 class="widget-title">リンク</h3>
         <div class="widget">
             <ul>
@@ -1093,56 +722,7 @@ ga('send', 'pageview');
         </div>
     </div>
 
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
 
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
             
         
     </div>
@@ -1165,66 +745,23 @@ ga('send', 'pageview');
             </div>
             <div class="credit">
 
-                <p>© 2019 <a href="/">フリーランサーとして生きる道</a></p>
+                <p>&copy; 2019 <a href="/">フリーランサーとして生きる道</a></p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">hueman</a></p>
             </div>
             <div class="footer-plugins">
-              <meta name="generator" content="Hexo 3.8.0"><script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
+              
     
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
 
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
 
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
             </div>
         </div>
     </div>
 </footer>
-        <meta name="generator" content="Hexo 3.8.0">
-<meta name="generator" content="Hexo 3.8.0"><script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
         <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
         <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
         <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
@@ -1239,110 +776,11 @@ ga('send', 'pageview');
     
     
 
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
 
 
+<!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
     </div>
-<script>document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages;
-
-  if ("IntersectionObserver" in window) {
-    lazyloadImages = document.querySelectorAll(".lazy");
-    var imageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var image = entry.target;
-          image.src = image.dataset.src;
-          image.classList.remove("lazy");
-          imageObserver.unobserve(image);
-        }
-      });
-    });
-
-    lazyloadImages.forEach(function(image) {
-      imageObserver.observe(image);
-    });
-  } else {  
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-    
-    function lazyload () {
-      if(lazyloadThrottleTimeout) {
-        clearTimeout(lazyloadThrottleTimeout);
-      }    
-
-      lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-      }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-  }
-})
-</script>
-
-</body></html><!-- Custom Scripts -->
+</body>
+</html>

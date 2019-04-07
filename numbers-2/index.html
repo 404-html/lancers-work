@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head><meta name="generator" content="Hexo 3.8.0">
+<!DOCTYPE html><html lang="ja"><head>
     <meta charset="utf-8">
     <meta name="author" content="bulma">
     <link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
@@ -8,8 +6,7 @@
     <link rel="dns-prefetch" href="//googleads4.g.doubleclick.net">
     <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.gstatic.com">
-    
-
+    </head><body>
     
     <title>Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～ | フリーランサーとして生きる道</title>
     
@@ -17,19 +14,19 @@
     
         <meta name="keywords" content="Node.js,Express">
     
-    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad">
+    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad">
 <meta name="keywords" content="Node.js,Express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～">
 <meta property="og:url" content="https://lancers.work/numbers-2/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad">
+<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/numbers-2.jpg">
 <meta property="og:updated_time" content="2019-04-07T10:20:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～">
-<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad">
+<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/numbers-2.jpg">
     
 
@@ -48,15 +45,13 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
         <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
     
     
-        <script type="text/javascript">
+        <meta name="generator" content="Hexo 3.8.0"><script type="text/javascript">
 (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -66,14 +61,112 @@ ga('create', 'UA-137271270-1', 'auto');
 ga('send', 'pageview');
 
 </script>
+<script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
 
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
     
     
 
+<script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
 
-</head>
-</html>
-<body>
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
+
+
+
     <div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
@@ -108,7 +201,7 @@ ga('send', 'pageview');
         <input type="text" class="ins-search-input search-form-input" placeholder="検索">
         <button type="submit" class="search-form-submit"></button>
     </form>
-    <div class="ins-search">
+    <meta name="generator" content="Hexo 3.8.0"><div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
@@ -136,7 +229,56 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script>
+<script src="/js/insight.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
 
 </div>
                         </nav>
@@ -148,7 +290,56 @@ ga('send', 'pageview');
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-</p>
+</p><script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
             </div>
         </div>
     </div>
@@ -169,9 +360,7 @@ ga('send', 'pageview');
     <div class="article-inner">
         
             <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
+                <h1 class="article-title" itemprop="name">
         Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～
         </h1>
     
@@ -180,17 +369,14 @@ ga('send', 'pageview');
         
         
             <div class="article-meta">
-                
-    <div class="article-date">
+                <div class="article-date">
         <a href="/numbers-2/" class="article-date">
             <time datetime="2019-04-03T09:40:00.000Z" itemprop="datePublished">2019-04-03</time>
         </a>
     </div>
 
 		
-
-                
-    <div class="article-tag">
+                <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Express/">Express</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
     </div>
@@ -199,13 +385,13 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/numbers-2.jpg" alt></p>
+            <p><img alt class="lazy" data-src="/images/numbers-2.jpg"></p>
 <p>※Node.jsアプリ作成の共有コーナーです。<br>※Node.jsアプリ作成にはExpressを使用しています。</p>
-<p>今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。</p>
-<a href="https://lancers.work/numbers3/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers3.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ3アプリ</div><div class="og-description">ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
-<a href="https://lancers.work/numbers4/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers4.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ4アプリ</div><div class="og-description">ナンバーズ3はこちら ナンバーズ4 過去10回の当選数字  集計回数   ナンバーズ4 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
+<p>今回はナンバーズ（NUMBERS3 & NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。</p>
+<a href="https://lancers.work/numbers3/" class="link-preview"><div class="link-area"><div class="og-image"><img class="lazy" data-src="https://lancers.work/thumbnail/numbers3.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ3アプリ</div><div class="og-description">ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
+<a href="https://lancers.work/numbers4/" class="link-preview"><div class="link-area"><div class="og-image"><img class="lazy" data-src="https://lancers.work/thumbnail/numbers4.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ4アプリ</div><div class="og-description">ナンバーズ3はこちら ナンバーズ4 過去10回の当選数字  集計回数   ナンバーズ4 過去10回の当選数字出現回数      (adsby…</div></div></div></a>
 <p>前回の記事はこちらです。</p>
-<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img class="lazy" data-src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
 <p>今年の目標が<strong>Node.jsを極める！</strong>ですので、かなりの初心者コードですが、参考やヒラメキの一助になればと思い書いています。</p>
 <p>今回でナンバーズアプリに関するナレッジは最終回です。</p>
 <p>アプリが完成しましたら、公開していきたいと思います。</p>
@@ -224,24 +410,24 @@ ga('send', 'pageview');
 </div>
 
 <h2><span id="配列のソート">配列のソート</span></h2><p><code>cheerio-httpcli</code>で取得した<code>回数</code>、<code>抽選日</code>、<code>当選番号</code>はそれぞれ<code>array.tit</code>、<code>array.date</code>、<code>array.win</code>に格納されています。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">"tit"</span>:[<span class="string">"第5104回"</span>,<span class="string">"第5105回"</span>,<span class="string">"第5106回"</span>,<span class="string">"第5107回"</span>,<span class="string">"第5108回"</span>,<span class="string">"第5109回"</span>,<span class="string">"第5110回"</span>,<span class="string">"第5111回"</span>,<span class="string">"第5112回"</span>,<span class="string">"第5113回"</span>,<span class="string">"第5114回"</span>,<span class="string">"第5115回"</span>,<span class="string">"第5116回"</span>,<span class="string">"第5117回"</span>,<span class="string">"第5118回"</span>,<span class="string">"第5119回"</span>,<span class="string">"第5120回"</span>,<span class="string">"第5121回"</span>,<span class="string">"第5122回"</span>,<span class="string">"第5123回"</span>],<span class="string">"date"</span>:[<span class="string">"2019/02/01"</span>,<span class="string">"2019/02/04"</span>,<span class="string">"2019/02/05"</span>,<span class="string">"2019/02/06"</span>,<span class="string">"2019/02/07"</span>,<span class="string">"2019/02/08"</span>,<span class="string">"2019/02/11"</span>,<span class="string">"2019/02/12"</span>,<span class="string">"2019/02/13"</span>,<span class="string">"2019/02/14"</span>,<span class="string">"2019/02/15"</span>,<span class="string">"2019/02/18"</span>,<span class="string">"2019/02/19"</span>,<span class="string">"2019/02/20"</span>,<span class="string">"2019/02/21"</span>,<span class="string">"2019/02/22"</span>,<span class="string">"2019/02/25"</span>,<span class="string">"2019/02/26"</span>,<span class="string">"2019/02/27"</span>,<span class="string">"2019/02/28"</span>],<span class="string">"win"</span>:[<span class="string">"049"</span>,<span class="string">"766"</span>,<span class="string">"322"</span>,<span class="string">"660"</span>,<span class="string">"626"</span>,<span class="string">"684"</span>,<span class="string">"077"</span>,<span class="string">"882"</span>,<span class="string">"087"</span>,<span class="string">"446"</span>,<span class="string">"771"</span>,<span class="string">"878"</span>,<span class="string">"991"</span>,<span class="string">"956"</span>,<span class="string">"831"</span>,<span class="string">"672"</span>,<span class="string">"661"</span>,<span class="string">"635"</span>,<span class="string">"663"</span>,<span class="string">"366"</span>]&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{<span class="string">"tit"</span>:[<span class="string">"第5104回"</span>,<span class="string">"第5105回"</span>,<span class="string">"第5106回"</span>,<span class="string">"第5107回"</span>,<span class="string">"第5108回"</span>,<span class="string">"第5109回"</span>,<span class="string">"第5110回"</span>,<span class="string">"第5111回"</span>,<span class="string">"第5112回"</span>,<span class="string">"第5113回"</span>,<span class="string">"第5114回"</span>,<span class="string">"第5115回"</span>,<span class="string">"第5116回"</span>,<span class="string">"第5117回"</span>,<span class="string">"第5118回"</span>,<span class="string">"第5119回"</span>,<span class="string">"第5120回"</span>,<span class="string">"第5121回"</span>,<span class="string">"第5122回"</span>,<span class="string">"第5123回"</span>],<span class="string">"date"</span>:[<span class="string">"2019/02/01"</span>,<span class="string">"2019/02/04"</span>,<span class="string">"2019/02/05"</span>,<span class="string">"2019/02/06"</span>,<span class="string">"2019/02/07"</span>,<span class="string">"2019/02/08"</span>,<span class="string">"2019/02/11"</span>,<span class="string">"2019/02/12"</span>,<span class="string">"2019/02/13"</span>,<span class="string">"2019/02/14"</span>,<span class="string">"2019/02/15"</span>,<span class="string">"2019/02/18"</span>,<span class="string">"2019/02/19"</span>,<span class="string">"2019/02/20"</span>,<span class="string">"2019/02/21"</span>,<span class="string">"2019/02/22"</span>,<span class="string">"2019/02/25"</span>,<span class="string">"2019/02/26"</span>,<span class="string">"2019/02/27"</span>,<span class="string">"2019/02/28"</span>],<span class="string">"win"</span>:[<span class="string">"049"</span>,<span class="string">"766"</span>,<span class="string">"322"</span>,<span class="string">"660"</span>,<span class="string">"626"</span>,<span class="string">"684"</span>,<span class="string">"077"</span>,<span class="string">"882"</span>,<span class="string">"087"</span>,<span class="string">"446"</span>,<span class="string">"771"</span>,<span class="string">"878"</span>,<span class="string">"991"</span>,<span class="string">"956"</span>,<span class="string">"831"</span>,<span class="string">"672"</span>,<span class="string">"661"</span>,<span class="string">"635"</span>,<span class="string">"663"</span>,<span class="string">"366"</span>]}</span><br></pre></td></tr></tbody></table></figure>
 <p>これらを最新日付順にソートし、<code>numbers</code>という名前の配列に入れ直します。</p>
 <p>まず、<code>回数</code>と<code>抽選日</code>と<code>当選番号</code>を組み合わせます。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var i=0; i&lt;resJson.tit.length; i++) &#123;</span><br><span class="line">  var tit = arrayJson.tit[i];</span><br><span class="line">  var date = arrayJson.date[i];</span><br><span class="line">  var win = arrayJson.win[i];</span><br><span class="line">  numbers.push(&#123;tit, date, win&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var i=0; i<resjson.tit.length; i++) {< span><br><span class="line">  var tit = arrayJson.tit[i];</span><br><span class="line">  var date = arrayJson.date[i];</span><br><span class="line">  var win = arrayJson.win[i];</span><br><span class="line">  numbers.push({tit, date, win});</span><br><span class="line">}</span><br></resjson.tit.length;></span></pre></td></tr></tbody></table></figure>
 <p>この結果、</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">"tit"</span>:<span class="string">"第5104回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/01"</span>,<span class="string">"win"</span>:<span class="string">"049"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5105回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/04"</span>,<span class="string">"win"</span>:<span class="string">"766"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5106回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/05"</span>,<span class="string">"win"</span>:<span class="string">"322"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5107回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/06"</span>,<span class="string">"win"</span>:<span class="string">"660"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5108回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/07"</span>,<span class="string">"win"</span>:<span class="string">"626"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5109回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/08"</span>,<span class="string">"win"</span>:<span class="string">"684"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5110回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/11"</span>,<span class="string">"win"</span>:<span class="string">"077"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5111回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/12"</span>,<span class="string">"win"</span>:<span class="string">"882"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5112回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/13"</span>,<span class="string">"win"</span>:<span class="string">"087"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5113回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/14"</span>,<span class="string">"win"</span>:<span class="string">"446"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5114回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/15"</span>,<span class="string">"win"</span>:<span class="string">"771"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5115回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/18"</span>,<span class="string">"win"</span>:<span class="string">"878"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5116回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/19"</span>,<span class="string">"win"</span>:<span class="string">"991"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5117回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/20"</span>,<span class="string">"win"</span>:<span class="string">"956"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5118回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/21"</span>,<span class="string">"win"</span>:<span class="string">"831"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5119回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/22"</span>,<span class="string">"win"</span>:<span class="string">"672"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5120回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/25"</span>,<span class="string">"win"</span>:<span class="string">"661"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5121回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/26"</span>,<span class="string">"win"</span>:<span class="string">"635"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5122回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/27"</span>,<span class="string">"win"</span>:<span class="string">"663"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5123回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/28"</span>,<span class="string">"win"</span>:<span class="string">"366"</span>&#125;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[{<span class="string">"tit"</span>:<span class="string">"第5104回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/01"</span>,<span class="string">"win"</span>:<span class="string">"049"</span>},{<span class="string">"tit"</span>:<span class="string">"第5105回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/04"</span>,<span class="string">"win"</span>:<span class="string">"766"</span>},{<span class="string">"tit"</span>:<span class="string">"第5106回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/05"</span>,<span class="string">"win"</span>:<span class="string">"322"</span>},{<span class="string">"tit"</span>:<span class="string">"第5107回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/06"</span>,<span class="string">"win"</span>:<span class="string">"660"</span>},{<span class="string">"tit"</span>:<span class="string">"第5108回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/07"</span>,<span class="string">"win"</span>:<span class="string">"626"</span>},{<span class="string">"tit"</span>:<span class="string">"第5109回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/08"</span>,<span class="string">"win"</span>:<span class="string">"684"</span>},{<span class="string">"tit"</span>:<span class="string">"第5110回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/11"</span>,<span class="string">"win"</span>:<span class="string">"077"</span>},{<span class="string">"tit"</span>:<span class="string">"第5111回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/12"</span>,<span class="string">"win"</span>:<span class="string">"882"</span>},{<span class="string">"tit"</span>:<span class="string">"第5112回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/13"</span>,<span class="string">"win"</span>:<span class="string">"087"</span>},{<span class="string">"tit"</span>:<span class="string">"第5113回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/14"</span>,<span class="string">"win"</span>:<span class="string">"446"</span>},{<span class="string">"tit"</span>:<span class="string">"第5114回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/15"</span>,<span class="string">"win"</span>:<span class="string">"771"</span>},{<span class="string">"tit"</span>:<span class="string">"第5115回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/18"</span>,<span class="string">"win"</span>:<span class="string">"878"</span>},{<span class="string">"tit"</span>:<span class="string">"第5116回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/19"</span>,<span class="string">"win"</span>:<span class="string">"991"</span>},{<span class="string">"tit"</span>:<span class="string">"第5117回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/20"</span>,<span class="string">"win"</span>:<span class="string">"956"</span>},{<span class="string">"tit"</span>:<span class="string">"第5118回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/21"</span>,<span class="string">"win"</span>:<span class="string">"831"</span>},{<span class="string">"tit"</span>:<span class="string">"第5119回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/22"</span>,<span class="string">"win"</span>:<span class="string">"672"</span>},{<span class="string">"tit"</span>:<span class="string">"第5120回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/25"</span>,<span class="string">"win"</span>:<span class="string">"661"</span>},{<span class="string">"tit"</span>:<span class="string">"第5121回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/26"</span>,<span class="string">"win"</span>:<span class="string">"635"</span>},{<span class="string">"tit"</span>:<span class="string">"第5122回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/27"</span>,<span class="string">"win"</span>:<span class="string">"663"</span>},{<span class="string">"tit"</span>:<span class="string">"第5123回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/28"</span>,<span class="string">"win"</span>:<span class="string">"366"</span>}]</span><br></pre></td></tr></tbody></table></figure>
 <p>こうなります。</p>
 <p>この状態で<code>date</code>をキーに抽選日降順にソートします。<br>※ツールで最新の当選番号が上に来るように設計したためソートします。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 降順の場合</span><br><span class="line">numbers.sort(<span class="keyword">function</span>(a,b) &#123;</span><br><span class="line">  <span class="keyword">if</span>(a.date &gt; b.date) <span class="built_in">return</span> -1;</span><br><span class="line">  <span class="keyword">if</span>(a.date &lt; b.date) <span class="built_in">return</span> 1;</span><br><span class="line">  <span class="built_in">return</span> 0;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 降順の場合</span><br><span class="line">numbers.sort(<span class="keyword">function</span>(a,b) {</span><br><span class="line">  <span class="keyword">if</span>(a.date > b.date) <span class="built_in">return</span> -1;</span><br><span class="line">  <span class="keyword">if</span>(a.date < b.date) <span class="built_in">return</span> 1;</span><br><span class="line">  <span class="built_in">return</span> 0;</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
 <p>この結果、</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123;<span class="string">"tit"</span>:<span class="string">"第5123回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/28"</span>,<span class="string">"win"</span>:<span class="string">"366"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5122回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/27"</span>,<span class="string">"win"</span>:<span class="string">"663"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5121回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/26"</span>,<span class="string">"win"</span>:<span class="string">"635"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5120回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/25"</span>,<span class="string">"win"</span>:<span class="string">"661"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5119回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/22"</span>,<span class="string">"win"</span>:<span class="string">"672"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5118回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/21"</span>,<span class="string">"win"</span>:<span class="string">"831"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5117回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/20"</span>,<span class="string">"win"</span>:<span class="string">"956"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5116回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/19"</span>,<span class="string">"win"</span>:<span class="string">"991"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5115回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/18"</span>,<span class="string">"win"</span>:<span class="string">"878"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5114回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/15"</span>,<span class="string">"win"</span>:<span class="string">"771"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5113回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/14"</span>,<span class="string">"win"</span>:<span class="string">"446"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5112回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/13"</span>,<span class="string">"win"</span>:<span class="string">"087"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5111回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/12"</span>,<span class="string">"win"</span>:<span class="string">"882"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5110回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/11"</span>,<span class="string">"win"</span>:<span class="string">"077"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5109回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/08"</span>,<span class="string">"win"</span>:<span class="string">"684"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5108回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/07"</span>,<span class="string">"win"</span>:<span class="string">"626"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5107回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/06"</span>,<span class="string">"win"</span>:<span class="string">"660"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5106回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/05"</span>,<span class="string">"win"</span>:<span class="string">"322"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5105回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/04"</span>,<span class="string">"win"</span>:<span class="string">"766"</span>&#125;,&#123;<span class="string">"tit"</span>:<span class="string">"第5104回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/01"</span>,<span class="string">"win"</span>:<span class="string">"049"</span>&#125;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[{<span class="string">"tit"</span>:<span class="string">"第5123回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/28"</span>,<span class="string">"win"</span>:<span class="string">"366"</span>},{<span class="string">"tit"</span>:<span class="string">"第5122回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/27"</span>,<span class="string">"win"</span>:<span class="string">"663"</span>},{<span class="string">"tit"</span>:<span class="string">"第5121回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/26"</span>,<span class="string">"win"</span>:<span class="string">"635"</span>},{<span class="string">"tit"</span>:<span class="string">"第5120回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/25"</span>,<span class="string">"win"</span>:<span class="string">"661"</span>},{<span class="string">"tit"</span>:<span class="string">"第5119回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/22"</span>,<span class="string">"win"</span>:<span class="string">"672"</span>},{<span class="string">"tit"</span>:<span class="string">"第5118回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/21"</span>,<span class="string">"win"</span>:<span class="string">"831"</span>},{<span class="string">"tit"</span>:<span class="string">"第5117回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/20"</span>,<span class="string">"win"</span>:<span class="string">"956"</span>},{<span class="string">"tit"</span>:<span class="string">"第5116回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/19"</span>,<span class="string">"win"</span>:<span class="string">"991"</span>},{<span class="string">"tit"</span>:<span class="string">"第5115回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/18"</span>,<span class="string">"win"</span>:<span class="string">"878"</span>},{<span class="string">"tit"</span>:<span class="string">"第5114回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/15"</span>,<span class="string">"win"</span>:<span class="string">"771"</span>},{<span class="string">"tit"</span>:<span class="string">"第5113回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/14"</span>,<span class="string">"win"</span>:<span class="string">"446"</span>},{<span class="string">"tit"</span>:<span class="string">"第5112回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/13"</span>,<span class="string">"win"</span>:<span class="string">"087"</span>},{<span class="string">"tit"</span>:<span class="string">"第5111回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/12"</span>,<span class="string">"win"</span>:<span class="string">"882"</span>},{<span class="string">"tit"</span>:<span class="string">"第5110回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/11"</span>,<span class="string">"win"</span>:<span class="string">"077"</span>},{<span class="string">"tit"</span>:<span class="string">"第5109回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/08"</span>,<span class="string">"win"</span>:<span class="string">"684"</span>},{<span class="string">"tit"</span>:<span class="string">"第5108回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/07"</span>,<span class="string">"win"</span>:<span class="string">"626"</span>},{<span class="string">"tit"</span>:<span class="string">"第5107回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/06"</span>,<span class="string">"win"</span>:<span class="string">"660"</span>},{<span class="string">"tit"</span>:<span class="string">"第5106回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/05"</span>,<span class="string">"win"</span>:<span class="string">"322"</span>},{<span class="string">"tit"</span>:<span class="string">"第5105回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/04"</span>,<span class="string">"win"</span>:<span class="string">"766"</span>},{<span class="string">"tit"</span>:<span class="string">"第5104回"</span>,<span class="string">"date"</span>:<span class="string">"2019/02/01"</span>,<span class="string">"win"</span>:<span class="string">"049"</span>}]</span><br></pre></td></tr></tbody></table></figure>
 <p>こうなります。</p>
 <p>これでアプリで使いたかったjson形式のナンバーズ当選番号データが完成しました。</p>
-<h2><span id="jsonファイルの保存">jsonファイルの保存</span></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(<span class="string">'fs'</span>);</span><br><span class="line">fs.writeFile(<span class="string">'numbers3.json'</span>, JSON.stringify(winJson));</span><br></pre></td></tr></table></figure>
+<h2><span id="jsonファイルの保存">jsonファイルの保存</span></h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(<span class="string">'fs'</span>);</span><br><span class="line">fs.writeFile(<span class="string">'numbers3.json'</span>, JSON.stringify(winJson));</span><br></pre></td></tr></tbody></table></figure>
 <p>ファイルの保存は特に書くことはありません。</p>
 <p>以上でNode.jsで作るナンバーズアプリの準備ができましたので、あとはこのデータを加工しながら当選ロジックを完成させたいと思います。</p>
 <p>今作っているナンバーズアプリですがテレビでも放映された理論を取り入れたアプリです。</p>
@@ -252,11 +438,7 @@ ga('send', 'pageview');
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
         <footer class="article-footer">
-            
-
-
-
-    <a data-url="https://lancers.work/numbers-2/" data-id="cju5gsoks000blcrtnl83hp8r" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+            <meta name="generator" content="Hexo 3.8.0"><a data-url="https://lancers.work/numbers-2/" data-id="cju6t5kq4000fuhrtufiber0p" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -314,6 +496,55 @@ ga('send', 'pageview');
             window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
         });
     })(jQuery);
+</script><script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
 </script>
 
         </footer>
@@ -341,10 +572,108 @@ ga('send', 'pageview');
         "wordCount": 524
     }
 </script>
+<script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
 
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ" rel="bookmark">ナンバーズ3アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li></ul>
-</article>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ" rel="bookmark">ナンバーズ4アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ" rel="bookmark">ナンバーズ3アプリ</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li></ul>
+</article><script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -380,8 +709,7 @@ ga('send', 'pageview');
         </ul>
     </div>
     
-        
-<nav id="article-nav">
+        <nav id="article-nav">
     
         <a href="/wordpress-custom-rewrite-rule/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">次の記事</strong>
@@ -407,11 +735,10 @@ ga('send', 'pageview');
         
             
                 
-
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img class="lazy" data-src="/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -432,10 +759,10 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/hexo-github-netlify-deploy/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-github-netlify-deploy/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
     
     
 </a>
@@ -444,7 +771,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
-                            <p class="item-title"><a href="/hexo-github-netlify-deploy/" class="title">Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説</a></p>
+                            <p class="item-title"><a href="/hexo-github-netlify-deploy/" class="title">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></p>
                             <p class="item-date"><time datetime="2019-04-06T22:59:00.000Z" itemprop="datePublished">2019-04-07</time></p>
                         </div>
                     </li>
@@ -454,29 +781,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/numbers4/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
-                            <p class="item-title"><a href="/numbers4/" class="title">ナンバーズ4アプリ</a></p>
-                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
-                        </div>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/numbers3/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers3/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ" class="thumbnail-image"></span>
@@ -498,7 +803,29 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers4/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
+                            <p class="item-title"><a href="/numbers4/" class="title">ナンバーズ4アプリ</a></p>
+                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/vmware-esxi65-realtek-nic.jpg)" alt="VMware ESXi「No Network Adapters」エラー時の対処法" class="thumbnail-image"></span>
@@ -520,7 +847,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/wordpress-custom-rewrite-rule.jpg)" alt="WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～" class="thumbnail-image"></span>
@@ -540,7 +867,7 @@ ga('send', 'pageview');
                 
                     
                         </ul>
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <meta name="generator" content="Hexo 3.8.0"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
@@ -550,7 +877,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/numbers-2/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers-2/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers-2.jpg)" alt="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" class="thumbnail-image"></span>
@@ -572,7 +899,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/numbers-1/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/numbers-1/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/numbers-1.jpg)" alt="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" class="thumbnail-image"></span>
@@ -594,7 +921,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/hexo-hueman-list-archives-date/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-hueman-list-archives-date/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/archives-list-date-fix.jpg)" alt="Hexoのサイドバーのアーカイブ日付表示の変更方法" class="thumbnail-image"></span>
@@ -616,29 +943,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
-                            <p class="item-title"><a href="/hexo-plugin-fix-tag-link-preview/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></p>
-                            <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
-                        </div>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/hexo-plugin-fix-toc/" class="thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-plugin-fix-toc/" class="thumbnail">
     
     
         <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
@@ -656,18 +961,88 @@ ga('send', 'pageview');
                     </li>
                     
                 
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <meta name="generator" content="Hexo 3.8.0"><a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
+                            <p class="item-title"><a href="/hexo-plugin-fix-tag-link-preview/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></p>
+                            <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
+                        </div>
+                    </li>
+                    
+                
             </ul>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <meta name="generator" content="Hexo 3.8.0"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-h8+b-z-57+db" data-ad-client="ca-pub-6760690047817155" data-ad-slot="7252383188"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
+</script><script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
 </script>
         </div>
     </div>
 
             
-                
-    <div class="widget-wrap widget-list">
+                <div class="widget-wrap widget-list">
         <h3 class="widget-title">カテゴリー</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/アプリ/">アプリ</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/アプリの素/">アプリの素</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ナレッジ/">ナレッジ</a><span class="category-list-count">11</span></li></ul>
@@ -676,8 +1051,7 @@ ga('send', 'pageview');
 
 
             
-                
-    <div class="widget-wrap widget-list">
+                <div class="widget-wrap widget-list">
         <h3 class="widget-title">タグ</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESXi/">ESXi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Express/">Express</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KUSANAGI/">KUSANAGI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MongoDB/">MongoDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Netlify/">Netlify</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware/">VMware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let-s-encrypt/">let's encrypt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/仮想化/">仮想化</a><span class="tag-list-count">1</span></li></ul>
@@ -686,8 +1060,7 @@ ga('send', 'pageview');
 
 
             
-                
-    <div class="widget-wrap widget-float">
+                <div class="widget-wrap widget-float">
         <h3 class="widget-title">タグクラウド</h3>
         <div class="widget tagcloud">
             <a href="/tags/ESXi/" style="font-size: 10px;">ESXi</a> <a href="/tags/Express/" style="font-size: 15px;">Express</a> <a href="/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hexo/" style="font-size: 17.5px;">Hexo</a> <a href="/tags/KUSANAGI/" style="font-size: 10px;">KUSANAGI</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/tags/VMware/" style="font-size: 10px;">VMware</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/jQuery/" style="font-size: 12.5px;">jQuery</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/let-s-encrypt/" style="font-size: 10px;">let's encrypt</a> <a href="/tags/仮想化/" style="font-size: 10px;">仮想化</a>
@@ -701,8 +1074,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
             
-                
-    <div class="widget-wrap widget-list">
+                <div class="widget-wrap widget-list">
         <h3 class="widget-title">アーカイブ</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">2019年04月</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">2019年03月</a><span class="archive-list-count">3</span></li></ul>
@@ -711,8 +1083,7 @@ ga('send', 'pageview');
 
 
             
-                
-    <div class="widget-wrap widget-list">
+                <div class="widget-wrap widget-list">
         <h3 class="widget-title">リンク</h3>
         <div class="widget">
             <ul>
@@ -725,7 +1096,56 @@ ga('send', 'pageview');
         </div>
     </div>
 
+<script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
 
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
             
         
     </div>
@@ -748,23 +1168,66 @@ ga('send', 'pageview');
             </div>
             <div class="credit">
 
-                <p>&copy; 2019 <a href="/">フリーランサーとして生きる道</a></p>
+                <p>© 2019 <a href="/">フリーランサーとして生きる道</a></p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">hueman</a></p>
             </div>
             <div class="footer-plugins">
-              
+              <meta name="generator" content="Hexo 3.8.0"><script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
     
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
 
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
 
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
             </div>
         </div>
     </div>
 </footer>
-        
-
-
-    
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <meta name="generator" content="Hexo 3.8.0">
+<meta name="generator" content="Hexo 3.8.0"><script src="/libs/lightgallery/js/lightgallery.min.js"></script>
         <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
         <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
         <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
@@ -779,11 +1242,110 @@ ga('send', 'pageview');
     
     
 
+<script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
 
 
-<!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
     </div>
-</body>
-</html>
+<script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.src = image.dataset.src;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+</script>
+
+</body></html><!-- Custom Scripts -->

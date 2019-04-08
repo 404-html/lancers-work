@@ -10,29 +10,8 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/KUSANAGI/</loc>
-        <lastmod>2019-04-07T10:19:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/let-s-encrypt/</loc>
         <lastmod>2019-04-07T10:19:04.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/json/</loc>
-        <lastmod>2019-04-07T10:21:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/HTML/</loc>
-        <lastmod>2019-04-07T10:21:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -52,43 +31,8 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/%E4%BB%AE%E6%83%B3%E5%8C%96/</loc>
-        <lastmod>2019-04-07T10:21:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/WordPress/</loc>
         <lastmod>2019-04-07T10:21:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/Hexo/</loc>
-        <lastmod>2019-04-07T10:22:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/GitHub/</loc>
-        <lastmod>2019-04-07T10:22:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/Netlify/</loc>
-        <lastmod>2019-04-07T10:22:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/Node-js/</loc>
-        <lastmod>2019-04-07T11:31:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -102,7 +46,84 @@
 
     <url>
         <loc>https://lancers.work/tags/jQuery/</loc>
-        <lastmod>2019-04-07T11:31:15.000Z</lastmod>
+        <lastmod>2019-04-08T01:39:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/json/</loc>
+        <lastmod>2019-04-08T01:39:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/HTML/</loc>
+        <lastmod>2019-04-08T01:39:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/Node-js/</loc>
+        <lastmod>2019-04-08T01:40:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/Hexo/</loc>
+        <lastmod>2019-04-08T01:40:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/GitHub/</loc>
+        <lastmod>2019-04-08T01:40:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/Netlify/</loc>
+        <lastmod>2019-04-08T01:40:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/KUSANAGI/</loc>
+        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E4%BB%AE%E6%83%B3%E5%8C%96/</loc>
+        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/Docker/</loc>
+        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/Esxi/</loc>
+        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/ubuntu/</loc>
+        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

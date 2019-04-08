@@ -11,21 +11,26 @@
     
 
     
-    <title>アーカイブ: 2019/4 </title>
+    <title>vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化 </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Hexoは超高速WordPress仮想マシン「KUSANAGI」を超えられるか？！そして収益化ブログになり得るのか？！挑戦中！">
-<meta name="keywords" content="Node.js,Hexo,blog,ブログ,KUSANAGI,WordPress,AdSense,仮想化">
-<meta property="og:type" content="website">
-<meta property="og:title" content="フリーランサーとして生きる道">
-<meta property="og:url" content="https://lancers.work/archives/2019/04/index.html">
+        <meta name="keywords" content="KUSANAGI,仮想化,Docker,Esxi,ubuntu">
+    
+    <meta name="description" content="超高速WordPress仮想マシンのKUSANAGI。 以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。 とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては">
+<meta name="keywords" content="KUSANAGI,仮想化,Docker,Esxi,ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化">
+<meta property="og:url" content="https://lancers.work/esxi-kusanagi-runs-on-docker/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="Hexoは超高速WordPress仮想マシン「KUSANAGI」を超えられるか？！そして収益化ブログになり得るのか？！挑戦中！">
+<meta property="og:description" content="超高速WordPress仮想マシンのKUSANAGI。 以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。 とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.jpg">
+<meta property="og:updated_time" content="2019-04-08T03:06:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="フリーランサーとして生きる道">
-<meta name="twitter:description" content="Hexoは超高速WordPress仮想マシン「KUSANAGI」を超えられるか？！そして収益化ブログになり得るのか？！挑戦中！">
+<meta name="twitter:title" content="vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化">
+<meta name="twitter:description" content="超高速WordPress仮想マシンのKUSANAGI。 以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。 とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.jpg">
     
 
     
@@ -157,627 +162,219 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <p class="header">
     
-    <i class="icon fa fa-archive"></i>アーカイブ: 2019/4
+    <a class="page-title-link" href="/categories/ナレッジ/">ナレッジ</a>
     </p>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-esxi-kusanagi-runs-on-docker" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/esxi-kusanagi-runs-on-docker/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/esxi-kusanagi-runs-on-docker.jpg)" alt="vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/esxi-kusanagi-runs-on-docker/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-08T03:06:00.000Z" itemprop="datePublished">2019-04-08</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/esxi-kusanagi-runs-on-docker/">vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化</a>
+        vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/esxi-kusanagi-runs-on-docker/" class="article-date">
+            <time datetime="2019-04-08T03:06:00.000Z" itemprop="datePublished">2019-04-08</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Docker/">Docker</a>, <a class="tag-link" href="/tags/Esxi/">Esxi</a>, <a class="tag-link" href="/tags/KUSANAGI/">KUSANAGI</a>, <a class="tag-link" href="/tags/ubuntu/">ubuntu</a>, <a class="tag-link" href="/tags/仮想化/">仮想化</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/esxi-kusanagi-runs-on-docker.jpg" alt></p>
+<p>超高速WordPress仮想マシンのKUSANAGI。</p>
+<p>以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。</p>
+<p>とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによってはKUSANAGIを動かしたりしています。</p>
+<p>そこで、KUSANAGIをサクッと立ち上げるのにDockerは有効です。</p>
+<p>本記事では<strong>KUSANAGI Runs on Docker</strong>（以下、KUSANAGI RoD）の導入手順をまとめておきたいと思います。</p>
+<p>なお、ローカルの開発環境にはvSphere ESXiを利用しています。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<div class="toc-title">目　次</div><div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#kusanagi-runs-on-docker">KUSANAGI Runs on Docker</a></li>
+<li><a href="#kusanagi-runs-on-docker-導入手順">KUSANAGI Runs on Docker 導入手順</a><ul>
+<li><a href="#ubuntu18041仮想マシン作成">ubuntu18.04.1仮想マシン作成</a></li>
+<li><a href="#ovaファイルエクスポート">ovaファイルエクスポート</a></li>
+</ul>
+</li>
+<li><a href="#docker-composeymlによるkusanagi-rod構築本題">docker-compose.ymlによるKUSANAGI RoD構築（本題）</a></li>
+<li><a href="#まとめ">まとめ</a></li>
+</ul>
+<!-- tocstop -->
+</div>
+
+<h2><span id="kusanagi-runs-on-docker">KUSANAGI Runs on Docker</span></h2><p>docker-compose.ymlは公式のものを使わずに、karelie様が非常によくまとめてくれているものを参考にしました。</p>
+<p>【公式】</p>
+<a href="https://kusanagi.tokyo/cloud/kusanagi-runs-on-docker/" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img src="https://kusanagi.tokyo/wp-content/themes/kusanagi/images/ogp.png"></div><div class="descriptions"><div class="og-title">KUSANAGI Runs on Docker – KUSANAGI</div><div class="og-description">超高速WordPress仮想マシン [高速化チューニング済みWordPressサーバ]</div></div></div></a>
+<p>karelie様</p>
+<a href="https://www.karelie.net/free-fast-wordpress-site/" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img src="https://www.karelie.net/wp-content/uploads/free-fast-wordpress-site.png"></div><div class="descriptions"><div class="og-title">【第1回】GCPの無料枠でdev.toなみの爆速Wordpress環境を構築する（爆速は正義） | カレリエ</div><div class="og-description">GCPの無料枠でdev.toなみの爆速Wordpress環境を構築する方法を紹介する。巷で話題になっていたdev.toなみの爆速Wordpr…</div></div></div></a>
+<h2><span id="kusanagi-runs-on-docker-導入手順">KUSANAGI Runs on Docker 導入手順</span></h2><h3><span id="ubuntu18041仮想マシン作成">ubuntu18.04.1仮想マシン作成</span></h3><p>karelie様のKUSANAI RoDは1台のubuntuサーバーでいくつものKUSANAGIを動かせるようになっています。素晴らしい！！！</p>
+<p>そうは言ってもサーバーの性能にも限界がありますので、10個近くのKUSANAGIを動かしたら別のubuntuサーバーでKUSANAGIを動かしていますが、その際ネックになるのが、ubuntuのインストールと初期設定です。</p>
+<p>KUSANAGIマシンが増えるたびに一から土台となるubuntuサーバーを構築するのは大変というか面倒です。</p>
+<p>そこで、KUSANAGI RoDを動かす上で必要な標準設定まで含んだubuntuを以下のように作成して、vSphereでovaファイルとしてエクスポートしておいたものを使い回すことにします。</p>
+<p>vSphere ESXiにubuntu18.04.1 Serverをインストールする詳細な手順は省略しますが、Server版のインストールで下記の画面が表示されたらDockerを選択してインストールしてしまいましょう。</p>
+<p><img src="/images/esxi-kusanagi-runs-on-docker-1.jpg" alt></p>
+<p>Dockerを選択しなかった場合（し忘れた場合）は、後からdocker-ceとdocker-composeをインストールします。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># apt install -y \</span></span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    software-properties-common</span><br><span class="line"></span><br><span class="line"><span class="comment">#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span></span><br><span class="line">    add-apt-repository \</span><br><span class="line">    <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">    <span class="variable">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">    stable"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># apt update</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># apt install -y docker-ce</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl status docker</span></span><br><span class="line">/** active (running)になっていることを確認 **/</span><br><span class="line"></span><br><span class="line">/** rootをdockerグループに追加 **/</span><br><span class="line"><span class="comment"># usermod -aG docker root</span></span><br></pre></td></tr></table></figure>
+<p>少し戻りますが、rootでSSHから作業する場合、以下のようにrootのパスワードとrootによるSSH接続を許可しておきます。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd root</span><br><span class="line"> ① 現在のユーザのパスワードを入力 </span><br><span class="line"> ② rootの新しいパスワードを入力 </span><br><span class="line"> ③ ②と同じパスワードを入力</span><br><span class="line"></span><br><span class="line"><span class="comment"># sudo su</span></span><br><span class="line"></span><br><span class="line">/** rootによるSSH許可 **/</span><br><span class="line"><span class="comment"># nano /etc/ssh/sshd_config</span></span><br><span class="line">（追記）PermitRootLogin yes</span><br><span class="line"><span class="comment"># systemctl restart sshd</span></span><br></pre></td></tr></table></figure>
+<h3><span id="ovaファイルエクスポート">ovaファイルエクスポート</span></h3><p>ubuntu+Docker+SSHの環境がある程度整ったら、vSphere clientでOVFファイルにエクスポートします。</p>
+<p>何度もubuntuの初期環境設定するのは面倒ですので、基本的なシステム構成ができたらOVFファイルで保存しておきましょう。</p>
+<p>次回以降、Docker RoDを構築する際の土台はこのOVFファイルを利用してubuntu+Docker環境をサクッと構築して、その上にKUSANAGI RoDをのせると簡単です。</p>
+<p>※Docker RoDでPULLするDcokerイメージをこの基本ubuntuに入れておいてもいいかもしれません。<br>（Dockerイメージのバージョンが上がると困るケースでは、Dockerイメージは時間がかかりますがその都度PULLしたほうがいいかもしれません。）</p>
+<p><img src="/images/esxi-kusanagi-runs-on-docker-2.jpg" alt></p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2><span id="docker-composeymlによるkusanagi-rod構築本題">docker-compose.ymlによるKUSANAGI RoD構築（本題）</span></h2><p>公式のdocker-compose-ymlもわかりやすいですが、いろいろ改良してくれたkarelie様のファイル群でKUSANAGIを構築していきます。</p>
+<p>ファイルや構築手順はkarelie様のサイトをご参照ください。</p>
+<p><code>kusanagi-1</code>フォルダに入っている<code>docker-compose.yml</code>にphpMyAdminコンテナだけ追加させていただきましたので、そちらを公開します。</p>
+<p><code>https://ローカルIPアドレス:指定ポート番号(下記の例では33066)</code>でphpMyAdminにアクセスできます。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">'2'</span></span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  kusanagi-data:</span><br><span class="line">    container_name: kusanagi-1</span><br><span class="line">    image: busybox</span><br><span class="line">    restart: always</span><br><span class="line">    stdin_open: <span class="literal">true</span></span><br><span class="line">    tty: <span class="literal">true</span></span><br><span class="line">    volumes:</span><br><span class="line">      /etc/nginx/conf.d</span><br><span class="line">      /etc/httpd/conf.d</span><br><span class="line">      /etc/kusanagi.d</span><br><span class="line">      ./data:/home/kusanagi</span><br><span class="line">      /home/wordpress/uploads.ini:/usr/<span class="built_in">local</span>/etc/php/conf.d/uploads.ini</span><br><span class="line">    <span class="built_in">command</span>: /bin/sh</span><br><span class="line"></span><br><span class="line">  kusanagi-nginx:</span><br><span class="line">    image: primestrategy/kusanagi-nginx:1.10.0-1</span><br><span class="line">    environment:</span><br><span class="line">      VIRTUAL_HOST: lancers.hoge</span><br><span class="line">      VIRTUAL_PORT: 443</span><br><span class="line">      VIRTUAL_PROTO: https</span><br><span class="line">      LETSENCRYPT_HOST: lancers.hoge</span><br><span class="line">      LETSENCRYPT_EMAIL: mail-address@lancers.hoge</span><br><span class="line">      LETSENCRYPT_TEST: <span class="string">"false”</span></span><br><span class="line"><span class="string">      PROFILE: プロファイル名（KUSANAGIを設置するフォルダ名になります）</span></span><br><span class="line"><span class="string">      FQDN: lancers.hoge</span></span><br><span class="line"><span class="string">      WPLANG: ja</span></span><br><span class="line"><span class="string">      BCACHE: "</span>off”</span><br><span class="line">      FCACHE: <span class="string">"off”</span></span><br><span class="line"><span class="string">    volumes_from:</span></span><br><span class="line"><span class="string">      kusanagi-data</span></span><br><span class="line"><span class="string">    links:</span></span><br><span class="line"><span class="string">      kusanagi-php7:php</span></span><br><span class="line"><span class="string">    external_links:</span></span><br><span class="line"><span class="string">      mariadb:mysql</span></span><br><span class="line"><span class="string">    ports:</span></span><br><span class="line"><span class="string">      "</span>443”</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      common_link</span><br><span class="line"></span><br><span class="line">  kusanagi-php7:</span><br><span class="line">    image: kusanagi-php7</span><br><span class="line">    external_links:</span><br><span class="line">      mariadb:mysql</span><br><span class="line">    volumes_from:</span><br><span class="line">     kusanagi-data</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      common_link</span><br><span class="line"></span><br><span class="line">  kusanagi-phpmyadmin:</span><br><span class="line">    container_name: kusanagi-phpmyadmin</span><br><span class="line">    image: phpmyadmin/phpmyadmin:latest</span><br><span class="line">    external_links:</span><br><span class="line">      mariadb:mysql</span><br><span class="line">    environment:</span><br><span class="line">      PMA_ARBITRARY=1</span><br><span class="line">      PMA_HOST=mysql　<span class="comment"># 必ず「mysql」</span></span><br><span class="line">      PMA_USER=root</span><br><span class="line">      PMA_PASSWORD=rootパスワード</span><br><span class="line">    ports:</span><br><span class="line">      <span class="string">"33066:80"</span>　<span class="comment"># ポート33066は適宜変更</span></span><br><span class="line">    volumes_from:</span><br><span class="line">      kusanagi-data</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      common_link</span><br><span class="line"></span><br><span class="line">  networks:</span><br><span class="line">    common_link:</span><br><span class="line">      external: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>このdocker-compose.ymlでKUSANAGI RoDとphpMyAdminが立ち上がります。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># docker-compose -f /home/wordpress/kusanagi-1/docker-compose.yml up -d</span></span><br></pre></td></tr></table></figure>
+<p>※事前にビルドやファイルの変更箇所などもありますが、詳細はkarelie様のこのページを御覧ください。</p>
+<a href="https://www.karelie.net/free-fast-wordpress-site-kusanagi-docker/" class="link-preview" target="_blank" rel="nofollw"><div class="link-area"><div class="og-image"><img src="https://www.karelie.net/wp-content/uploads/free-fast-wordpress-site.png"></div><div class="descriptions"><div class="og-title">【第5回】GCPの無料枠でdev.toなみの爆速Wordpress環境を構築する（KUSANAGI Runs on Docker編） | カレリエ</div><div class="og-description">GCPの無料枠でdev.toなみの爆速Wordpress環境を構築するが公式ページで掲載されているインストール方法だと様々な問題があり実用的…</div></div></div></a>
+<p>一度KUSANAGI RoDを立ち上げた環境から複数のKUSANAGI RoDを立ち上げる場合は、</p>
+<ul>
+<li>container_name: kusanagi-1</li>
+<li>LETSENCRYPT_HOST: lancers.hoge</li>
+<li>PROFILE: プロファイル名</li>
+<li>FQDN: lancers.hoge</li>
+</ul>
+<p>この箇所を<code>kusanagi-2</code>に変更したり、新しいドメインに合わせてFQDNを書き換、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose -f /home/wordpress/kusanagi-2/docker-compose.yml up -d</span><br></pre></td></tr></table></figure>
+<p>とすれば2つ目のKUSANAGI RoDが簡単に立ち上がります。</p>
+<h2><span id="まとめ">まとめ</span></h2><p>いかがでしたでしょうか。</p>
+<p>自分で開発環境やサーバーを構築される方は何度もOSをインストールした経験があると思います。</p>
+<p>KUSANAGI RoDは一つのサーバーにいくつでも構築できますので、KUSANAGI用途でそうそうサーバーを一から構築したり増やしたりすることは無いと思いますが、今回の記事に限らず、ご自身の標準機能を実装させた土台のOSをovaファイルで持っておくことは何かと便利かと思います。</p>
+<p>そしてKUSANAGI RoDは本当に便利です。</p>
+<p>KUSANAGIがDockerに対応してくれているおかげで自宅サーバーでもGCPでも、Dockerを動かせる環境があれば、どこでもKUSANAGIを走らせることができます。</p>
+<p>管理人は徐々にNode.jsに移行していますが、まだまだWordPressの勢いは衰えないと思いますので、Node.jsの勉強をしつつ、KUSANAGIも忘れないようにしていこうと思います。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <footer class="article-footer">
             
+
+
+
+    <a data-url="https://lancers.work/esxi-kusanagi-runs-on-docker/" data-id="cju7qxvv200000brthkb8zywd" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "bulma"
+        },
+        "headline": "vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化",
+        "image": "https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.jpg",
+        "keywords": "KUSANAGI 仮想化 Docker Esxi ubuntu",
+        "genre": "ナレッジ",
+        "datePublished": "2019-04-08",
+        "dateCreated": "2019-04-08",
+        "dateModified": "2019-04-08",
+        "url": "https://lancers.work/esxi-kusanagi-runs-on-docker/",
+        "description": "
 超高速WordPress仮想マシンのKUSANAGI。
 以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。
-とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては
-        </p>
-    </div>
+とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては"
+        "wordCount": 870
+    }
+</script>
+
+    <p>関連記事</p>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/vmware-esxi65-realtek-nic.jpg"></div><div class="popular-posts-title"><h3><a href="/vmware-esxi65-realtek-nic/" title="VMware ESXi「No Network Adapters」エラー時の対処法" rel="bookmark">VMware ESXi「No Network Adapters」エラー時の対処法</a></h3></div></li></ul>
 </article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-github-netlify-deploy/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-github-netlify-deploy/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-06T22:59:00.000Z" itemprop="datePublished">2019-04-07</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo-github-netlify-deploy/">Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。
-開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。
-KUSANAGIのLAMP環境にHexoを構築まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/numbers3/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/numbers3/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/アプリ/">アプリ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/numbers3/">ナンバーズ3アプリ ～ Node.jsベース ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            ナンバーズ4はこちら
-ナンバーズ3 過去10回の当選数字
-
-集計回数
-
-
-ナンバーズ3 過去10回の当選数字出現回数
-
-
-
-
-
-(adsbygoogle = window.adsbygoogle || []).push({});
-
-目　次
-
-
-
-ナンバーズアプリについて
-ナンバーズアプリの使い方
-ナンバーズ予想 実験方法
-このアプリを支えているNode.js製WEBアプリ
-
-
-
-
-
-
-ナンバーズア
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/numbers4/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/numbers4/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/アプリ/">アプリ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/numbers4/">ナンバーズ4アプリ ～ Node.jsベース ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            ナンバーズ3はこちら
-ナンバーズ4 過去10回の当選数字
-
-集計回数
-
-
-ナンバーズ4 過去10回の当選数字出現回数
-
-
-
-
-
-(adsbygoogle = window.adsbygoogle || []).push({});
-
-目　次
-
-
-
-ナンバーズアプリについて
-ナンバーズアプリの使い方
-ナンバーズ予想 実験方法
-このアプリを支えているNode.js製WEBアプリ
-
-
-
-
-
-
-ナンバーズア
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/vmware-esxi65-realtek-nic/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/vmware-esxi65-realtek-nic.jpg)" alt="VMware ESXi「No Network Adapters」エラー時の対処法" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/vmware-esxi65-realtek-nic/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-04T02:10:00.000Z" itemprop="datePublished">2019-04-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/vmware-esxi65-realtek-nic/">VMware ESXi「No Network Adapters」エラー時の対処法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-ESXiはINTEL NIC以外のネットワークアダプタを認識してくれない？！
-使わないパソコンが3台あって、VMware vSphere Hypervisor ESXiを入れたところ、見事に3台とも「No Network Adapters」のグレー画面（キャプチャ撮り忘れた）が現れてインストールできず。
-どうやらINTEL NIC以外のネットワークアダプタは認識しないようで、確かにINTEL製で
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/wordpress-custom-rewrite-rule/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/wordpress-custom-rewrite-rule.jpg)" alt="WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/wordpress-custom-rewrite-rule/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-03T22:55:00.000Z" itemprop="datePublished">2019-04-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/wordpress-custom-rewrite-rule/">WordPressクエリパラメータつきURLを静的URLにリライト ～ 完全版 ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-本記事の目的はWordPressでクエリ文字付き動的URLを静的URLにリライトし、クエリパラメータの値を取得することです。
-WordPressの公式サイト通りに関数を追加したり、コードを書けばできますが、その他のページをさまよっていてすぐに実装できなかったのでまとめておきます。
-1https://kusanagi.lancers.work/food/?pref=hokkaido&amp;cit
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/numbers-2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/numbers-2.jpg)" alt="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/numbers-2/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/アプリの素/">アプリの素</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-03T09:40:00.000Z" itemprop="datePublished">2019-04-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/numbers-2/">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。
-今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。
-ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (ad
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/numbers-1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/numbers-1.jpg)" alt="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/numbers-1/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/アプリの素/">アプリの素</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-03T09:39:00.000Z" itemprop="datePublished">2019-04-03</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/numbers-1/">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。
-今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！
-ナンバーズ3アプリナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsby…
-ナンバー
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-hueman-list-archives-date/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/archives-list-date-fix.jpg)" alt="Hexoのサイドバーのアーカイブ日付表示の変更方法" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-hueman-list-archives-date/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-04-02T04:40:00.000Z" itemprop="datePublished">2019-04-02</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo-hueman-list-archives-date/">Hexoのサイドバーのアーカイブ日付表示の変更方法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Hexoでブログを書き始めてかなり満足度の高い作業ができています。
-Hexoブログ開設以来、ずっと気になっていて修正方法がわからなかった箇所があります。
-ここです。
-
-サイドバーのアーカイブの日付が漢数字になっています。
-今回はこの日付の表示方法を変更していきましょう！
-
-
-(adsbygoogle = window.adsbygoogle || []).push({});
-
-目　次
-
-
-
-ar
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-plugin-fix-toc/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-plugin-fix-toc/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo-plugin-fix-toc/">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。
-ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。
-そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。
-なお、この修正は管理人の環境、管理人仕様的なところがあります。
-gitにもnpmにも上げていませんし、プラグイン
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    <div class="article-row">
-        <article class="article article-summary">
-            <div class="article-summary-inner">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-az-36+22+10+10" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9596836309"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </article>
-        <article class="article article-summary">
-            <div class="article-summary-inner">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-az-36+22+10+10" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9596836309"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </article> 
-    </div>
-
-    </div></section>
-
-
-    <nav id="page-nav">
-        <span class="pages"> 1 ページ2 ページ中</span>
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2019/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/04/page/2/">&raquo;</a>
-    </nav>
-
-
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -813,6 +410,19 @@ gitにもnpmにも上げていませんし、プラグイン
         </ul>
     </div>
     
+        
+<nav id="article-nav">
+    
+    
+        <a href="/hexo-github-netlify-deploy/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">前の記事</strong>
+        <p class="article-nav-title">Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
     <div class="widgets-container">
         
             
@@ -821,7 +431,7 @@ gitにもnpmにも上げていませんし、プラグイン
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

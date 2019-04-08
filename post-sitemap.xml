@@ -8,6 +8,30 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/esxi-kusanagi-runs-on-docker/</loc>
+        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/hexo-github-netlify-deploy/</loc>
+        <lastmod>2019-04-08T01:40:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
+        <lastmod>2019-04-08T01:39:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/numbers4/</loc>
         <lastmod>2019-04-07T11:31:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,14 +48,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-github-netlify-deploy/</loc>
-        <lastmod>2019-04-07T10:22:39.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://lancers.work/wordpress-custom-rewrite-rule/</loc>
         <lastmod>2019-04-07T10:21:48.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,14 +58,6 @@
     <url>
         <loc>https://lancers.work/vmware-esxi65-realtek-nic/</loc>
         <lastmod>2019-04-07T10:21:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
-        <lastmod>2019-04-07T10:21:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

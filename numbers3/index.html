@@ -17,19 +17,19 @@
     
         <meta name="keywords" content="Node.js,Express,jQuery,ナンバーズ">
     
-    <meta name="description" content="ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて ナンバーズアプリの使い方 ナンバーズ予想 実験方法 このアプリを支えているNode.js製WEBアプリ       ナンバーズア">
+    <meta name="description" content="ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて アプリの作成にあたって ナンバーズ3アプリの使い方 ナンバーズ3予想 実験方法       ナンバーズアプリについてアプリの作成">
 <meta name="keywords" content="Node.js,Express,jQuery,ナンバーズ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ナンバーズ3アプリ ～ Node.jsベース ～">
 <meta property="og:url" content="https://lancers.work/numbers3/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて ナンバーズアプリの使い方 ナンバーズ予想 実験方法 このアプリを支えているNode.js製WEBアプリ       ナンバーズア">
+<meta property="og:description" content="ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて アプリの作成にあたって ナンバーズ3アプリの使い方 ナンバーズ3予想 実験方法       ナンバーズアプリについてアプリの作成">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/numbers3.jpg">
-<meta property="og:updated_time" content="2019-04-08T03:20:54.000Z">
+<meta property="og:updated_time" content="2019-04-08T04:41:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ナンバーズ3アプリ ～ Node.jsベース ～">
-<meta name="twitter:description" content="ナンバーズ4はこちら ナンバーズ3 過去10回の当選数字  集計回数   ナンバーズ3 過去10回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて ナンバーズアプリの使い方 ナンバーズ予想 実験方法 このアプリを支えているNode.js製WEBアプリ       ナンバーズア">
+<meta name="twitter:description" content="ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数      (adsbygoogle = window.adsbygoogle || []).push({});  目　次    ナンバーズアプリについて アプリの作成にあたって ナンバーズ3アプリの使い方 ナンバーズ3予想 実験方法       ナンバーズアプリについてアプリの作成">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/numbers3.jpg">
     
 
@@ -201,13 +201,13 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><a href="https://lancers.work/numbers4/">ナンバーズ4はこちら</a></p>
-<h2><span id="ナンバーズ3-過去10回の当選数字">ナンバーズ3 過去<span class="selected-tit">10</span>回の当選数字</span></h2>
+            <p><a href="https://lancers.work/numbers4/">ナンバーズ4アプリはこちら</a></p>
+<h2><span id="ナンバーズ3-過去回の当選数字">ナンバーズ3 過去<span class="selected-tit"></span>回の当選数字</span></h2>
 
-<p>集計回数<select id="tit"></select></p>
+<p>集計回数：<select id="tit"></select></p>
 <table id="win-result"></table>
 
-<h2><span id="ナンバーズ3-過去10回の当選数字出現回数">ナンバーズ3 過去<span class="selected-tit">10</span>回の当選数字出現回数</span></h2>
+<h2><span id="ナンバーズ3-過去回の当選数字出現回数">ナンバーズ3 過去<span class="selected-tit"></span>回の当選数字出現回数</span></h2>
 
 <table id="win-count"></table>
 
@@ -220,122 +220,43 @@ ga('send', 'pageview');
 <!-- toc -->
 <ul>
 <li><a href="#ナンバーズアプリについて">ナンバーズアプリについて</a><ul>
-<li><a href="#ナンバーズアプリの使い方">ナンバーズアプリの使い方</a></li>
-<li><a href="#ナンバーズ予想-実験方法">ナンバーズ予想 実験方法</a></li>
-<li><a href="#このアプリを支えているnodejs製webアプリ">このアプリを支えているNode.js製WEBアプリ</a></li>
+<li><a href="#アプリの作成にあたって">アプリの作成にあたって</a></li>
+<li><a href="#ナンバーズ3アプリの使い方">ナンバーズ3アプリの使い方</a></li>
+<li><a href="#ナンバーズ3予想-実験方法">ナンバーズ3予想 実験方法</a></li>
 </ul>
 </li>
 </ul>
 <!-- tocstop -->
 </div>
 
-<h2><span id="ナンバーズアプリについて">ナンバーズアプリについて</span></h2><h3><span id="ナンバーズアプリの使い方">ナンバーズアプリの使い方</span></h3><p>直近回から過去30回までの当選番号、出現回数を調べることができます</p>
+<h2><span id="ナンバーズアプリについて">ナンバーズアプリについて</span></h2><h3><span id="アプリの作成にあたって">アプリの作成にあたって</span></h3><p>本アプリで使用しているナンバーズの当選番号データは、Node.jsで作成したWEBアプリでスクレイピングにより取得しています。<br>（スクレイピンはナンバーズ抽選日に1回行っています。スクレイピングをする際は対象サイトに迷惑をかけないように行いましょう。）</p>
+<p>なおNode.jsアプリのエッセンスは下記記事に書いています。</p>
+<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<p>そのNode.jsでアプリと連携させつつ、この静的ブログでWEBアプリっぽいものを作ってみようの第一弾です。</p>
+<p>簡単なアプリですがナンバーズ予想のお役には十分立てると思います。</p>
+<p>ご利用は無料ですので、ナンバーズ予想にお気軽に使ってみてください。</p>
+<h3><span id="ナンバーズ3アプリの使い方">ナンバーズ3アプリの使い方</span></h3><p>ナンバーズ3の直近回から過去30回までの当選番号、出現回数を調べることができます</p>
 <p>集計回数を絞り込むと下段の「当選数字出現回数」も自動的に集計し直されます。</p>
-<h3><span id="ナンバーズ予想-実験方法">ナンバーズ予想 実験方法</span></h3><p>某テレビ番組で「月の最初の2週間の当選数字」に出現していない数字を中心に残り2週間ナンバーズを買い続けるという必勝法が紹介されていました。<br>※テレビ放映では当選確率100％と言っていて、本当に当選していました。（購入口数もそれなりに必要だったみたいですが・・・）</p>
+<h3><span id="ナンバーズ3予想-実験方法">ナンバーズ3予想 実験方法</span></h3><p>某テレビ番組で「月の最初の2週間の当選数字」に出現していない数字を中心に残り2週間ナンバーズを買い続けるという必勝法が紹介されていました。<br>※テレビ放映では当選確率100％と言っていて、本当に当選していました。（購入口数もそれなりに必要だったみたいですが・・・）</p>
 <p>本アプリでは、この放映内容を元に直近2週間分（10回分）の当選数字を集計して、どの数字が出ていないかチェックすることができます。</p>
 <p>具体的な購入数字の組み合わせはこのアプリでは提供されませんので、このアプリの先からはあなたの運におまかせします！</p>
 <p>ナンバーズは偏りはあるものの所詮確率論と考えていますので、最終的にはすべての組み合わせ・数字が等しく出現するハズとの考え方を尊重しています。</p>
-<h3><span id="このアプリを支えているnodejs製webアプリ">このアプリを支えているNode.js製WEBアプリ</span></h3><p>本アプリで使用しているナンバーズの当選番号データは、Node.jsで作成したWEBアプリでスクレイピングにより取得しています。<br>（スクレイピンは1日1回行っています。スクレイピングをする際は対象サイトに迷惑をかけないように行いましょう。）</p>
-<p>Node.jsアプリのエッセンスは下記記事に書いています。</p>
-<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
-<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
-<p><a href="https://lancers.work/numbers4/">ナンバーズ4はこちら</a></p>
+<p><a href="https://lancers.work/numbers4/">ナンバーズ4アプリはこちら</a></p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<style>
-#tit {font-size: large;} #win-result th, #win-result td {text-align: center; width: 25%;}
-</style>
+<style>#tit {font-size: large;} #win-result th, #win-result td {text-align: center; width: 25%;}</style>
 
-<script>
-function createTable(c) {
-  var t = '<tr><th>回分</th><th>回別</th><th>抽選日</th><th>当選数字</th></tr>';
-  var ca = [];
-  $.getJSON('../../json/numbers3.json', function(d) {
-    for(var i=0; i<c; i++) {
-      var num = Number(i) + 1;
-      t += '<tr><td>'+num+'</td><td>'+d[i].tit+'</td><td>'+d[i].date+'</td><td>'+d[i].win+'</td></tr>';
-      ca.push(strToArray(d[i].win));
-    }
-    $('#win-result').append(t);
-    t = makeCountTable(ca);
-    $('#win-count').append(t);
-  });
-  $('.selected-tit').text(c);
-}
-
-function makeCountTable(c) {
-  var ct = countNumber(c);
-  ct.sort(function(a,b) {
-    if(a.count < b.count) return -1;
-    if(a.count > b.count) return 1;
-    return 0;
-  });
-  var t = '<tr><th width="50%">当選数字（出現回数少ない順）</th>';
-  ct.forEach(function(d) {
-    t += '<th width="5%">'+d.num+'</th>';
-  });
-  t += '</tr><tr><td width="50%">出現回数</td>';
-  ct.forEach(function(d) {
-    t += '<td width="5%">'+d.count+'</td>';
-  });
-  t += '<tr>';
-  return t;
-}
-
-function strToArray(s) {
-  var s1 = s.split('');
-  var a = [];
-  s1.forEach(function(d) {
-    a.push(d);
-  });
-  return a;
-}
-
-function countNumber(a) {
-  var c = [0,0,0,0,0,0,0,0,0,0];
-  a.forEach(function(d1) {
-    d1.forEach(function(d2) {
-      c[d2]++;
-    });
-  });
-  var r = [];
-  for(var i=0; i<10; i++) {
-    r.push({"num":i, "count":c[i]})
-  }
-  return r;
-}
-
-$(function() {
-  $('#tit').on('change', function() {
-    $('#win-result tr').remove();
-    $('#win-count tr').remove();
-    var t = $('#tit').val();
-    createTable(t);
-  });
-});
-
-$(function() {
-  var base = 10;
-  for(var i=1; i<31; i++) {
-    if(i == base) {
-      var s = ' selected';
-    } else {
-      var s = '';
-    }
-    $('#tit').append('<option value="'+i+'"'+s+'>過去'+i+'回分</option>');
-  }
-  createTable(base);
-});
-</script>
+<script>function createTable(c) {var t = '<tr><th>回分</th><th>回別</th><th>抽選日</th><th>当選数字</th></tr>';var ca = [];$.getJSON('../../json/numbers3.json', function(d) {for(var i=0; i<c; i++) {var num = Number(i) + 1;t += '<tr><td>'+num+'</td><td>'+d[i].tit+'</td><td>'+d[i].date+'</td><td>'+d[i].win+'</td></tr>';ca.push(strToArray(d[i].win));}$('#win-result').append(t);t = makeCountTable(ca);$('#win-count').append(t);});$('.selected-tit').text(c);}function makeCountTable(c) {var ct = countNumber(c);ct.sort(function(a,b) {if(a.count < b.count) return -1;if(a.count > b.count) return 1;return 0;});var t = '<tr><th width="50%">当選数字（出現回数少ない順）</th>';ct.forEach(function(d) {t += '<th width="5%">'+d.num+'</th>';});t += '</tr><tr><td width="50%">出現回数</td>';ct.forEach(function(d) {t += '<td width="5%">'+d.count+'</td>';});t += '<tr>';return t;}function strToArray(s) {var s1 = s.split('');var a = [];s1.forEach(function(d) {a.push(d);});return a;}function countNumber(a) {var c = [0,0,0,0,0,0,0,0,0,0];a.forEach(function(d1) {d1.forEach(function(d2) {c[d2]++;});});var r = [];for(var i=0; i<10; i++) {r.push({"num":i, "count":c[i]})}return r;}$(function() {$('#tit').on('change', function() {$('#win-result tr').remove();$('#win-count tr').remove();var t = $('#tit').val();createTable(t);});});$(function() {var base = 10;for(var i=1; i<31; i++) {if(i == base) {var s = ' selected';} else {var s = '';}$('#tit').append('<option value="'+i+'"'+s+'>過去'+i+'回分</option>');}createTable(base);});</script>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://lancers.work/numbers3/" data-id="cju7maac5000j9mrtq2uwy6e7" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
+    <a data-url="https://lancers.work/numbers3/" data-id="cju7v2f3v000qkqrtlvy3nhgo" class="article-share-link"><i class="fa fa-share"></i>シェア</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -413,13 +334,13 @@ $(function() {
         "dateCreated": "2019-04-05",
         "dateModified": "2019-04-08",
         "url": "https://lancers.work/numbers3/",
-        "description": "ナンバーズ4はこちら
-ナンバーズ3 過去10回の当選数字
+        "description": "ナンバーズ4アプリはこちら
+ナンバーズ3 過去回の当選数字
 
-集計回数
+集計回数：
 
 
-ナンバーズ3 過去10回の当選数字出現回数
+ナンバーズ3 過去回の当選数字出現回数
 
 
 
@@ -432,17 +353,17 @@ $(function() {
 
 
 ナンバーズアプリについて
-ナンバーズアプリの使い方
-ナンバーズ予想 実験方法
-このアプリを支えているNode.js製WEBアプリ
+アプリの作成にあたって
+ナンバーズ3アプリの使い方
+ナンバーズ3予想 実験方法
 
 
 
 
 
 
-ナンバーズア"
-        "wordCount": 391
+ナンバーズアプリについてアプリの作成"
+        "wordCount": 199
     }
 </script>
 
@@ -487,20 +408,20 @@ $(function() {
         
 <nav id="article-nav">
     
-        <a href="/hexo-github-netlify-deploy/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/numbers4/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">次の記事</strong>
         <p class="article-nav-title">
         
-            Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説
+            ナンバーズ4アプリ ～ Node.jsベース ～
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/numbers4/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/vmware-esxi65-realtek-nic/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">前の記事</strong>
-        <p class="article-nav-title">ナンバーズ4アプリ ～ Node.jsベース ～</p>
+        <p class="article-nav-title">VMware ESXi「No Network Adapters」エラー時の対処法</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -580,28 +501,6 @@ $(function() {
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/numbers3/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
-                            <p class="item-title"><a href="/numbers3/" class="title">ナンバーズ3アプリ ～ Node.jsベース ～</a></p>
-                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
-                        </div>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/numbers4/" class="thumbnail">
     
     
@@ -615,6 +514,28 @@ $(function() {
                         <div class="item-inner">
                             <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
                             <p class="item-title"><a href="/numbers4/" class="title">ナンバーズ4アプリ ～ Node.jsベース ～</a></p>
+                            <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
+                        </div>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/numbers3/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <!-- <p class="item-category"><a class="article-category-link" href="/categories/アプリ/">アプリ</a></p> -->
+                            <p class="item-title"><a href="/numbers3/" class="title">ナンバーズ3アプリ ～ Node.jsベース ～</a></p>
                             <p class="item-date"><time datetime="2019-04-05T05:39:00.000Z" itemprop="datePublished">2019-04-05</time></p>
                         </div>
                     </li>
@@ -742,10 +663,10 @@ $(function() {
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/hexo-plugin-fix-toc/" class="thumbnail">
+                            <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
     
     
 </a>
@@ -754,7 +675,7 @@ $(function() {
                         
                         <div class="item-inner">
                             <!-- <p class="item-category"><a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a></p> -->
-                            <p class="item-title"><a href="/hexo-plugin-fix-toc/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></p>
+                            <p class="item-title"><a href="/hexo-plugin-fix-tag-link-preview/" class="title">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></p>
                             <p class="item-date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></p>
                         </div>
                     </li>

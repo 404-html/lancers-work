@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lancers.work/"/>
-  <updated>2019-04-08T03:06:56.000Z</updated>
+  <updated>2019-04-09T09:38:38.000Z</updated>
   <id>https://lancers.work/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Node.jsで国税庁法人番号システムWeb-APIを叩いてみる</title>
+    <link href="https://lancers.work/nodejs-express-houjin-api/"/>
+    <id>https://lancers.work/nodejs-express-houjin-api/</id>
+    <published>2019-04-09T06:31:00.000Z</published>
+    <updated>2019-04-09T09:38:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/nodejs-express-houjin-api.jpg" alt></p><p>Node.jsで<strong>国税庁の法人番号公表サイトの法人番号システムWeb-API</strong>を利用してみたいと思います。</p><a href="http://www.houjin-bangou.nta.go.jp/webapi/#web-api03" class="link-preview" target="_blank" rel="nofollw"><div class="link-area"><div class="og-image"><img></div><div class="descriptions"><div class="og-title">法人番号システム Web-API｜国税庁法人番号公表サイト</div><div class="og-description">国税庁法人番号公表サイトで提供するWeb-API機能について説明しています。</div></div></div></a><p>法人番号システムWeb-APIのレスポンスはCSV形式とXML形式があります。</p><p>いまどきどちらもあれですが、XML形式がまだ多いことからXML形式でAPIのレスポンスを受け、処理してみたいと思います。</p><p>XMLをjson形式に変換するモジュールもありますが、今回はXMLのまま処理しています。</p><p>なお、Node.jsのフレームワークにはExpressを使っています。</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div class="toc-title">目　次</div><div class="toc"><!-- toc --><ul><li><a href="#routesindexjs">/routes/index.js</a><ul><li><a href="#モジュール">モジュール</a></li><li><a href="#apiリクエストレスポンスコード解説">APIリクエスト＆レスポンスコード解説</a></li><li><a href="#実行結果">実行結果</a></li></ul></li><li><a href="#まとめ">まとめ</a></li></ul><!-- tocstop --></div><h2><span id="routesindexjs">/routes/index.js</span></h2><p>いきなりソースです。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">var express = require(<span class="string">'express'</span>);</span><br><span class="line">var router = express.Router();</span><br><span class="line"></span><br><span class="line">var request = require(<span class="string">'request'</span>);</span><br><span class="line">var cheerio = require(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line">var result = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="keyword">function</span>(req, res, next) &#123;</span><br><span class="line"></span><br><span class="line">  var options = &#123;</span><br><span class="line">    url: <span class="string">'https://api.houjin-bangou.nta.go.jp/4/name'</span>,</span><br><span class="line">    method: <span class="string">'GET'</span>,</span><br><span class="line">    qs: &#123;</span><br><span class="line">      <span class="string">'id'</span>: <span class="string">'*************'</span>, // APIキー（事前に申請して取得の必要があります） </span><br><span class="line">      <span class="string">'name'</span>: <span class="string">'トマト'</span>, // 検索ワード</span><br><span class="line">      <span class="string">'type'</span>: <span class="string">'12'</span> // 出力形式（XML）</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  request(options, <span class="keyword">function</span>(err, req, data) &#123;</span><br><span class="line">    $ = cheerio.load(data);</span><br><span class="line">    Object.keys($(<span class="string">"corporation"</span>)).forEach(<span class="keyword">function</span>(key) &#123;</span><br><span class="line">      var number = $(<span class="string">"corporateNumber"</span>).eq(key).text();</span><br><span class="line">      var name = $(<span class="string">"name"</span>).eq(key).text();</span><br><span class="line">      var post = $(<span class="string">"postCode"</span>).eq(key).text();</span><br><span class="line">      var pref = $(<span class="string">"prefectureName"</span>).eq(key).text();</span><br><span class="line">      var city = $(<span class="string">"cityName"</span>).eq(key).text();</span><br><span class="line">      var street = $(<span class="string">"streetNumber"</span>).eq(key).text();</span><br><span class="line">      result += key + <span class="string">' &gt;&gt;&gt; '</span> + number +<span class="string">' : '</span> + name + <span class="string">' : 〒'</span> + post + <span class="string">' '</span> +pref + city + street + <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  res.send(result);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">module.exports = router;</span><br></pre></td></tr></table></figure><p>書き終えてみるとこれだけのコードなのですが、パースやら非同期やらハマりまくり、紆余曲折の結果、上記のソースに一旦落ち着きました。</p><p>検索データの投入方法や結果の表示方法は仮ですので、XMLからデータを抽出する過程を忘れないために書いています。</p><h3><span id="モジュール">モジュール</span></h3><p><code>request</code>と<code>cheerio</code>です。</p><p>requestモジュールはGET/POST通信するためのモジュールです。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install request --save</span><br></pre></td></tr></table></figure><p>cheerioモジュールはHTMLパーサです。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cheerio --save</span><br></pre></td></tr></table></figure><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><h3><span id="apiリクエストレスポンスコード解説">APIリクエスト＆レスポンスコード解説</span></h3><p>11行目の<code>var options =</code>では、APIにリクエストするパラメータを設定しています。</p><p><code>qs</code>はGETクエリパラメータで、ここでは最小限の<code>APIキー</code>と<code>キーワード</code>と<code>レスポンス形式</code>を指定しています。</p><p>キーワード<code>トマト</code>はご愛嬌。</p><p>21行目<code>request(options, function(err, req, data) {</code>でAPIにアクセスしてレスポンスを<code>data</code>で受け取っています。</p><p>22行目<code>$ = cheerio.load(data);</code>で受け取った<code>data</code>をパースして<code>$</code>に格納しています。</p><p>以下、<code>forEach</code>で各データを取得しているのですが、ここがかなりハマりました。</p><p><code>for</code>、<code>each</code>、<code>async.each</code>等々試しましたが、膨大な量のXML解析のため解析処理が終わる前に最終データの格納が先行してしまったり、<code>key</code>ごとのデータが取得できなかったり（これは初心者あるある）と、なかなか思うようなデータ結果を取得できませんでした。</p><p>XMLからjsonに変換したほうが簡単ではないか？CSVのレスポンスを受け取ったほうが簡単ではないか？という試行もしましたが、今回はあえてXMLのパースにこだわりました。</p><p>ということで最終的には、<code>forEach</code>で回しながら<code>eq:(key)</code>を指定して個々のデータを順次取得するという方法に落ち着きました。</p><p>国税庁の法人番号公表サイトの法人番号システムWeb-APIでは、XMLの<code>&lt;corporation&gt;</code>以下に各法人データが格納されます。</p><p>ですので、<code>Object.keys($(&quot;corporation&quot;)).forEach(function(key) {</code>というように<code>&lt;corporation&gt;</code>以下のデータを順次取り出し、<code>key</code>値を指定しながら<code>var number = $(&quot;corporateNumber&quot;).eq(key).text();</code>（例：法人番号）として、データを取得しています。</p><p><code>result</code>は取得したデータを表示するためにまとめているだけです。</p><p>実際には取得したデータをMongoDBに入れたり、運営サイトに合わせた形に整形します。</p><h3><span id="実行結果">実行結果</span></h3><p><img src="/images/nodejs-express-houjin-api-1.jpg" alt></p><p><code>http://localhost:3000</code>にアクセスすると上記のような結果が得られます。</p><h2><span id="まとめ">まとめ</span></h2><p>非同期処理ってなかなか慣れないと難しいです。</p><p>非同期させたい処理、同期させたい処理、データ量との兼ね合いなど、都度都度最善のコードを書くようになりたいです。</p><p>また、これからはAPIのレスポンスはjsonが増えてくると思いますので、レスポンスがjson形式のAPIについても確固たるコードを確立しておきたいと思います。</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/nodejs-express-houjin-api.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;Node.jsで&lt;strong&gt;国税庁の法人番号公表サイトの法人番号システムWeb-API&lt;/strong&gt;を利用してみたいと思います。&lt;/p&gt;
+&lt;a 
+      
+    
+    </summary>
+    
+      <category term="ナレッジ" scheme="https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/"/>
+    
+    
+      <category term="Node.js" scheme="https://lancers.work/tags/Node-js/"/>
+    
+      <category term="Express" scheme="https://lancers.work/tags/Express/"/>
+    
+      <category term="API" scheme="https://lancers.work/tags/API/"/>
+    
+  </entry>
   
   <entry>
     <title>vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化</title>
@@ -298,35 +329,6 @@
   </entry>
   
   <entry>
-    <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</title>
-    <link href="https://lancers.work/hexo-plugin-fix-tag-link-preview/"/>
-    <id>https://lancers.work/hexo-plugin-fix-tag-link-preview/</id>
-    <published>2019-03-31T22:19:00.000Z</published>
-    <updated>2019-04-07T10:19:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/hexo-tag-link-preview-fix.jpg" alt></p><p>「Hexoのプラグインが機能しないので修正してみた」第二弾は<code>hexo-tag-link-preview</code>です。</p><p>このプラグインはリンク先をカードのように表示してくれるカッコいいプラグインです。こんな感じ。</p><a href="https://lancers.work/hexo-plugin-fix-toc/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-toc-fix.jpg"></div><div class="descriptions"><div class="og-title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</div><div class="og-description">KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を…</div></div></div></a><p>この連載記事シリーズは管理人の環境に依存、管理人仕様的なところがあります。</p><p>gitにもnpmにも上げていませんし、プラグインが更新されるとまた修正しなければいけませんし、かといって修正版を公開するところまで至っていません。</p><p>また、プラグインの使い方が間違っているよ！ということもあるかもしれません。<br>（製作者の方、すみません。）</p><p>以上を踏まえて、同じところで悩まれ修正することができた人がいれば嬉しい限りです。</p><div class="toc-title">目　次</div><div class="toc"><!-- toc --><ul><li><a href="#hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</a></li><li><a href="#hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</a><ul><li><a href="#修正対象ファイルindexjs">修正対象ファイル：index.js</a></li></ul></li></ul><!-- tocstop --></div><h2><span id="hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</span></h2><p>今回の不具合の気づきは、このプラグインであるあタグ<code>｛% linkPreview https://www.amazon.com/ _blank nofollow %｝</code>（例、}は表示上大文字になっています）を記事内に記述したところエラーで静的ファイルが生成されなかったことにあります。</p><p>タグの記述を何回見直しても正しかったので、これはプラグインファイルに原因が！ということで、該当ファイルを修正したところ上記のように表示されるようになりました。</p><p>この不具合は後日談ですが<code>hexo s</code>のエラーメッセージをよく見ればすぐに解決する内容でした。</p><p>もう一点、<code>_config.yml</code>に記述したオプションが機能しないということです。</p><p>class名をあてられないのは前回の<code>hexo-toc</code>より大きな問題ではありませんでしたが（管理人のケース）、キャプションの文字数が反映されないのが困りました。</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><h2><span id="hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</span></h2><p>プラグインの実体は<code>node_modules</code>フォルダ内にあります。</p><p>hexo-tag-link-previewの実体は<code>hexo-tag-link-preview</code>フォルダになります。</p><h3><span id="修正対象ファイルindexjs">修正対象ファイル：index.js</span></h3><p>25行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>これを、</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>というように先頭の<code>async</code>を削除したところ、<code>hexo s</code>、<code>hexo g</code>を実行してもエラーが出なくなり静的ファイルが生成されるようになりました。</p><p><code>async</code>は非同期処理を実行するためにつけるのですが、同期処理でも今のところ問題ないので、削除したまま使っています。</p><p>キャプションの文字数は<code>_config.yml</code>で変更できない状況にあるため、同じファイル<code>index.js</code>に直書きしてしのいでいます。</p><p>15行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? hexo.config.linkPreview.descriptionLength : 70;</span><br></pre></td></tr></table></figure><p>末尾の数字を変更します。</p><p>以上、2点の不具合の解決方法はこれだけとなります。</p><p>本記事執筆現在手を加えたプラグインは2つですが、Hexoには便利なプラグインたくさんありますね。</p><p>今までKUSANAGI（WordPress）で作っていた表現がほぼ表現できます。</p><p>WordPressはかなり昔から使っていましたが、今では当たり前になって多くの人が使い、なんとなく嫌気がさしていたので、Hexoに乗り換えて正解です！</p><p>動的サイト、WordPress、PHPから脱却してみませんか？</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/hexo-tag-link-preview-fix.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;「Hexoのプラグインが機能しないので修正してみた」第二弾は&lt;code&gt;hexo-tag-link-preview&lt;/code&gt;です。&lt;/p&gt;
-&lt;p&gt;こ
-      
-    
-    </summary>
-    
-      <category term="ナレッジ" scheme="https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/"/>
-    
-    
-      <category term="Node.js" scheme="https://lancers.work/tags/Node-js/"/>
-    
-      <category term="Hexo" scheme="https://lancers.work/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</title>
     <link href="https://lancers.work/hexo-plugin-fix-toc/"/>
     <id>https://lancers.work/hexo-plugin-fix-toc/</id>
@@ -342,6 +344,35 @@
         &lt;p&gt;&lt;img src=&quot;/images/hexo-toc-fix.jpg&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。&lt;/p&gt;
 &lt;p&gt;ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。
+      
+    
+    </summary>
+    
+      <category term="ナレッジ" scheme="https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/"/>
+    
+    
+      <category term="Node.js" scheme="https://lancers.work/tags/Node-js/"/>
+    
+      <category term="Hexo" scheme="https://lancers.work/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</title>
+    <link href="https://lancers.work/hexo-plugin-fix-tag-link-preview/"/>
+    <id>https://lancers.work/hexo-plugin-fix-tag-link-preview/</id>
+    <published>2019-03-31T22:19:00.000Z</published>
+    <updated>2019-04-07T10:19:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/hexo-tag-link-preview-fix.jpg" alt></p><p>「Hexoのプラグインが機能しないので修正してみた」第二弾は<code>hexo-tag-link-preview</code>です。</p><p>このプラグインはリンク先をカードのように表示してくれるカッコいいプラグインです。こんな感じ。</p><a href="https://lancers.work/hexo-plugin-fix-toc/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-toc-fix.jpg"></div><div class="descriptions"><div class="og-title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</div><div class="og-description">KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を…</div></div></div></a><p>この連載記事シリーズは管理人の環境に依存、管理人仕様的なところがあります。</p><p>gitにもnpmにも上げていませんし、プラグインが更新されるとまた修正しなければいけませんし、かといって修正版を公開するところまで至っていません。</p><p>また、プラグインの使い方が間違っているよ！ということもあるかもしれません。<br>（製作者の方、すみません。）</p><p>以上を踏まえて、同じところで悩まれ修正することができた人がいれば嬉しい限りです。</p><div class="toc-title">目　次</div><div class="toc"><!-- toc --><ul><li><a href="#hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</a></li><li><a href="#hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</a><ul><li><a href="#修正対象ファイルindexjs">修正対象ファイル：index.js</a></li></ul></li></ul><!-- tocstop --></div><h2><span id="hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</span></h2><p>今回の不具合の気づきは、このプラグインであるあタグ<code>｛% linkPreview https://www.amazon.com/ _blank nofollow %｝</code>（例、}は表示上大文字になっています）を記事内に記述したところエラーで静的ファイルが生成されなかったことにあります。</p><p>タグの記述を何回見直しても正しかったので、これはプラグインファイルに原因が！ということで、該当ファイルを修正したところ上記のように表示されるようになりました。</p><p>この不具合は後日談ですが<code>hexo s</code>のエラーメッセージをよく見ればすぐに解決する内容でした。</p><p>もう一点、<code>_config.yml</code>に記述したオプションが機能しないということです。</p><p>class名をあてられないのは前回の<code>hexo-toc</code>より大きな問題ではありませんでしたが（管理人のケース）、キャプションの文字数が反映されないのが困りました。</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><h2><span id="hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</span></h2><p>プラグインの実体は<code>node_modules</code>フォルダ内にあります。</p><p>hexo-tag-link-previewの実体は<code>hexo-tag-link-preview</code>フォルダになります。</p><h3><span id="修正対象ファイルindexjs">修正対象ファイル：index.js</span></h3><p>25行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>これを、</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>というように先頭の<code>async</code>を削除したところ、<code>hexo s</code>、<code>hexo g</code>を実行してもエラーが出なくなり静的ファイルが生成されるようになりました。</p><p><code>async</code>は非同期処理を実行するためにつけるのですが、同期処理でも今のところ問題ないので、削除したまま使っています。</p><p>キャプションの文字数は<code>_config.yml</code>で変更できない状況にあるため、同じファイル<code>index.js</code>に直書きしてしのいでいます。</p><p>15行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? hexo.config.linkPreview.descriptionLength : 70;</span><br></pre></td></tr></table></figure><p>末尾の数字を変更します。</p><p>以上、2点の不具合の解決方法はこれだけとなります。</p><p>本記事執筆現在手を加えたプラグインは2つですが、Hexoには便利なプラグインたくさんありますね。</p><p>今までKUSANAGI（WordPress）で作っていた表現がほぼ表現できます。</p><p>WordPressはかなり昔から使っていましたが、今では当たり前になって多くの人が使い、なんとなく嫌気がさしていたので、Hexoに乗り換えて正解です！</p><p>動的サイト、WordPress、PHPから脱却してみませんか？</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/hexo-tag-link-preview-fix.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;「Hexoのプラグインが機能しないので修正してみた」第二弾は&lt;code&gt;hexo-tag-link-preview&lt;/code&gt;です。&lt;/p&gt;
+&lt;p&gt;こ
       
     
     </summary>

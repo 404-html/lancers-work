@@ -11,21 +11,26 @@
     
 
     
-    <title>フリーランサーとして生きる道</title>
+    <title>Node.jsで国税庁法人番号システムWeb-APIを叩いてみる </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Node.js製のHexo（静的サイトジェネレーター）は超高速WordPress仮想マシン「KUSANAGI」を超えられるか？！静的ブログでどこまでWEBサービスを提供できるか？！そしてHexoブログは収益化ブログになり得るのか？！このブログはHexoから無料で使えるNetlifyへデプロイして公開しています。">
-<meta name="keywords" content="Node.js,Hexo,blog,ブログ,静的サイトジェネレーター,KUSANAGI,WordPress,AdSense,仮想化,WEBアプリ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="フリーランサーとして生きる道">
-<meta property="og:url" content="https://lancers.work/page/2/index.html">
+        <meta name="keywords" content="Node.js,Express,API">
+    
+    <meta name="description" content="Node.jsで国税庁の法人番号公表サイトの法人番号システムWeb-APIを利用してみたいと思います。 法人番号システム Web-API｜国税庁法人番号公表サイト国税庁法人番号公表サイトで提供するWeb-API機能について説明しています。 法人番号システムWeb-APIのレスポンスはCSV形式とXML形式があります。 いまどきどちらもあれですが、XML形式がまだ多いことからXML形式でAPIのレ">
+<meta name="keywords" content="Node.js,Express,API">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる">
+<meta property="og:url" content="https://lancers.work/nodejs-express-houjin-api/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="Node.js製のHexo（静的サイトジェネレーター）は超高速WordPress仮想マシン「KUSANAGI」を超えられるか？！静的ブログでどこまでWEBサービスを提供できるか？！そしてHexoブログは収益化ブログになり得るのか？！このブログはHexoから無料で使えるNetlifyへデプロイして公開しています。">
+<meta property="og:description" content="Node.jsで国税庁の法人番号公表サイトの法人番号システムWeb-APIを利用してみたいと思います。 法人番号システム Web-API｜国税庁法人番号公表サイト国税庁法人番号公表サイトで提供するWeb-API機能について説明しています。 法人番号システムWeb-APIのレスポンスはCSV形式とXML形式があります。 いまどきどちらもあれですが、XML形式がまだ多いことからXML形式でAPIのレ">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="https://lancers.work/thumbnail/nodejs-express-houjin-api.jpg">
+<meta property="og:updated_time" content="2019-04-09T09:38:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="フリーランサーとして生きる道">
-<meta name="twitter:description" content="Node.js製のHexo（静的サイトジェネレーター）は超高速WordPress仮想マシン「KUSANAGI」を超えられるか？！静的ブログでどこまでWEBサービスを提供できるか？！そしてHexoブログは収益化ブログになり得るのか？！このブログはHexoから無料で使えるNetlifyへデプロイして公開しています。">
+<meta name="twitter:title" content="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる">
+<meta name="twitter:description" content="Node.jsで国税庁の法人番号公表サイトの法人番号システムWeb-APIを利用してみたいと思います。 法人番号システム Web-API｜国税庁法人番号公表サイト国税庁法人番号公表サイトで提供するWeb-API機能について説明しています。 法人番号システムWeb-APIのレスポンスはCSV形式とXML形式があります。 いまどきどちらもあれですが、XML形式がまだ多いことからXML形式でAPIのレ">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/nodejs-express-houjin-api.jpg">
     
 
     
@@ -157,328 +162,139 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <p class="header">
     
-    <em class="page-title-link" data-url="home">ホーム</em>
+    <a class="page-title-link" href="/categories/ナレッジ/">ナレッジ</a>
     </p>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-nodejs-express-houjin-api" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-plugin-fix-toc/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-toc-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-plugin-fix-toc/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/hexo-plugin-fix-toc/">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a>
+        Node.jsで国税庁法人番号システムWeb-APIを叩いてみる
         </h1>
     
 
-        <p class="article-excerpt">
-            
-KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。
-ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています。
-そんな中、Hexoのプラグインが機能しないという症状に度々遭遇したので、修正した内容を備忘録として書き留めていきます。
-なお、この修正は管理人の環境、管理人仕様的なところがあります。
-gitにもnpmにも上げていませんし、プラグイン
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/nodejs-express-houjin-api/" class="article-date">
+            <time datetime="2019-04-09T06:31:00.000Z" itemprop="datePublished">2019-04-09</time>
+        </a>
     </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/API/">API</a>, <a class="tag-link" href="/tags/Express/">Express</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/images/nodejs-express-houjin-api.jpg" alt></p>
+<p>Node.jsで<strong>国税庁の法人番号公表サイトの法人番号システムWeb-API</strong>を利用してみたいと思います。</p>
+<a href="http://www.houjin-bangou.nta.go.jp/webapi/#web-api03" class="link-preview" target="_blank" rel="nofollw"><div class="link-area"><div class="og-image"><img></div><div class="descriptions"><div class="og-title">法人番号システム Web-API｜国税庁法人番号公表サイト</div><div class="og-description">国税庁法人番号公表サイトで提供するWeb-API機能について説明しています。</div></div></div></a>
+<p>法人番号システムWeb-APIのレスポンスはCSV形式とXML形式があります。</p>
+<p>いまどきどちらもあれですが、XML形式がまだ多いことからXML形式でAPIのレスポンスを受け、処理してみたいと思います。</p>
+<p>XMLをjson形式に変換するモジュールもありますが、今回はXMLのまま処理しています。</p>
+<p>なお、Node.jsのフレームワークにはExpressを使っています。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<div class="toc-title">目　次</div><div class="toc">
+
+<!-- toc -->
+<ul>
+<li><a href="#routesindexjs">/routes/index.js</a><ul>
+<li><a href="#モジュール">モジュール</a></li>
+<li><a href="#apiリクエストレスポンスコード解説">APIリクエスト＆レスポンスコード解説</a></li>
+<li><a href="#実行結果">実行結果</a></li>
+</ul>
+</li>
+<li><a href="#まとめ">まとめ</a></li>
+</ul>
+<!-- tocstop -->
+</div>
+
+<h2><span id="routesindexjs">/routes/index.js</span></h2><p>いきなりソースです。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">var express = require(<span class="string">'express'</span>);</span><br><span class="line">var router = express.Router();</span><br><span class="line"></span><br><span class="line">var request = require(<span class="string">'request'</span>);</span><br><span class="line">var cheerio = require(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line">var result = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/'</span>, <span class="keyword">function</span>(req, res, next) &#123;</span><br><span class="line"></span><br><span class="line">  var options = &#123;</span><br><span class="line">    url: <span class="string">'https://api.houjin-bangou.nta.go.jp/4/name'</span>,</span><br><span class="line">    method: <span class="string">'GET'</span>,</span><br><span class="line">    qs: &#123;</span><br><span class="line">      <span class="string">'id'</span>: <span class="string">'*************'</span>, // APIキー（事前に申請して取得の必要があります） </span><br><span class="line">      <span class="string">'name'</span>: <span class="string">'トマト'</span>, // 検索ワード</span><br><span class="line">      <span class="string">'type'</span>: <span class="string">'12'</span> // 出力形式（XML）</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  request(options, <span class="keyword">function</span>(err, req, data) &#123;</span><br><span class="line">    $ = cheerio.load(data);</span><br><span class="line">    Object.keys($(<span class="string">"corporation"</span>)).forEach(<span class="keyword">function</span>(key) &#123;</span><br><span class="line">      var number = $(<span class="string">"corporateNumber"</span>).eq(key).text();</span><br><span class="line">      var name = $(<span class="string">"name"</span>).eq(key).text();</span><br><span class="line">      var post = $(<span class="string">"postCode"</span>).eq(key).text();</span><br><span class="line">      var pref = $(<span class="string">"prefectureName"</span>).eq(key).text();</span><br><span class="line">      var city = $(<span class="string">"cityName"</span>).eq(key).text();</span><br><span class="line">      var street = $(<span class="string">"streetNumber"</span>).eq(key).text();</span><br><span class="line">      result += key + <span class="string">' &gt;&gt;&gt; '</span> + number +<span class="string">' : '</span> + name + <span class="string">' : 〒'</span> + post + <span class="string">' '</span> +pref + city + street + <span class="string">'&lt;br&gt;'</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  res.send(result);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">module.exports = router;</span><br></pre></td></tr></table></figure>
+<p>書き終えてみるとこれだけのコードなのですが、パースやら非同期やらハマりまくり、紆余曲折の結果、上記のソースに一旦落ち着きました。</p>
+<p>検索データの投入方法や結果の表示方法は仮ですので、XMLからデータを抽出する過程を忘れないために書いています。</p>
+<h3><span id="モジュール">モジュール</span></h3><p><code>request</code>と<code>cheerio</code>です。</p>
+<p>requestモジュールはGET/POST通信するためのモジュールです。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install request --save</span><br></pre></td></tr></table></figure>
+<p>cheerioモジュールはHTMLパーサです。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cheerio --save</span><br></pre></td></tr></table></figure>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h3><span id="apiリクエストレスポンスコード解説">APIリクエスト＆レスポンスコード解説</span></h3><p>11行目の<code>var options =</code>では、APIにリクエストするパラメータを設定しています。</p>
+<p><code>qs</code>はGETクエリパラメータで、ここでは最小限の<code>APIキー</code>と<code>キーワード</code>と<code>レスポンス形式</code>を指定しています。</p>
+<p>キーワード<code>トマト</code>はご愛嬌。</p>
+<p>21行目<code>request(options, function(err, req, data) {</code>でAPIにアクセスしてレスポンスを<code>data</code>で受け取っています。</p>
+<p>22行目<code>$ = cheerio.load(data);</code>で受け取った<code>data</code>をパースして<code>$</code>に格納しています。</p>
+<p>以下、<code>forEach</code>で各データを取得しているのですが、ここがかなりハマりました。</p>
+<p><code>for</code>、<code>each</code>、<code>async.each</code>等々試しましたが、膨大な量のXML解析のため解析処理が終わる前に最終データの格納が先行してしまったり、<code>key</code>ごとのデータが取得できなかったり（これは初心者あるある）と、なかなか思うようなデータ結果を取得できませんでした。</p>
+<p>XMLからjsonに変換したほうが簡単ではないか？CSVのレスポンスを受け取ったほうが簡単ではないか？という試行もしましたが、今回はあえてXMLのパースにこだわりました。</p>
+<p>ということで最終的には、<code>forEach</code>で回しながら<code>eq:(key)</code>を指定して個々のデータを順次取得するという方法に落ち着きました。</p>
+<p>国税庁の法人番号公表サイトの法人番号システムWeb-APIでは、XMLの<code>&lt;corporation&gt;</code>以下に各法人データが格納されます。</p>
+<p>ですので、<code>Object.keys($(&quot;corporation&quot;)).forEach(function(key) {</code>というように<code>&lt;corporation&gt;</code>以下のデータを順次取り出し、<code>key</code>値を指定しながら<code>var number = $(&quot;corporateNumber&quot;).eq(key).text();</code>（例：法人番号）として、データを取得しています。</p>
+<p><code>result</code>は取得したデータを表示するためにまとめているだけです。</p>
+<p>実際には取得したデータをMongoDBに入れたり、運営サイトに合わせた形に整形します。</p>
+<h3><span id="実行結果">実行結果</span></h3><p><img src="/images/nodejs-express-houjin-api-1.jpg" alt></p>
+<p><code>http://localhost:3000</code>にアクセスすると上記のような結果が得られます。</p>
+<h2><span id="まとめ">まとめ</span></h2><p>非同期処理ってなかなか慣れないと難しいです。</p>
+<p>非同期させたい処理、同期させたい処理、データ量との兼ね合いなど、都度都度最善のコードを書くようになりたいです。</p>
+<p>また、これからはAPIのレスポンスはjsonが増えてくると思いますので、レスポンスがjson形式のAPIについても確固たるコードを確立しておきたいと思います。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+        <footer class="article-footer">
+            <div id="share-title">この記事が気に入ったらシェアをお願いします。</div>
+            <div id="share"></div>
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "bulma"
+        },
+        "headline": "Node.jsで国税庁法人番号システムWeb-APIを叩いてみる",
+        "image": "https://lancers.work/thumbnail/nodejs-express-houjin-api.jpg",
+        "keywords": "Node.js Express API",
+        "genre": "ナレッジ",
+        "datePublished": "2019-04-09",
+        "dateCreated": "2019-04-09",
+        "dateModified": "2019-04-09",
+        "url": "https://lancers.work/nodejs-express-houjin-api/",
+        "description": "
+Node.jsで国税庁の法人番号公表サイトの法人番号システムWeb-APIを利用してみたいと思います。
+法人番号システム Web-API｜国税庁法人番号公表サイト国税庁法人番号公表サイトで提供するWeb-API機能について説明しています。
+法人番号システムWeb-APIのレスポンスはCSV形式とXML形式があります。
+いまどきどちらもあれですが、XML形式がまだ多いことからXML形式でAPIのレ"
+        "wordCount": 396
+    }
+</script>
+
+    <p>関連記事</p>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ3アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ4アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li></ul>
 </article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-plugin-fix-tag-link-preview/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-tag-link-preview-fix.jpg)" alt="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-plugin-fix-tag-link-preview/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-03-31T22:19:00.000Z" itemprop="datePublished">2019-04-01</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo-plugin-fix-tag-link-preview/">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-「Hexoのプラグインが機能しないので修正してみた」第二弾はhexo-tag-link-previewです。
-このプラグインはリンク先をカードのように表示してくれるカッコいいプラグインです。こんな感じ。
-Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたとい
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-on-kusanagi/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-on-kusanagi.jpg)" alt="KUSANAGIのLAMP環境にHexoを構築" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-on-kusanagi/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-03-29T22:10:00.000Z" itemprop="datePublished">2019-03-30</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo-on-kusanagi/">KUSANAGIのLAMP環境にHexoを構築</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。
-HexoはNode.jsをほとんど意識せず、テキストを書き続けることで爆速ブログができていきますので、これはこれで楽しいです。
-そんなHexoですが運営環境としてKUSANAGIとの連携が簡単というのが今回のお話です。
-特にNode.jsやHexo初心者の方にはおすすめです。
-目　次
-
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/pref-city-form-jquery-json/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/pref-city-form.jpg)" alt="都道府県・市区町村フォームをできる限り少ないコード数で書いてみる" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/pref-city-form-jquery-json/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-03-29T06:53:00.000Z" itemprop="datePublished">2019-03-29</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/pref-city-form-jquery-json/">都道府県・市区町村フォームをできる限り少ないコード数で書いてみる</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-目　次
-
-
-
-基本データ（都道府県・市区町村 json形式データ）
-jQueryで都道府県・市区町村連動型フォームを作る
-サンプル
-jQueryソース
-HTMLソース
-
-
-
-
-
-
-基本データ（都道府県・市区町村 json形式データ）当ブログで用意している都道府県・市区町村のjsonデータの形式は、
-[{&quot;01&quot;:{&quot;id&quot;:&quot;01″,&quot;
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hexo-nodejs-blog/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/thumbnail/hexo-start-nodejs.jpg)" alt="Hexo（node.js）で静的ブログを構築してみる" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://lancers.work/hexo-nodejs-blog/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/ナレッジ/">ナレッジ</a>
-            </div>
-            <div class="date"><time datetime="2019-03-28T20:23:00.000Z" itemprop="datePublished">2019-03-29</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hexo-nodejs-blog/">Hexo（node.js）で静的ブログを構築してみる</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-もともとは、超高速WordPress仮想マシン「KUSANAGI」でWEBアプリを量産しようということで、KUSANAGIでブログを書いていました。（今もぼちぼち書いてます）
-なぜ、Node.jsに切り替えたのか？
-それは2018年末にNode.js+Express環境を構築して途中までWEBアプリを作成していたことを思い出し、さらに、2019年初「今年の目標はnode.jsを極める」を目標に掲
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    <div class="article-row">
-        <article class="article article-summary">
-            <div class="article-summary-inner">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-az-36+22+10+10" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9596836309"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </article>
-        <article class="article article-summary">
-            <div class="article-summary-inner">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-az-36+22+10+10" data-ad-client="ca-pub-6760690047817155" data-ad-slot="9596836309"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </article> 
-    </div>
-
-    </div></section>
-
-
-    <nav id="page-nav">
-        <span class="pages"> 2 ページ2 ページ中</span>
-        <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-
-
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -514,6 +330,19 @@ HTMLソース
         </ul>
     </div>
     
+        
+<nav id="article-nav">
+    
+    
+        <a href="/esxi-kusanagi-runs-on-docker/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">前の記事</strong>
+        <p class="article-nav-title">vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
     <div class="widgets-container">
         
             
@@ -522,7 +351,7 @@ HTMLソース
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/numbers-1.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/esxi-kusanagi-runs-on-docker.jpg"></div><div class="popular-posts-title"><h3><a href="/esxi-kusanagi-runs-on-docker/" title="vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化" rel="bookmark">vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/esxi-kusanagi-runs-on-docker.jpg"></div><div class="popular-posts-title"><h3><a href="/esxi-kusanagi-runs-on-docker/" title="vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化" rel="bookmark">vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/thumbnail/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

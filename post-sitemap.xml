@@ -8,96 +8,8 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/my-home-server-mail-dns/</loc>
-        <lastmod>2019-04-14T10:00:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
-        <lastmod>2019-04-13T11:33:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/nodejs-keystonejs-mongodb-ubuntu/</loc>
-        <lastmod>2019-04-11T10:18:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/hexo-nodejs-blog/</loc>
-        <lastmod>2019-04-11T09:37:29.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/numbers-2/</loc>
-        <lastmod>2019-04-10T22:42:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/nodejs-express-csv-download/</loc>
-        <lastmod>2019-04-10T22:41:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/numbers3/</loc>
-        <lastmod>2019-04-10T06:38:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/nodejs-express-houjin-api/</loc>
-        <lastmod>2019-04-09T10:20:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/numbers4/</loc>
-        <lastmod>2019-04-08T04:41:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/esxi-kusanagi-runs-on-docker/</loc>
-        <lastmod>2019-04-08T03:06:56.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/hexo-github-netlify-deploy/</loc>
-        <lastmod>2019-04-08T01:40:58.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://lancers.work/wordpress-custom-rewrite-rule/</loc>
-        <lastmod>2019-04-07T10:21:48.000Z</lastmod>
+        <lastmod>2019-04-14T10:26:43.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -105,7 +17,39 @@
 
     <url>
         <loc>https://lancers.work/vmware-esxi65-realtek-nic/</loc>
-        <lastmod>2019-04-07T10:21:31.000Z</lastmod>
+        <lastmod>2019-04-14T10:26:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
+        <lastmod>2019-04-14T10:26:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/numbers4/</loc>
+        <lastmod>2019-04-14T10:26:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/numbers3/</loc>
+        <lastmod>2019-04-14T10:26:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/numbers-2/</loc>
+        <lastmod>2019-04-14T10:26:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -113,7 +57,39 @@
 
     <url>
         <loc>https://lancers.work/numbers-1/</loc>
-        <lastmod>2019-04-07T10:19:58.000Z</lastmod>
+        <lastmod>2019-04-14T10:26:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/nodejs-keystonejs-mongodb-ubuntu/</loc>
+        <lastmod>2019-04-14T10:25:57.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/nodejs-express-houjin-api/</loc>
+        <lastmod>2019-04-14T10:25:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/nodejs-express-csv-download/</loc>
+        <lastmod>2019-04-14T10:25:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/my-home-server-mail-dns/</loc>
+        <lastmod>2019-04-14T10:25:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -121,7 +97,7 @@
 
     <url>
         <loc>https://lancers.work/hexo-plugin-fix-toc/</loc>
-        <lastmod>2019-04-07T10:19:42.000Z</lastmod>
+        <lastmod>2019-04-14T10:25:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -129,7 +105,7 @@
 
     <url>
         <loc>https://lancers.work/hexo-plugin-fix-tag-link-preview/</loc>
-        <lastmod>2019-04-07T10:19:22.000Z</lastmod>
+        <lastmod>2019-04-14T10:25:17.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -137,7 +113,15 @@
 
     <url>
         <loc>https://lancers.work/hexo-on-kusanagi/</loc>
-        <lastmod>2019-04-07T10:19:04.000Z</lastmod>
+        <lastmod>2019-04-14T10:25:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/hexo-nodejs-blog/</loc>
+        <lastmod>2019-04-14T10:25:06.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -145,7 +129,23 @@
 
     <url>
         <loc>https://lancers.work/hexo-hueman-list-archives-date/</loc>
-        <lastmod>2019-04-07T10:18:02.000Z</lastmod>
+        <lastmod>2019-04-14T10:25:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/hexo-github-netlify-deploy/</loc>
+        <lastmod>2019-04-14T10:24:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/esxi-kusanagi-runs-on-docker/</loc>
+        <lastmod>2019-04-14T10:24:05.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

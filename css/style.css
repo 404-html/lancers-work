@@ -699,10 +699,10 @@ code {
   transition: all 0.2s ease;
   float: left;
 }
-#sidebar .popular-posts-item {
+#sidebar .popular-posts li {
   padding: 10px 0 10px 94px;
   border-bottom: 1px solid #ddd;
-  height: 60px;
+  height: 80px;
 }
 #sidebar .popular-posts-title a {
   text-decoration: none;
@@ -1611,10 +1611,10 @@ a.article-title:hover {
   width: 120px;
   height: auto;
 }
-.popular-posts {
+.article .popular-posts {
   margin: 0 10px;
 }
-.popular-posts-img img {
+.article .popular-posts-img img {
   width: 80px;
   opacity: 1;
   -webkit-transition: all 0.2s ease;
@@ -1626,17 +1626,18 @@ a.article-title:hover {
   transition: all 0.2s ease;
   float: left;
 }
-.popular-posts-title h3 {
-  padding: 15px 15px 25px 0px !important;
+.article .popular-posts-title h3 {
+  height: 80px;
+  padding: 0px 15px 15px 0px !important;
   margin: 15px 15px 15px 0;
   border-bottom: solid 1px #ddd !important;
 }
-.popular-posts-title a {
+.article .popular-posts-title a {
   padding-left: 15px;
   text-decoration: none;
   color: #444;
 }
-.popular-posts-title a:hover {
+.article .popular-posts-title a:hover {
   color: #14a83b;
 }
 #comments {

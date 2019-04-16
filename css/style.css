@@ -1628,7 +1628,6 @@ a.article-title:hover {
 }
 .article .popular-posts-title h3 {
   height: 80px;
-  padding: 0px 15px 15px 0px !important;
   margin: 15px 15px 15px 0;
   border-bottom: solid 1px #ddd !important;
 }

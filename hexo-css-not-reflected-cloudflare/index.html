@@ -11,26 +11,26 @@
     
 
     
-    <title>KUSANAGIのLAMP環境にHexoを構築 </title>
+    <title>HexoのCSSが反映されない時の対処法 </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Node.js,KUSANAGI,let&#39;s encrypt">
+        <meta name="keywords" content="Node.js,Hexo">
     
-    <meta name="description" content="まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。 HexoはNode.jsをほとんど意識せず、テキストを書き続けることで爆速ブログができていきますので、これはこれで楽しいです。 そんなHexoですが運営環境としてKUSANAGIとの連携が簡単というのが今回のお話です。 特にNode.jsやHexo初心者の方にはおすすめです。 目　次">
-<meta name="keywords" content="Node.js,KUSANAGI,let&#39;s encrypt">
+    <meta name="description" content="Hexoでテンプレートをカスタマイズした後、ジェネレートして、デプロイした時にCSSが本番サイトに反映されないというのは、結構Hexoあるあるの話です。 まず最初に思いつく解決方法は、 12345$ hexo clean &amp;amp;&amp;amp; hexo gまたは$ hexo clean &amp;amp;&amp;amp; hexo d -g というようにhexo cleanを実行してからジェネレート・デプロイ">
+<meta name="keywords" content="Node.js,Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KUSANAGIのLAMP環境にHexoを構築">
-<meta property="og:url" content="https://lancers.work/hexo-on-kusanagi/index.html">
+<meta property="og:title" content="HexoのCSSが反映されない時の対処法">
+<meta property="og:url" content="https://lancers.work/hexo-css-not-reflected-cloudflare/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。 HexoはNode.jsをほとんど意識せず、テキストを書き続けることで爆速ブログができていきますので、これはこれで楽しいです。 そんなHexoですが運営環境としてKUSANAGIとの連携が簡単というのが今回のお話です。 特にNode.jsやHexo初心者の方にはおすすめです。 目　次">
+<meta property="og:description" content="Hexoでテンプレートをカスタマイズした後、ジェネレートして、デプロイした時にCSSが本番サイトに反映されないというのは、結構Hexoあるあるの話です。 まず最初に思いつく解決方法は、 12345$ hexo clean &amp;amp;&amp;amp; hexo gまたは$ hexo clean &amp;amp;&amp;amp; hexo d -g というようにhexo cleanを実行してからジェネレート・デプロイ">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://lancers.work/thumbnail/hexo-on-kusanagi.jpg">
-<meta property="og:updated_time" content="2019-04-14T10:25:12.000Z">
+<meta property="og:image" content="https://lancers.work/thumbnail/hexo-css-not-reflected-cloudflare.jpg">
+<meta property="og:updated_time" content="2019-04-16T02:27:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KUSANAGIのLAMP環境にHexoを構築">
-<meta name="twitter:description" content="まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。 HexoはNode.jsをほとんど意識せず、テキストを書き続けることで爆速ブログができていきますので、これはこれで楽しいです。 そんなHexoですが運営環境としてKUSANAGIとの連携が簡単というのが今回のお話です。 特にNode.jsやHexo初心者の方にはおすすめです。 目　次">
-<meta name="twitter:image" content="https://lancers.work/thumbnail/hexo-on-kusanagi.jpg">
+<meta name="twitter:title" content="HexoのCSSが反映されない時の対処法">
+<meta name="twitter:description" content="Hexoでテンプレートをカスタマイズした後、ジェネレートして、デプロイした時にCSSが本番サイトに反映されないというのは、結構Hexoあるあるの話です。 まず最初に思いつく解決方法は、 12345$ hexo clean &amp;amp;&amp;amp; hexo gまたは$ hexo clean &amp;amp;&amp;amp; hexo d -g というようにhexo cleanを実行してからジェネレート・デプロイ">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/hexo-css-not-reflected-cloudflare.jpg">
     
 
     
@@ -167,14 +167,14 @@ ga('send', 'pageview');
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-hexo-on-kusanagi" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-hexo-css-not-reflected-cloudflare" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        KUSANAGIのLAMP環境にHexoを構築
+        HexoのCSSが反映されない時の対処法
         </h1>
     
 
@@ -184,8 +184,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/hexo-on-kusanagi/" class="article-date">
-            <time datetime="2019-03-29T22:10:00.000Z" itemprop="datePublished">2019-03-30</time>
+        <a href="/hexo-css-not-reflected-cloudflare/" class="article-date">
+            <time datetime="2019-04-16T01:43:00.000Z" itemprop="datePublished">2019-04-16</time>
         </a>
     </div>
 
@@ -194,68 +194,50 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/KUSANAGI/">KUSANAGI</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>, <a class="tag-link" href="/tags/let-s-encrypt/">let's encrypt</a>
+        <a class="tag-link" href="/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/hexo-on-kusanagi.jpg" alt></p>
-<p>まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。</p>
-<p>HexoはNode.jsをほとんど意識せず、テキストを書き続けることで爆速ブログができていきますので、これはこれで楽しいです。</p>
-<p>そんなHexoですが運営環境としてKUSANAGIとの連携が簡単というのが今回のお話です。</p>
-<p>特にNode.jsやHexo初心者の方にはおすすめです。</p>
-<div class="toc-title">目　次</div><div class="toc">
-
-<!-- toc -->
-<ul>
-<li><a href="#kusanagiの特徴">KUSANAGIの特徴</a></li>
-<li><a href="#kusanagi環境へhexoをインストールする">KUSANAGI環境へHexoをインストールする</a><ul>
-<li><a href="#kusanagiによるlampプロビジョニング">KUSANAGIによるLAMPプロビジョニング</a></li>
-<li><a href="#hexoインストール">Hexoインストール</a></li>
-<li><a href="#nginx設定">Nginx設定</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-</div>
-
-<h2><span id="kusanagiの特徴">KUSANAGIの特徴</span></h2><p><strong>KUSANAGI</strong>とは超高速WordPress仮想マシンです。</p>
-<p>KUSANAGIはWordPressを高速に動かすだけでなく、すばやくLAMP環境を構築したり、<strong>Let’s Encrypt</strong>によるSSL化を簡単にしたり、複数のWordPressなどを追加・削除できます。</p>
-<p>このようにサーバー運営に必要な機能がてんこ盛り、かつ、便利な仮想マシンです。</p>
-<p>このKUSANAGI環境とHexoを組み合わせて、簡単にHexoブログを公開しようというのが本記事の内容です。</p>
-<h2><span id="kusanagi環境へhexoをインストールする">KUSANAGI環境へHexoをインストールする</span></h2><p>Node.jsのインストールはこちらの記事を参考に済ませておいてください。</p>
-<a href="https://lancers.work/hexo-nodejs-blog/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-start-nodejs.jpg"></div><div class="descriptions"><div class="og-title">Hexo（node.js）で静的ブログを構築してみる</div><div class="og-description">もともとは、超高速WordPress仮想マシン「KUSANAGI」でWEBアプリを量産しようということで、KUSANAGIでブログを書いてい…</div></div></div></a>
-<h3><span id="kusanagiによるlampプロビジョニング">KUSANAGIによるLAMPプロビジョニング</span></h3><p>KUSANAGIでLAMPをプロビジョニングします。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kusanagi provision --lamp hexo-blog</span><br></pre></td></tr></table></figure>
-<p><code>--lamp</code>を省略してしまいますとWordPressがインストールされてしましますので、<code>--lamp</code>は必須です。</p>
-<p><code>--lamp</code>を指定したので、WordPressはインストールされず、プロファイル名<code>hexo-blog</code>（任意の名前で可）の空のドキュメントルートが作成されます。</p>
-<p>プロビジョニング作業が進んでいくと、ドメインの設定やLet’s EncryptによるSSL化が実行されますので、この後のHexoインストール作業後にSSL化作業などを行う必要がありません、ここが楽です！</p>
+            <p><img src="/images/hexo-css-not-reflected-cloudflare.jpg" alt></p>
+<p>Hexoでテンプレートをカスタマイズした後、ジェネレートして、デプロイした時にCSSが本番サイトに反映されないというのは、結構Hexoあるあるの話です。</p>
+<p>まず最初に思いつく解決方法は、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g</span><br><span class="line"></span><br><span class="line">または</span><br><span class="line"></span><br><span class="line">$ hexo clean &amp;&amp; hexo d -g</span><br></pre></td></tr></table></figure>
+<p>というように<code>hexo clean</code>を実行してからジェネレート・デプロイするという方法です。</p>
+<p>これで解決できればいいのですが、どうしても解決できないケースがあったので、書き留めておきます。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<h3><span id="hexoインストール">Hexoインストール</span></h3><p>Hexo自体をインストールしていない人は、下記コマンドでインストールしてください。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<p>KUSANAGIで作成したLAMPのドキュメントルートにHexoをインストールします。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># LAMPドキュメントルートへ移動</span></span><br><span class="line">$ <span class="built_in">cd</span> /home/kusanagi/hexo-blog/DocumentRoot</span><br><span class="line"></span><br><span class="line"><span class="comment"># blogは任意の名前でOK</span></span><br><span class="line">$ hexo init blog</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line"></span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>これで<code>/home/kusanagi/hexo-blog/DocumentRoot/blog</code>にHexoブログ一式がインストールされます。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>サーバーを起動し<code>localhost:4000</code>または<code>ローカルIPアドレス:4000</code>にアクセスして、サンプルサイトが表示されることを確認してみてください。</p>
-<h3><span id="nginx設定">Nginx設定</span></h3><p>KUSANAGIでLAMPを構築しますと、</p>
+<div class="toc-title">目　次</div><div class="toc">
+
+<!-- toc -->
 <ul>
-<li><code>/etc/nginx/conf.d/hexo-blog_http.conf</code> </li>
-<li><code>/etc/nginx/conf.d/hexo-blog_ssl.conf</code></li>
+<li><a href="#cloudflareのキャッシュが原因だった">CLOUDFLAREのキャッシュが原因だった</a></li>
+<li><a href="#cloudflareのキャッシュのクリア方法">CLOUDFLAREのキャッシュのクリア方法</a></li>
 </ul>
-<p>というファイルが作成されています。</p>
-<p>これらのconfファイルのルートディレクトリの記述を次のように書き換えます。</p>
-<p><code>root  /home/kusanagi/hexo-blog/DocumentRoot/blog/public;</code></p>
-<p>最後の<code>public</code>は固定文字列です。</p>
-<p>Hexoで静的ファイルを生成すると<code>public</code>フォルダにブログの静的ファイルが格納されますので、それをそのまま公開用のディレクトリにしてしまおうという設定です。</p>
-<p>GitHub PagesやNetlifyにデプロイすることもできますが、お手軽に独自ドメインで公開するにはKUSANAGIを使うと難易度が下がると思います。</p>
-<p>KUSANAGIとHexoの連携いかがでしたでしょうか？</p>
-<p>KUSANAGI（WordPress）からHexo（Node.js）に移行しましたが、やはりKUSANAGIは素晴らしい仕組みです。</p>
+<!-- tocstop -->
+</div>
+
+<h2><span id="cloudflareのキャッシュが原因だった">CLOUDFLAREのキャッシュが原因だった</span></h2><p>Hexoユーザーは、<strong>Netlify</strong>を使っている方が多いのではないでしょうか？</p>
+<a href="https://app.netlify.com/" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img></div><div class="descriptions"><div class="og-title">Netlify App</div></div></div></a>
+<p>このブログも最初はNetlifyに置いていましたが、ブログ運営上一部都合の悪い箇所（こちら都合）があったので、今は<strong>CLOUDFLARE</strong>を使って高速化を求めながらブログ運営をしています。<br>当方都合が解決できればNetlifyに戻りたいです。（Netlifyは速いし機能豊富ですからね）</p>
+<a href="https://www.cloudflare.com/" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img src="https://www.cloudflare.com/img/network-map/network-map-gradient.png"></div><div class="descriptions"><div class="og-title">Cloudflare - The Web Performance &amp; Security Company
+ | Cloudflare </div><div class="og-description">Here at Cloudflare, we make the Internet work the way it should. Offer…</div></div></div></a>
+<p>CLOUDFLAREはNetlifyほど高速ではない感じですが、それでもキャッシュ機能などは有効に効いてサイトの高速化に役立っています。</p>
+<p>さて、本題に戻りますが、HexoでCSSが反映されないという問題、このブログの場合、このCLOUDFLAREのキャッシュが原因でした。</p>
+<p>CLOUDFLAREのキャッシュに溜め込まれたスタイルシートを延々と読み込んでいたため、いくら<code>hexo clean</code>を実行してもCSSが反映されないというオチでした。</p>
+<p>時間が経てば反映されるのでしょうが、レイアウト崩れなどの緊急のCSS修正はすぐに反映させたいところです。</p>
+<h2><span id="cloudflareのキャッシュのクリア方法">CLOUDFLAREのキャッシュのクリア方法</span></h2><p>CLOUDFLAREにログインして、上の<strong>Caching</strong>のアイコンをクリックします。</p>
+<p>今回は、CSSファイルのキャッシュだけをクリアしたいので、下の画像の赤枠<strong>Custom Purge</strong>ボタンを押します。</p>
+<p><img src="/images/hexo-css-not-reflected-cloudflare-1.jpg" alt></p>
+<p>続いて、キャッシュしたいファイル（ページ）のURLを入力し、<strong>Purge</strong>ボタンを押します。</p>
+<p><img src="/images/hexo-css-not-reflected-cloudflare-2.jpg" alt></p>
+<p>これでキャッシュがクリアされ、即時にCSSが反映されるようになります。</p>
+<p>HexoのCSSが反映されないという問題の解決までは時間がかかりましたが、原因がわかれば対処は一瞬でした。</p>
+<p>これでまたHexoを気持ちよく使い続けられるようになりました。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -273,27 +255,25 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "bulma"
         },
-        "headline": "KUSANAGIのLAMP環境にHexoを構築",
-        "image": "https://lancers.work/thumbnail/hexo-on-kusanagi.jpg",
-        "keywords": "Node.js KUSANAGI let's encrypt",
+        "headline": "HexoのCSSが反映されない時の対処法",
+        "image": "https://lancers.work/thumbnail/hexo-css-not-reflected-cloudflare.jpg",
+        "keywords": "Node.js Hexo",
         "genre": "ナレッジ",
-        "datePublished": "2019-03-30",
-        "dateCreated": "2019-03-30",
-        "dateModified": "2019-04-14",
-        "url": "https://lancers.work/hexo-on-kusanagi/",
+        "datePublished": "2019-04-16",
+        "dateCreated": "2019-04-16",
+        "dateModified": "2019-04-16",
+        "url": "https://lancers.work/hexo-css-not-reflected-cloudflare/",
         "description": "
-まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。
-HexoはNode.jsをほとんど意識せず、テキストを書き続けることで爆速ブログができていきますので、これはこれで楽しいです。
-そんなHexoですが運営環境としてKUSANAGIとの連携が簡単というのが今回のお話です。
-特にNode.jsやHexo初心者の方にはおすすめです。
-目　次
-"
-        "wordCount": 124
+Hexoでテンプレートをカスタマイズした後、ジェネレートして、デプロイした時にCSSが本番サイトに反映されないというのは、結構Hexoあるあるの話です。
+まず最初に思いつく解決方法は、
+12345$ hexo clean &amp;&amp; hexo gまたは$ hexo clean &amp;&amp; hexo d -g
+というようにhexo cleanを実行してからジェネレート・デプロイ"
+        "wordCount": 112
     }
 </script>
 
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-keystonejs-mongodb-ubuntu.jpg"></div><div class="popular-posts-title"><h3><a href="/nodejs-keystonejs-mongodb-ubuntu/" title="KeystoneJS(Node.js)でブログ構築 -ubuntuサーバー完全版 -" rel="bookmark">KeystoneJS(Node.js)でブログ構築 -ubuntuサーバー完全版 -</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-toc-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-toc/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></h3></div></li></ul>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-github-netlify-deploy.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-github-netlify-deploy/" title="Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説" rel="bookmark">Hexo->GitHub->Netlifyで静的サイトを公開する方法をわかりやすく解説</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-toc-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-toc/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li></ul>
 </article>
                         </div>
                     </section>
@@ -333,20 +313,10 @@ HexoはNode.jsをほとんど意識せず、テキストを書き続けること
         
 <nav id="article-nav">
     
-        <a href="/hexo-plugin-fix-tag-link-preview/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">次の記事</strong>
-        <p class="article-nav-title">
-        
-            Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/pref-city-form-jquery-json/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/my-home-server-mail-dns/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">前の記事</strong>
-        <p class="article-nav-title">jQueryで都道府県・市区町村プルダウン（都道府県連動型セレクトメニュー）をできる限り少ないコード数で書いてみた</p>
+        <p class="article-nav-title">自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -361,7 +331,7 @@ HexoはNode.jsをほとんど意識せず、テキストを書き続けること
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/my-home-server-mail-dns.jpg"></div><div class="popular-posts-title"><h3><a href="/my-home-server-mail-dns/" title="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" rel="bookmark">自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/esxi-kusanagi-runs-on-docker.jpg"></div><div class="popular-posts-title"><h3><a href="/esxi-kusanagi-runs-on-docker/" title="vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化" rel="bookmark">vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/my-home-server-mail-dns.jpg"></div><div class="popular-posts-title"><h3><a href="/my-home-server-mail-dns/" title="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" rel="bookmark">自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/esxi-kusanagi-runs-on-docker.jpg"></div><div class="popular-posts-title"><h3><a href="/esxi-kusanagi-runs-on-docker/" title="vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化" rel="bookmark">vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

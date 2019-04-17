@@ -25,12 +25,12 @@
 <meta property="og:site_name" content="フリーランサーとして生きる道">
 <meta property="og:description" content="超高速WordPress仮想マシンのKUSANAGI。 以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。 とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.jpg">
-<meta property="og:updated_time" content="2019-04-14T10:24:05.000Z">
+<meta property="og:image" content="https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.webp">
+<meta property="og:updated_time" content="2019-04-17T23:46:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化">
 <meta name="twitter:description" content="超高速WordPress仮想マシンのKUSANAGI。 以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。 とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによっては">
-<meta name="twitter:image" content="https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.jpg">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.webp">
     
 
     
@@ -2521,7 +2521,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/esxi-kusanagi-runs-on-docker.jpg" alt></p>
+            <p><img src="/images/esxi-kusanagi-runs-on-docker.webp" alt></p>
 <p>超高速WordPress仮想マシンのKUSANAGI。</p>
 <p>以前は、KUSANAGI（WordPress）でブログを書いたり、KUSANAGIのLAMP環境やWordPress上で動くWEBアプリを開発していましたが、今はNode.jsに切り替えてしまったので、ほとんどKUSANAGIを触ることはなくなりました。</p>
 <p>とはいえ、クライアント様からのニーズにWordPressは多く、プロジェクトによってはKUSANAGIを動かしたりしています。</p>
@@ -2558,7 +2558,7 @@ ga('send', 'pageview');
 <p>KUSANAGIマシンが増えるたびに一から土台となるubuntuサーバーを構築するのは大変というか面倒です。</p>
 <p>そこで、KUSANAGI RoDを動かす上で必要な標準設定まで含んだubuntuを以下のように作成して、vSphereでovaファイルとしてエクスポートしておいたものを使い回すことにします。</p>
 <p>vSphere ESXiにubuntu18.04.1 Serverをインストールする詳細な手順は省略しますが、Server版のインストールで下記の画面が表示されたらDockerを選択してインストールしてしまいましょう。</p>
-<p><img src="/images/esxi-kusanagi-runs-on-docker-1.jpg" alt></p>
+<p><img src="/images/esxi-kusanagi-runs-on-docker-1.webp" alt></p>
 <p>Dockerを選択しなかった場合（し忘れた場合）は、後からdocker-ceとdocker-composeをインストールします。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># apt install -y \</span></span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    software-properties-common</span><br><span class="line"></span><br><span class="line"><span class="comment">#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span></span><br><span class="line">    add-apt-repository \</span><br><span class="line">    <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">    <span class="variable">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">    stable"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># apt update</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># apt install -y docker-ce</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># systemctl status docker</span></span><br><span class="line">/** active (running)になっていることを確認 **/</span><br><span class="line"></span><br><span class="line">/** rootをdockerグループに追加 **/</span><br><span class="line"><span class="comment"># usermod -aG docker root</span></span><br></pre></td></tr></table></figure>
 <p>少し戻りますが、rootでSSHから作業する場合、以下のようにrootのパスワードとrootによるSSH接続を許可しておきます。</p>
@@ -2567,7 +2567,7 @@ ga('send', 'pageview');
 <p>何度もubuntuの初期環境設定するのは面倒ですので、基本的なシステム構成ができたらOVFファイルで保存しておきましょう。</p>
 <p>次回以降、Docker RoDを構築する際の土台はこのOVFファイルを利用してubuntu+Docker環境をサクッと構築して、その上にKUSANAGI RoDをのせると簡単です。</p>
 <p>※Docker RoDでPULLするDcokerイメージをこの基本ubuntuに入れておいてもいいかもしれません。<br>（Dockerイメージのバージョンが上がると困るケースでは、Dockerイメージは時間がかかりますがその都度PULLしたほうがいいかもしれません。）</p>
-<p><img src="/images/esxi-kusanagi-runs-on-docker-2.jpg" alt></p>
+<p><img src="/images/esxi-kusanagi-runs-on-docker-2.webp" alt></p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -2615,12 +2615,12 @@ ga('send', 'pageview');
             "name": "bulma"
         },
         "headline": "vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化",
-        "image": "https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.jpg",
+        "image": "https://lancers.work/thumbnail/esxi-kusanagi-runs-on-docker.webp",
         "keywords": "KUSANAGI Docker Esxi 仮想化 ubuntu",
         "genre": "ナレッジ",
         "datePublished": "2019-04-08",
         "dateCreated": "2019-04-08",
-        "dateModified": "2019-04-14",
+        "dateModified": "2019-04-18",
         "url": "https://lancers.work/esxi-kusanagi-runs-on-docker/",
         "description": "
 超高速WordPress仮想マシンのKUSANAGI。
@@ -2631,7 +2631,7 @@ ga('send', 'pageview');
 </script>
 
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/vmware-esxi65-realtek-nic.jpg"></div><div class="popular-posts-title"><h3><a href="/vmware-esxi65-realtek-nic/" title="VMware ESXi「No Network Adapters」エラー時の対処法" rel="bookmark">VMware ESXi「No Network Adapters」エラー時の対処法</a></h3></div></li></ul>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-on-kusanagi.webp"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/vmware-esxi65-realtek-nic.webp"></div><div class="popular-posts-title"><h3><a href="/vmware-esxi65-realtek-nic/" title="VMware ESXi「No Network Adapters」エラー時の対処法" rel="bookmark">VMware ESXi「No Network Adapters」エラー時の対処法</a></h3></div></li></ul>
 </article>
                         </div>
                     </section>
@@ -2699,7 +2699,7 @@ ga('send', 'pageview');
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/my-home-server-mail-dns.jpg"></div><div class="popular-posts-title"><h3><a href="/my-home-server-mail-dns/" title="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" rel="bookmark">自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-tag-link-preview-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/my-home-server-mail-dns.webp"></div><div class="popular-posts-title"><h3><a href="/my-home-server-mail-dns/" title="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" rel="bookmark">自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/archives-list-date-fix.webp"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.webp"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-on-kusanagi.webp"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-tag-link-preview-fix.webp"></div><div class="popular-posts-title"><h3><a href="/hexo-plugin-fix-tag-link-preview/" title="Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～" rel="bookmark">Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -2723,7 +2723,7 @@ ga('send', 'pageview');
                             <a href="/recaptcha-v3-php-jqueryi/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/recaptcha-v3-php-jquery.jpg)" alt="GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編）" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/recaptcha-v3-php-jquery.webp)" alt="GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編）" class="thumbnail-image"></span>
     
     
 </a>
@@ -2745,7 +2745,7 @@ ga('send', 'pageview');
                             <a href="/hexo-css-not-reflected-cloudflare/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/hexo-css-not-reflected-cloudflare.jpg)" alt="HexoのCSSが反映されない時の対処法" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/hexo-css-not-reflected-cloudflare.webp)" alt="HexoのCSSが反映されない時の対処法" class="thumbnail-image"></span>
     
     
 </a>
@@ -2767,7 +2767,7 @@ ga('send', 'pageview');
                             <a href="/my-home-server-mail-dns/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/my-home-server-mail-dns.jpg)" alt="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/my-home-server-mail-dns.webp)" alt="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" class="thumbnail-image"></span>
     
     
 </a>
@@ -2789,7 +2789,7 @@ ga('send', 'pageview');
                             <a href="/nodejs-keystonejs-mongodb-ubuntu/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/nodejs-keystonejs-mongodb-ubuntu.jpg)" alt="KeystoneJS(Node.js)でブログ構築 -ubuntuサーバー完全版 -" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/nodejs-keystonejs-mongodb-ubuntu.webp)" alt="KeystoneJS(Node.js)でブログ構築 -ubuntuサーバー完全版 -" class="thumbnail-image"></span>
     
     
 </a>
@@ -2811,7 +2811,7 @@ ga('send', 'pageview');
                             <a href="/nodejs-express-csv-download/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/nodejs-express-csv-download.jpg)" alt="Node.jsでCSVファイルをダウンロード・ソート・保存する" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/nodejs-express-csv-download.webp)" alt="Node.jsでCSVファイルをダウンロード・ソート・保存する" class="thumbnail-image"></span>
     
     
 </a>
@@ -2842,7 +2842,7 @@ ga('send', 'pageview');
                             <a href="/nodejs-express-houjin-api/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/nodejs-express-houjin-api.jpg)" alt="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/nodejs-express-houjin-api.webp)" alt="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる" class="thumbnail-image"></span>
     
     
 </a>
@@ -2864,7 +2864,7 @@ ga('send', 'pageview');
                             <a href="/esxi-kusanagi-runs-on-docker/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/esxi-kusanagi-runs-on-docker.jpg)" alt="vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/esxi-kusanagi-runs-on-docker.webp)" alt="vSphere ESXiでKUSANAGI Runs on Dockerを動かす &amp; 土台のubuntuのova化" class="thumbnail-image"></span>
     
     
 </a>
@@ -2886,7 +2886,7 @@ ga('send', 'pageview');
                             <a href="/hexo-github-netlify-deploy/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.jpg)" alt="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/hexo-github-netlify-deploy.webp)" alt="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説" class="thumbnail-image"></span>
     
     
 </a>
@@ -2908,7 +2908,7 @@ ga('send', 'pageview');
                             <a href="/numbers4/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/numbers4.jpg)" alt="ナンバーズ4アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/numbers4.webp)" alt="ナンバーズ4アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
     
     
 </a>
@@ -2930,7 +2930,7 @@ ga('send', 'pageview');
                             <a href="/numbers3/" class="thumbnail">
     
     
-        <span style="background-image:url(/thumbnail/numbers3.jpg)" alt="ナンバーズ3アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
+        <span style="background-image:url(/thumbnail/numbers3.webp)" alt="ナンバーズ3アプリ ～ Node.jsベース ～" class="thumbnail-image"></span>
     
     
 </a>

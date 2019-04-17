@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/recaptcha-v3-php-jqueryi/</loc>
+        <lastmod>2019-04-17T09:58:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/hexo-css-not-reflected-cloudflare/</loc>
         <lastmod>2019-04-16T02:27:09.000Z</lastmod>
         <changefreq>weekly</changefreq>

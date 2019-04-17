@@ -11,26 +11,26 @@
     
 
     
-    <title>Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～ </title>
+    <title>GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編） </title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Node.js,Express">
+        <meta name="keywords" content="jQuery,Google,reCAPTCHA,PHP">
     
-    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数">
-<meta name="keywords" content="Node.js,Express">
+    <meta name="description" content="自分のサイトに設置してあるフォームなどをボットから守る手段としてGoogleのreCAPTCHAがあります。 reCAPTCHAのバージョンがv3になり、v2まであった利用者の操作（チェックボックスクリック、画像選択など）が不要になり、利用者の手を煩わせることなくサイトを安全に守ることができるようになりました。 これはサイト運営者、サイト利用者の双方にとってとても有益なことです。 今後はreCA">
+<meta name="keywords" content="jQuery,Google,reCAPTCHA,PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～">
-<meta property="og:url" content="https://lancers.work/numbers-1/index.html">
+<meta property="og:title" content="GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編）">
+<meta property="og:url" content="https://lancers.work/recaptcha-v3-php-jqueryi/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数">
+<meta property="og:description" content="自分のサイトに設置してあるフォームなどをボットから守る手段としてGoogleのreCAPTCHAがあります。 reCAPTCHAのバージョンがv3になり、v2まであった利用者の操作（チェックボックスクリック、画像選択など）が不要になり、利用者の手を煩わせることなくサイトを安全に守ることができるようになりました。 これはサイト運営者、サイト利用者の双方にとってとても有益なことです。 今後はreCA">
 <meta property="og:locale" content="ja">
-<meta property="og:image" content="https://lancers.work/thumbnail/numbers-1.jpg">
-<meta property="og:updated_time" content="2019-04-14T10:26:04.000Z">
+<meta property="og:image" content="https://lancers.work/thumbnail/recaptcha-v3-php-jquery.jpg">
+<meta property="og:updated_time" content="2019-04-17T09:58:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～">
-<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！ ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数">
-<meta name="twitter:image" content="https://lancers.work/thumbnail/numbers-1.jpg">
+<meta name="twitter:title" content="GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編）">
+<meta name="twitter:description" content="自分のサイトに設置してあるフォームなどをボットから守る手段としてGoogleのreCAPTCHAがあります。 reCAPTCHAのバージョンがv3になり、v2まであった利用者の操作（チェックボックスクリック、画像選択など）が不要になり、利用者の手を煩わせることなくサイトを安全に守ることができるようになりました。 これはサイト運営者、サイト利用者の双方にとってとても有益なことです。 今後はreCA">
+<meta name="twitter:image" content="https://lancers.work/thumbnail/recaptcha-v3-php-jquery.jpg">
     
 
     
@@ -162,19 +162,19 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <p class="header">
     
-    <a class="page-title-link" href="/categories/アプリの素/">アプリの素</a> <a class="page-title-link" href="/categories/ナレッジ/">ナレッジ</a>
+    <a class="page-title-link" href="/categories/ナレッジ/">ナレッジ</a>
     </p>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-numbers-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-recaptcha-v3-php-jqueryi" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～
+        GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編）
         </h1>
     
 
@@ -184,8 +184,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/numbers-1/" class="article-date">
-            <time datetime="2019-04-03T09:39:00.000Z" itemprop="datePublished">2019-04-03</time>
+        <a href="/recaptcha-v3-php-jqueryi/" class="article-date">
+            <time datetime="2019-04-17T09:24:00.000Z" itemprop="datePublished">2019-04-17</time>
         </a>
     </div>
 
@@ -194,21 +194,19 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Express/">Express</a>, <a class="tag-link" href="/tags/Node-js/">Node.js</a>
+        <a class="tag-link" href="/tags/Google/">Google</a>, <a class="tag-link" href="/tags/PHP/">PHP</a>, <a class="tag-link" href="/tags/jQuery/">jQuery</a>, <a class="tag-link" href="/tags/reCAPTCHA/">reCAPTCHA</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/numbers-1.jpg" alt></p>
-<p>※Node.jsアプリ作成の共有コーナーです。<br>※Node.jsアプリ作成にはExpressを使用しています。</p>
-<p>今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！</p>
-<a href="https://lancers.work/numbers3/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers3.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ3アプリ ～ Node.jsベース ～</div><div class="og-description">ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数      (adsby…</div></div></div></a>
-<a href="https://lancers.work/numbers4/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers4.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ4アプリ ～ Node.jsベース ～</div><div class="og-description">ナンバーズ3アプリはこちら ナンバーズ4 過去回の当選数字  集計回数：   ナンバーズ4 過去回の当選数字出現回数      (adsby…</div></div></div></a>
-<p>瞬時に直近○○回分の当選数字と当選回数を表示します！（直近30回分が対象）</p>
-<p>以前、KUSANAGIのWordPress上でPHPで組んだツールの焼き直しです。</p>
-<p>アプリの公開は後日追記しますので、本記事はプログラムの流れの備忘録です。</p>
+            <p><img src="/images/recaptcha-v3-php-jquery.jpg" alt></p>
+<p>自分のサイトに設置してあるフォームなどをボットから守る手段として<strong>GoogleのreCAPTCHA</strong>があります。</p>
+<p>reCAPTCHAのバージョンが<strong>v3</strong>になり、v2まであった利用者の操作（チェックボックスクリック、画像選択など）が不要になり、利用者の手を煩わせることなくサイトを安全に守ることができるようになりました。</p>
+<p>これはサイト運営者、サイト利用者の双方にとってとても有益なことです。</p>
+<p>今後はreCAPTCHA v3を積極的に使いたいところですが、設置方法が分かりづらいというクライアント様が案外多いので書き留めておきます。</p>
+<p>クライアント様はPHP利用が多いので、今回はPHPのソース公開となっていますが、PHPコード自体非常に短いですので、容易にNode.jsに置き換えられると思いますので、是非参考にご活用ください。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -217,34 +215,38 @@ ga('send', 'pageview');
 
 <!-- toc -->
 <ul>
-<li><a href="#スクレイピングcheerio-httpcli">スクレイピング（cheerio-httpcli）</a></li>
+<li><a href="#recaptcha-v3に登録する">reCAPTCHA v3に登録する</a></li>
+<li><a href="#recaptcha-v3をプログラムへ実装する">reCAPTCHA v3をプログラムへ実装する</a></li>
 </ul>
 <!-- tocstop -->
 </div>
 
-<h2><span id="スクレイピングcheerio-httpcli">スクレイピング（cheerio-httpcli）</span></h2><p>Node.jsでナンバースの当選番号を某サイトからスクレイピングするプログラムを書きました。</p>
-<p>スクレイピングの結果はjsonファイルに保存し、1日に1回更新とし、相手先のサイトに迷惑をかけないようにしています。</p>
-<p>スクレイピングのモジュールはcheerio-httpcliを使いました。</p>
-<p>今回はスクレイピングの結果を保存する関係で、同期処理にて組みました。</p>
-<p><code>cheerio-httpcli</code>の非同期処理の書き方</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var client = require(<span class="string">'cheerio-httpcli'</span>);</span><br><span class="line"></span><br><span class="line">client.fetch(<span class="string">'https://対象URL/'</span>, &#123;&#125;, <span class="keyword">function</span> (err, $, result) &#123;</span><br><span class="line">  ・・・</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>普通にデータ収集・加工後にデータをまとめてjsonファイルに保存しようとすると、保存処理が先に走ってしまい、空のファイルが出来上がってしまいました。</p>
-<p>いろいろやり方はあると思いますが（教えてください！）、今回は同期処理にてスクレイピング → ファイル保存を行いました。</p>
+<h2><span id="recaptcha-v3に登録する">reCAPTCHA v3に登録する</span></h2><p>GoogleのreCAPTCHAの下記サイトで、必要な情報を登録・取得していきます。</p>
+<a href="https://www.google.com/recaptcha/intro/v3.html" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img></div><div class="descriptions"><div class="og-title">reCAPTCHA</div><div class="og-description">reCAPTCHA is a free security service that protects your websites from …</div></div></div></a>
+<p>reCAPTCHAのサイトの右上の<code>Admin console</code>ボタンを押します。</p>
+<p><img src="/images/recaptcha-v3-php-jquery-1.jpg" alt></p>
+<p>次のページで<code>作成（＋）</code>をクリックし、下の画像の画面が表示されたら赤枠を埋め、<code>送信ボタン</code>を押します。</p>
+<p><strong>ラベル</strong>は任意の名前でOKです。</p>
+<p><img src="/images/recaptcha-v3-php-jquery-2.jpg" alt></p>
+<p>送信ボタンを押すと、<strong>サイトキー</strong>と<strong>シークレットキー</strong>が発行されます。</p>
+<p><img src="/images/recaptcha-v3-php-jquery-3.jpg" alt></p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">var client = require(<span class="string">'cheerio-httpcli'</span>);</span><br><span class="line"></span><br><span class="line">var array = &#123;&#125;;</span><br><span class="line">array.tit = [];</span><br><span class="line">array.date = [];</span><br><span class="line">array.win = [];</span><br><span class="line"></span><br><span class="line">var html = client.fetchSync(<span class="string">'https://某NUMBERS当選番号公開ページURL/'</span>);</span><br><span class="line"></span><br><span class="line">// 第○○回を取得</span><br><span class="line">html.$(<span class="string">'th'</span>).each(<span class="keyword">function</span> (idx) &#123;</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text().match(<span class="string">'第'</span>)) &#123;</span><br><span class="line">    array.tit.push(html.$(this).text());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 抽選日を取得</span><br><span class="line">html.$(<span class="string">'td'</span>).each(<span class="keyword">function</span> (idx) &#123;</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text().match(<span class="string">'/'</span>)) &#123;</span><br><span class="line">    array.date.push(html.$(this).text());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 当選番号を取得    </span><br><span class="line">html.$(<span class="string">'td'</span>).each(<span class="keyword">function</span> (idx) &#123;</span><br><span class="line">  <span class="keyword">if</span>(html.$(this).text() &lt; 1000) &#123;</span><br><span class="line">    array.win.push(html.$(this).text());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>このサイトの当選番号は<code>table</code>で表示しているのですが、抽選日ごとに<code>table</code>があったり、<code>th</code>や<code>td</code>などにclassがあてられてなかったり、かつ、データの並びをうまく整理できず、<code>eq(0)</code>などで正常に取得できなかったので、非常に原始的な処理にしました。</p>
+<h2><span id="recaptcha-v3をプログラムへ実装する">reCAPTCHA v3をプログラムへ実装する</span></h2><p><strong>reCAPTCHA v3サンプルプログラム</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">/**</span><br><span class="line"> * reCAPTCHA検証関数</span><br><span class="line"> * @param string <span class="variable">$token</span></span><br><span class="line"> */</span><br><span class="line"><span class="keyword">function</span> checkReCaptcha(<span class="variable">$token</span>) &#123;</span><br><span class="line">    global <span class="variable">$secret_key</span>;</span><br><span class="line">    <span class="variable">$ch</span> = curl_init();</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_URL, <span class="string">"https://www.google.com/recaptcha/api/siteverify?secret=<span class="variable">$secret_key</span>&amp;response=<span class="variable">$token</span>"</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_RETURNTRANSFER, <span class="literal">true</span>);</span><br><span class="line">    curl_setopt(<span class="variable">$ch</span>, CURLOPT_SSL_VERIFYPEER, <span class="literal">false</span>);</span><br><span class="line">    <span class="variable">$res</span> = curl_exec(<span class="variable">$ch</span>);</span><br><span class="line">    curl_close(<span class="variable">$ch</span>);</span><br><span class="line">    <span class="built_in">return</span> json_decode(<span class="variable">$res</span>, <span class="literal">true</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$site_key</span> = <span class="string">'取得したサイトキー'</span>;</span><br><span class="line"><span class="variable">$secret_key</span> = <span class="string">'取得したシークレットキー'</span>;</span><br><span class="line"><span class="keyword">if</span>(isset(<span class="variable">$_POST</span>[<span class="string">"g-recaptcha-response"</span>]) &amp;&amp; <span class="variable">$_POST</span>[<span class="string">"g-recaptcha-response"</span>] != NULL) &#123;</span><br><span class="line">    <span class="variable">$res</span> = checkReCaptcha(<span class="variable">$_POST</span>[<span class="string">"g-recaptcha-response"</span>], <span class="variable">$secret_key</span>);</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$res</span>[<span class="string">'success'</span>] != <span class="literal">true</span> || <span class="variable">$res</span>[<span class="string">'score'</span>] &lt; 0.5 ) &#123;</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">'あなたのアクセスは無効です。。。'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        // 安全なアクセスの場合の処理</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">'あなたのアクセスは安全ですね！'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">&lt;html lang=<span class="string">"ja"</span>&gt;</span><br><span class="line">&lt;head&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;form id=<span class="string">"hogeForm"</span> method=<span class="string">"post"</span> action=<span class="string">"test.php"</span>&gt;</span><br><span class="line">&lt;button <span class="built_in">type</span>=<span class="string">"button"</span> onclick=<span class="string">"hogeSubmit()"</span>&gt;送信&lt;/button&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://www.google.com/recaptcha/api.js?render=&lt;?php echo <span class="variable">$site_key</span>; ?&gt;"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">hogeSubmit</span></span>() &#123;</span><br><span class="line">  grecaptcha.ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    grecaptcha.execute(<span class="string">'&lt;?php echo $site_key; ?&gt;'</span>, &#123;action: <span class="string">'homepage'</span>&#125;)</span><br><span class="line">    .<span class="keyword">then</span>(<span class="keyword">function</span>(token) &#123;</span><br><span class="line">    // alert(token); トークンを確認したい方はどうぞ！</span><br><span class="line">    $(<span class="string">'#hogeForm'</span>).append(<span class="string">'&lt;input type="hidden" name="g-recaptcha-response" value="'</span>+token+<span class="string">'"&gt;'</span>);</span><br><span class="line">    $(<span class="string">'#hogeForm'</span>).submit();</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>サンプルプログラムはPHP+jQuery+HTMLとなっています。</p>
 <ul>
-<li>第1234回という回数は<code>th</code>に<code>第</code>の文字が含まれていたら回数として取得</li>
-<li>抽選日は<code>td</code>に<code>/</code>が入っていたら日付として取得</li>
-<li>当選番号（ナンバーズ3）の場合、当選数字は最大値として見ると999なので、1000以下の数字が<code>td</code>に入っていたら当選番号として取得</li>
+<li>$site_key = ‘取得したサイトキー’;</li>
+<li>$secret_key = ‘取得したシークレットキー’;</li>
 </ul>
-<p>こんな感じでターゲットのデータを取得し、配列に格納しています。</p>
-<p>PHPではスマートに書けけているので、もう少し考えてみようとは思っています。</p>
-<p>それでは長くなりましたので、今回はスクレイピングまでということで、その他のナレッジについては次回に続きます。</p>
-<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+<p>この2箇所にキーを入力してサーバーに設置すると、そのページでreCAPTCHA v3が有効に動作します。</p>
+<p>reCAPTCHAの処理結果を判断している箇所↓ですが、</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="variable">$res</span>[<span class="string">'success'</span>] != <span class="literal">true</span> || <span class="variable">$res</span>[<span class="string">'score'</span>] &lt; 0.5 ) &#123;</span><br></pre></td></tr></table></figure>
+<p><em>スコアの条件（0.5）を小さくすると判定が厳しくなります。</em><br>（サンプルの例ではスコアの真ん中の値である0.5以下は怪しいアクセスと設定しています。）</p>
+<p>また、reCAPTCHAとは直接関係ありませんが、送信ボタンのタグ内に「name=”submit”」を書いてしまうと、jQueryのsubmit()が機能しなくなりますのでご注意ください。</p>
+<p>それではGoogleのreCAPTCHA v3を利用してあなたの大切なサイトを迷惑なボットたちから守りましょう！</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -262,24 +264,25 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "bulma"
         },
-        "headline": "Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～",
-        "image": "https://lancers.work/thumbnail/numbers-1.jpg",
-        "keywords": "Node.js Express",
-        "genre": "ナレッジ アプリの素",
-        "datePublished": "2019-04-03",
-        "dateCreated": "2019-04-03",
-        "dateModified": "2019-04-14",
-        "url": "https://lancers.work/numbers-1/",
+        "headline": "GoogleのreCAPTCHA v3をサクッと設置する（PHP＋jQuery編）",
+        "image": "https://lancers.work/thumbnail/recaptcha-v3-php-jquery.jpg",
+        "keywords": "jQuery Google reCAPTCHA PHP",
+        "genre": "ナレッジ",
+        "datePublished": "2019-04-17",
+        "dateCreated": "2019-04-17",
+        "dateModified": "2019-04-17",
+        "url": "https://lancers.work/recaptcha-v3-php-jqueryi/",
         "description": "
-※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。
-今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）に関するナレッジです！
-ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数   "
-        "wordCount": 276
+自分のサイトに設置してあるフォームなどをボットから守る手段としてGoogleのreCAPTCHAがあります。
+reCAPTCHAのバージョンがv3になり、v2まであった利用者の操作（チェックボックスクリック、画像選択など）が不要になり、利用者の手を煩わせることなくサイトを安全に守ることができるようになりました。
+これはサイト運営者、サイト利用者の双方にとってとても有益なことです。
+今後はreCA"
+        "wordCount": 455
     }
 </script>
 
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-csv-download.jpg"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-csv-download/" title="Node.jsでCSVファイルをダウンロード・ソート・保存する" rel="bookmark">Node.jsでCSVファイルをダウンロード・ソート・保存する</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-houjin-api.jpg"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-houjin-api/" title="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる" rel="bookmark">Node.jsで国税庁法人番号システムWeb-APIを叩いてみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ3アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ4アプリ ～ Node.jsベース ～</a></h3></div></li></ul>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers3.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ3アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers4.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ4アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/pref-city-form.jpg"></div><div class="popular-posts-title"><h3><a href="/pref-city-form-jquery-json/" title="jQueryで都道府県・市区町村プルダウン（都道府県連動型セレクトメニュー）をできる限り少ないコード数で書いてみた" rel="bookmark">jQueryで都道府県・市区町村プルダウン（都道府県連動型セレクトメニュー）をできる限り少ないコード数で書いてみた</a></h3></div></li></ul>
 </article>
                         </div>
                     </section>
@@ -319,20 +322,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/numbers-2/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">次の記事</strong>
-        <p class="article-nav-title">
-        
-            Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/hexo-hueman-list-archives-date/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/hexo-css-not-reflected-cloudflare/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">前の記事</strong>
-        <p class="article-nav-title">Hexoのサイドバーのアーカイブ日付表示の変更方法</p>
+        <p class="article-nav-title">HexoのCSSが反映されない時の対処法</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -347,7 +340,7 @@ ga('send', 'pageview');
             
                 <h3 class="popular-widget-title">人気の記事</h3>
 
-<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-csv-download.jpg"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-csv-download/" title="Node.jsでCSVファイルをダウンロード・ソート・保存する" rel="bookmark">Node.jsでCSVファイルをダウンロード・ソート・保存する</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers-2.jpg"></div><div class="popular-posts-title"><h3><a href="/numbers-2/" title="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</a></h3></div></li></ul>
+<ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/my-home-server-mail-dns.jpg"></div><div class="popular-posts-title"><h3><a href="/my-home-server-mail-dns/" title="自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策" rel="bookmark">自宅サーバー初心者が悩むメールサーバーとDNSサーバー対策</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/esxi-kusanagi-runs-on-docker.jpg"></div><div class="popular-posts-title"><h3><a href="/esxi-kusanagi-runs-on-docker/" title="vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化" rel="bookmark">vSphere ESXiでKUSANAGI Runs on Dockerを動かす & 土台のubuntuのova化</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/archives-list-date-fix.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-hueman-list-archives-date/" title="Hexoのサイドバーのアーカイブ日付表示の変更方法" rel="bookmark">Hexoのサイドバーのアーカイブ日付表示の変更方法</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-start-nodejs.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-nodejs-blog/" title="Hexo（node.js）で静的ブログを構築してみる" rel="bookmark">Hexo（node.js）で静的ブログを構築してみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/hexo-on-kusanagi.jpg"></div><div class="popular-posts-title"><h3><a href="/hexo-on-kusanagi/" title="KUSANAGIのLAMP環境にHexoを構築" rel="bookmark">KUSANAGIのLAMP環境にHexoを構築</a></h3></div></li></ul>
             
                 <p style="padding: 10px 0 0 0">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

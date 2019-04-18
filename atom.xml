@@ -488,35 +488,6 @@
   </entry>
   
   <entry>
-    <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</title>
-    <link href="https://lancers.work/hexo-plugin-fix-tag-link-preview/"/>
-    <id>https://lancers.work/hexo-plugin-fix-tag-link-preview/</id>
-    <published>2019-03-31T22:19:00.000Z</published>
-    <updated>2019-04-17T23:47:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/hexo-tag-link-preview-fix.webp" alt></p><p>「Hexoのプラグインが機能しないので修正してみた」第二弾は<code>hexo-tag-link-preview</code>です。</p><p>このプラグインはリンク先をカードのように表示してくれるカッコいいプラグインです。こんな感じ。</p><a href="https://lancers.work/hexo-plugin-fix-toc/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-toc-fix.jpg"></div><div class="descriptions"><div class="og-title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</div><div class="og-description">KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を…</div></div></div></a><p>この連載記事シリーズは管理人の環境に依存、管理人仕様的なところがあります。</p><p>gitにもnpmにも上げていませんし、プラグインが更新されるとまた修正しなければいけませんし、かといって修正版を公開するところまで至っていません。</p><p>また、プラグインの使い方が間違っているよ！ということもあるかもしれません。<br>（製作者の方、すみません。）</p><p>以上を踏まえて、同じところで悩まれ修正することができた人がいれば嬉しい限りです。</p><div class="toc-title">目　次</div><div class="toc"><!-- toc --><ul><li><a href="#hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</a></li><li><a href="#hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</a><ul><li><a href="#修正対象ファイルindexjs">修正対象ファイル：index.js</a></li></ul></li></ul><!-- tocstop --></div><h2><span id="hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</span></h2><p>今回の不具合の気づきは、このプラグインであるあタグ<code>｛% linkPreview https://www.amazon.com/ _blank nofollow %｝</code>（例、}は表示上大文字になっています）を記事内に記述したところエラーで静的ファイルが生成されなかったことにあります。</p><p>タグの記述を何回見直しても正しかったので、これはプラグインファイルに原因が！ということで、該当ファイルを修正したところ上記のように表示されるようになりました。</p><p>この不具合は後日談ですが<code>hexo s</code>のエラーメッセージをよく見ればすぐに解決する内容でした。</p><p>もう一点、<code>_config.yml</code>に記述したオプションが機能しないということです。</p><p>class名をあてられないのは前回の<code>hexo-toc</code>より大きな問題ではありませんでしたが（管理人のケース）、キャプションの文字数が反映されないのが困りました。</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><h2><span id="hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</span></h2><p>プラグインの実体は<code>node_modules</code>フォルダ内にあります。</p><p>hexo-tag-link-previewの実体は<code>hexo-tag-link-preview</code>フォルダになります。</p><h3><span id="修正対象ファイルindexjs">修正対象ファイル：index.js</span></h3><p>25行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>これを、</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>というように先頭の<code>async</code>を削除したところ、<code>hexo s</code>、<code>hexo g</code>を実行してもエラーが出なくなり静的ファイルが生成されるようになりました。</p><p><code>async</code>は非同期処理を実行するためにつけるのですが、同期処理でも今のところ問題ないので、削除したまま使っています。</p><p>キャプションの文字数は<code>_config.yml</code>で変更できない状況にあるため、同じファイル<code>index.js</code>に直書きしてしのいでいます。</p><p>15行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? hexo.config.linkPreview.descriptionLength : 70;</span><br></pre></td></tr></table></figure><p>末尾の数字を変更します。</p><p>以上、2点の不具合の解決方法はこれだけとなります。</p><p>本記事執筆現在手を加えたプラグインは2つですが、Hexoには便利なプラグインたくさんありますね。</p><p>今までKUSANAGI（WordPress）で作っていた表現がほぼ表現できます。</p><p>WordPressはかなり昔から使っていましたが、今では当たり前になって多くの人が使い、なんとなく嫌気がさしていたので、Hexoに乗り換えて正解です！</p><p>動的サイト、WordPress、PHPから脱却してみませんか？</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;/images/hexo-tag-link-preview-fix.webp&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;「Hexoのプラグインが機能しないので修正してみた」第二弾は&lt;code&gt;hexo-tag-link-preview&lt;/code&gt;です。&lt;/p&gt;
-&lt;p&gt;
-      
-    
-    </summary>
-    
-      <category term="ナレッジ" scheme="https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/"/>
-    
-    
-      <category term="Node.js" scheme="https://lancers.work/tags/Node-js/"/>
-    
-      <category term="Hexo" scheme="https://lancers.work/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</title>
     <link href="https://lancers.work/hexo-plugin-fix-toc/"/>
     <id>https://lancers.work/hexo-plugin-fix-toc/</id>
@@ -532,6 +503,35 @@
         &lt;p&gt;&lt;img src=&quot;/images/hexo-toc-fix.webp&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。&lt;/p&gt;
 &lt;p&gt;ブログをガシガシ書き始めたというより、ブログの体裁を整える日を送っています
+      
+    
+    </summary>
+    
+      <category term="ナレッジ" scheme="https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/"/>
+    
+    
+      <category term="Node.js" scheme="https://lancers.work/tags/Node-js/"/>
+    
+      <category term="Hexo" scheme="https://lancers.work/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexoのプラグインが機能しないので修正してみた ～ hexo-tag-link-preview編 ～</title>
+    <link href="https://lancers.work/hexo-plugin-fix-tag-link-preview/"/>
+    <id>https://lancers.work/hexo-plugin-fix-tag-link-preview/</id>
+    <published>2019-03-31T22:19:00.000Z</published>
+    <updated>2019-04-17T23:47:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/hexo-tag-link-preview-fix.webp" alt></p><p>「Hexoのプラグインが機能しないので修正してみた」第二弾は<code>hexo-tag-link-preview</code>です。</p><p>このプラグインはリンク先をカードのように表示してくれるカッコいいプラグインです。こんな感じ。</p><a href="https://lancers.work/hexo-plugin-fix-toc/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-toc-fix.jpg"></div><div class="descriptions"><div class="og-title">Hexoのプラグインが機能しないので修正してみた ～ hexo-toc編 ～</div><div class="og-description">KUSANAGI（WordPress）からHexoへブログを移行して数日がたちました。 ブログをガシガシ書き始めたというより、ブログの体裁を…</div></div></div></a><p>この連載記事シリーズは管理人の環境に依存、管理人仕様的なところがあります。</p><p>gitにもnpmにも上げていませんし、プラグインが更新されるとまた修正しなければいけませんし、かといって修正版を公開するところまで至っていません。</p><p>また、プラグインの使い方が間違っているよ！ということもあるかもしれません。<br>（製作者の方、すみません。）</p><p>以上を踏まえて、同じところで悩まれ修正することができた人がいれば嬉しい限りです。</p><div class="toc-title">目　次</div><div class="toc"><!-- toc --><ul><li><a href="#hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</a></li><li><a href="#hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</a><ul><li><a href="#修正対象ファイルindexjs">修正対象ファイル：index.js</a></li></ul></li></ul><!-- tocstop --></div><h2><span id="hexo-tag-link-preview-不具合の症状">hexo-tag-link-preview 不具合の症状</span></h2><p>今回の不具合の気づきは、このプラグインであるあタグ<code>｛% linkPreview https://www.amazon.com/ _blank nofollow %｝</code>（例、}は表示上大文字になっています）を記事内に記述したところエラーで静的ファイルが生成されなかったことにあります。</p><p>タグの記述を何回見直しても正しかったので、これはプラグインファイルに原因が！ということで、該当ファイルを修正したところ上記のように表示されるようになりました。</p><p>この不具合は後日談ですが<code>hexo s</code>のエラーメッセージをよく見ればすぐに解決する内容でした。</p><p>もう一点、<code>_config.yml</code>に記述したオプションが機能しないということです。</p><p>class名をあてられないのは前回の<code>hexo-toc</code>より大きな問題ではありませんでしたが（管理人のケース）、キャプションの文字数が反映されないのが困りました。</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><h2><span id="hexo-tag-link-preview-不具合の解消">hexo-tag-link-preview 不具合の解消</span></h2><p>プラグインの実体は<code>node_modules</code>フォルダ内にあります。</p><p>hexo-tag-link-previewの実体は<code>hexo-tag-link-preview</code>フォルダになります。</p><h3><span id="修正対象ファイルindexjs">修正対象ファイル：index.js</span></h3><p>25行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>これを、</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getTag(options) &#123;</span><br></pre></td></tr></table></figure><p>というように先頭の<code>async</code>を削除したところ、<code>hexo s</code>、<code>hexo g</code>を実行してもエラーが出なくなり静的ファイルが生成されるようになりました。</p><p><code>async</code>は非同期処理を実行するためにつけるのですが、同期処理でも今のところ問題ないので、削除したまま使っています。</p><p>キャプションの文字数は<code>_config.yml</code>で変更できない状況にあるため、同じファイル<code>index.js</code>に直書きしてしのいでいます。</p><p>15行目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? hexo.config.linkPreview.descriptionLength : 70;</span><br></pre></td></tr></table></figure><p>末尾の数字を変更します。</p><p>以上、2点の不具合の解決方法はこれだけとなります。</p><p>本記事執筆現在手を加えたプラグインは2つですが、Hexoには便利なプラグインたくさんありますね。</p><p>今までKUSANAGI（WordPress）で作っていた表現がほぼ表現できます。</p><p>WordPressはかなり昔から使っていましたが、今では当たり前になって多くの人が使い、なんとなく嫌気がさしていたので、Hexoに乗り換えて正解です！</p><p>動的サイト、WordPress、PHPから脱却してみませんか？</p><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/hexo-tag-link-preview-fix.webp&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;「Hexoのプラグインが機能しないので修正してみた」第二弾は&lt;code&gt;hexo-tag-link-preview&lt;/code&gt;です。&lt;/p&gt;
+&lt;p&gt;
       
     
     </summary>

@@ -9,6 +9,7 @@
     <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.gstatic.com">
     
+    
 
     
     <title>Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～ </title>
@@ -17,19 +18,19 @@
     
         <meta name="keywords" content="Node.js,Express">
     
-    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選">
+    <meta name="description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。   前回の記事はこちらです。  今年の目標がNode.jsを極める！ですので、かなりの初心者コードですが、参考やヒラメキの一助になればと思い書いています">
 <meta name="keywords" content="Node.js,Express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～">
 <meta property="og:url" content="https://lancers.work/numbers-2/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選">
+<meta property="og:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。   前回の記事はこちらです。  今年の目標がNode.jsを極める！ですので、かなりの初心者コードですが、参考やヒラメキの一助になればと思い書いています">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/numbers-2.webp">
 <meta property="og:updated_time" content="2019-04-17T23:48:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～">
-<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。 ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選">
+<meta name="twitter:description" content="※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBERS3 &amp;amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。   前回の記事はこちらです。  今年の目標がNode.jsを極める！ですので、かなりの初心者コードですが、参考やヒラメキの一助になればと思い書いています">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/numbers-2.webp">
     
 
@@ -2597,10 +2598,10 @@ ga('send', 'pageview');
             <p><img src="/images/numbers-2.webp" alt></p>
 <p>※Node.jsアプリ作成の共有コーナーです。<br>※Node.jsアプリ作成にはExpressを使用しています。</p>
 <p>今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。</p>
-<a href="https://lancers.work/numbers3/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers3.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ3アプリ ～ Node.jsベース ～</div><div class="og-description">ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選数字出現回数      (adsby…</div></div></div></a>
-<a href="https://lancers.work/numbers4/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers4.jpg"></div><div class="descriptions"><div class="og-title">ナンバーズ4アプリ ～ Node.jsベース ～</div><div class="og-description">ナンバーズ3アプリはこちら ナンバーズ4 過去回の当選数字  集計回数：   ナンバーズ4 過去回の当選数字出現回数      (adsby…</div></div></div></a>
+
+
 <p>前回の記事はこちらです。</p>
-<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+
 <p>今年の目標が<strong>Node.jsを極める！</strong>ですので、かなりの初心者コードですが、参考やヒラメキの一助になればと思い書いています。</p>
 <p>今回でナンバーズアプリに関するナレッジは最終回です。</p>
 <p>アプリが完成しましたら、公開していきたいと思います。</p>
@@ -2670,13 +2671,17 @@ ga('send', 'pageview');
         "description": "
 ※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。
 今回はナンバーズ（NUMBERS3 &amp; NUMBERS4）の超お役立ちアプリ（大げさ）作成に関するナレッジの続き第2回目です。
-ナンバーズ3アプリ ～ Node.jsベース ～ナンバーズ4アプリはこちら ナンバーズ3 過去回の当選数字  集計回数：   ナンバーズ3 過去回の当選"
-        "wordCount": 530
+
+
+前回の記事はこちらです。
+
+今年の目標がNode.jsを極める！ですので、かなりの初心者コードですが、参考やヒラメキの一助になればと思い書いています"
+        "wordCount": 468
     }
 </script>
 
     <p>関連記事</p>
-    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers4.webp"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ4アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-houjin-api.webp"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-houjin-api/" title="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる" rel="bookmark">Node.jsで国税庁法人番号システムWeb-APIを叩いてみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-csv-download.webp"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-csv-download/" title="Node.jsでCSVファイルをダウンロード・ソート・保存する" rel="bookmark">Node.jsでCSVファイルをダウンロード・ソート・保存する</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers-1.webp"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers3.webp"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ3アプリ ～ Node.jsベース ～</a></h3></div></li></ul>
+    <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers4.webp"></div><div class="popular-posts-title"><h3><a href="/numbers4/" title="ナンバーズ4アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ4アプリ ～ Node.jsベース ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-csv-download.webp"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-csv-download/" title="Node.jsでCSVファイルをダウンロード・ソート・保存する" rel="bookmark">Node.jsでCSVファイルをダウンロード・ソート・保存する</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/nodejs-express-houjin-api.webp"></div><div class="popular-posts-title"><h3><a href="/nodejs-express-houjin-api/" title="Node.jsで国税庁法人番号システムWeb-APIを叩いてみる" rel="bookmark">Node.jsで国税庁法人番号システムWeb-APIを叩いてみる</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers-1.webp"></div><div class="popular-posts-title"><h3><a href="/numbers-1/" title="Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～" rel="bookmark">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-img"><img src="/eyecatch/numbers3.webp"></div><div class="popular-posts-title"><h3><a href="/numbers3/" title="ナンバーズ3アプリ ～ Node.jsベース ～" rel="bookmark">ナンバーズ3アプリ ～ Node.jsベース ～</a></h3></div></li></ul>
 </article>
                         </div>
                     </section>

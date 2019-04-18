@@ -9,6 +9,7 @@
     <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.gstatic.com">
     
+    
 
     
     <title>Node.jsでCSVファイルをダウンロード・ソート・保存する </title>
@@ -17,19 +18,19 @@
     
         <meta name="keywords" content="Node.js,Express,CSV">
     
-    <meta name="description" content="ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。 Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER… これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSV">
+    <meta name="description" content="ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。  これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSVファイルで提供している公的サイトを見つけたので、CSVファイルをダウンロードして、ナンバーズの当選番号を取得するという仕様に変更しました。 Node.jsにおけるCSVファイルのダウンロードとデータの抽出、ナ">
 <meta name="keywords" content="Node.js,Express,CSV">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.jsでCSVファイルをダウンロード・ソート・保存する">
 <meta property="og:url" content="https://lancers.work/nodejs-express-csv-download/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。 Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER… これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSV">
+<meta property="og:description" content="ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。  これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSVファイルで提供している公的サイトを見つけたので、CSVファイルをダウンロードして、ナンバーズの当選番号を取得するという仕様に変更しました。 Node.jsにおけるCSVファイルのダウンロードとデータの抽出、ナ">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/nodejs-express-csv-download.webp">
 <meta property="og:updated_time" content="2019-04-18T07:22:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.jsでCSVファイルをダウンロード・ソート・保存する">
-<meta name="twitter:description" content="ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。 Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER… これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSV">
+<meta name="twitter:description" content="ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。  これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSVファイルで提供している公的サイトを見つけたので、CSVファイルをダウンロードして、ナンバーズの当選番号を取得するという仕様に変更しました。 Node.jsにおけるCSVファイルのダウンロードとデータの抽出、ナ">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/nodejs-express-csv-download.webp">
     
 
@@ -2596,7 +2597,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/nodejs-express-csv-download.webp" alt></p>
 <p>ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。</p>
-<a href="https://lancers.work/numbers-1/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-1.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+
 <p>これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSVファイルで提供している公的サイトを見つけたので、CSVファイルをダウンロードして、ナンバーズの当選番号を取得するという仕様に変更しました。</p>
 <p>Node.jsにおけるCSVファイルのダウンロードとデータの抽出、ナンバーズアプリのためのjsonファイル作成までのコードを備忘録のためサンプル的に置いておきます。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -2640,7 +2641,7 @@ ga('send', 'pageview');
 <p>この辺はCSVのモジュールを使ったり、文字エンコードをもっと丁寧に行えば解決するのかなと思っています。</p>
 <h3><span id="抽選日を降順にソート">抽選日を降順にソート</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">winJson.sort(<span class="keyword">function</span>(a,b) &#123;</span><br><span class="line">  <span class="keyword">if</span>(a.date &gt; b.date) <span class="built_in">return</span> -1;</span><br><span class="line">  <span class="keyword">if</span>(a.date &lt; b.date) <span class="built_in">return</span> 1;</span><br><span class="line">  <span class="built_in">return</span> 0;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>これは過去記事と変更ありません。</p>
-<a href="https://lancers.work/numbers-2/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/numbers-2.jpg"></div><div class="descriptions"><div class="og-title">Node.jsによるナンバーズアプリ ～ 2.配列のソート・jsonファイル保存編 ～</div><div class="og-description">※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…</div></div></div></a>
+
 <h3><span id="jsonファイルの保存">jsonファイルの保存</span></h3><p>こちらも↑の過去記事と変更ありません。</p>
 <p>配列<code>winJson</code>に格納したナンバーズ抽選・当選データを<code>fs.writeFile</code>でファイルに保存しています。</p>
 <p>今回は非同期処理でデータ抽出完了の前にファイルが保存されてしまうという現象は起きません。</p>
@@ -2674,9 +2675,10 @@ ga('send', 'pageview');
         "url": "https://lancers.work/nodejs-express-csv-download/",
         "description": "
 ナンバーズアプリの元データをスクレイピングで行っているという記事を紹介しました。
-Node.jsによるナンバーズアプリ ～ 1.スクレイピング編 ～※Node.jsアプリ作成の共有コーナーです。※Node.jsアプリ作成にはExpressを使用しています。 今回はナンバーズ（NUMBER…
-これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSV"
-        "wordCount": 370
+
+これはこれで良かったのですが、少し不具合が出て問題解決策を模索していたところ、ナンバーズの当選番号をCSVファイルで提供している公的サイトを見つけたので、CSVファイルをダウンロードして、ナンバーズの当選番号を取得するという仕様に変更しました。
+Node.jsにおけるCSVファイルのダウンロードとデータの抽出、ナ"
+        "wordCount": 346
     }
 </script>
 

@@ -9,6 +9,7 @@
     <link rel="dns-prefetch" href="//tpc.googlesyndication.com">
     <link rel="dns-prefetch" href="//www.gstatic.com">
     
+    
 
     
     <title>Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説 </title>
@@ -17,19 +18,19 @@
     
         <meta name="keywords" content="Node.js,Hexo,GitHub,Netlify">
     
-    <meta name="description" content="これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。 KUSANAGIのLAMP環境にHexoを構築まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。">
+    <meta name="description" content="これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。  しかし、如何せん弱小回線のため、このブログのGoogleのPageSpeed Insightsでは遅い！とお叱りを受けていました（泣） そこで高機能でパフ">
 <meta name="keywords" content="Node.js,Hexo,GitHub,Netlify">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説">
 <meta property="og:url" content="https://lancers.work/hexo-github-netlify-deploy/index.html">
 <meta property="og:site_name" content="フリーランサーとして生きる道">
-<meta property="og:description" content="これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。 KUSANAGIのLAMP環境にHexoを構築まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。">
+<meta property="og:description" content="これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。  しかし、如何せん弱小回線のため、このブログのGoogleのPageSpeed Insightsでは遅い！とお叱りを受けていました（泣） そこで高機能でパフ">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/hexo-github-netlify-deploy.webp">
 <meta property="og:updated_time" content="2019-04-17T23:47:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-&gt;GitHub-&gt;Netlifyで静的サイトを公開する方法をわかりやすく解説">
-<meta name="twitter:description" content="これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。 KUSANAGIのLAMP環境にHexoを構築まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。">
+<meta name="twitter:description" content="これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。  しかし、如何せん弱小回線のため、このブログのGoogleのPageSpeed Insightsでは遅い！とお叱りを受けていました（泣） そこで高機能でパフ">
 <meta name="twitter:image" content="https://lancers.work/thumbnail/hexo-github-netlify-deploy.webp">
     
 
@@ -2597,7 +2598,7 @@ ga('send', 'pageview');
             <p><img src="/images/hexo-github-netlify-deploy.webp" alt></p>
 <p>これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。</p>
 <p>開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。</p>
-<a href="https://lancers.work/hexo-on-kusanagi/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-on-kusanagi.jpg"></div><div class="descriptions"><div class="og-title">KUSANAGIのLAMP環境にHexoを構築</div><div class="og-description">まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。 HexoはNode.jsをほ…</div></div></div></a>
+
 <p>しかし、如何せん弱小回線のため、このブログのGoogleの<a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener">PageSpeed Insights</a>では<strong>遅い！</strong>とお叱りを受けていました（泣）</p>
 <p>そこで高機能でパフォーマンスが優れていて、Hexoユーザー御用達の無料ホスティングサービス<a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>に移行することにしました。</p>
 <p>結果から言いますとPageSpeed Insightsのスコアは激的に改善されました。</p>
@@ -2631,7 +2632,7 @@ ga('send', 'pageview');
 </ul>
 <p>という方を対象にしています。</p>
 <p>Node.jsやHexoのインストール方法などは、当ブログの記事や皆さんの記事を参考にしてください。</p>
-<a href="https://lancers.work/hexo-nodejs-blog/" class="link-preview"><div class="link-area"><div class="og-image"><img src="https://lancers.work/thumbnail/hexo-start-nodejs.jpg"></div><div class="descriptions"><div class="og-title">Hexo（node.js）で静的ブログを構築してみる</div><div class="og-description">もともとは、超高速WordPress仮想マシン「KUSANAGI」でWEBアプリを量産しようということで、KUSANAGIでブログを書いてい…</div></div></div></a>
+
 <h2><span id="hexoの設定">Hexoの設定</span></h2><h3><span id="_configymlの設定">_config.ymlの設定</span></h3><figure class="highlight bash"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/your-git-account/your-repository.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>ブログ本体（Themes内ではなく）の<code>_config.yml</code>の<code># Deployment</code>の箇所に上記のように記述します。</p>
 <p>予め、リポジトリ（空でOK）を作成しておき、gitのURLをrepo欄に記述します。<br>（私はprivateなリポジトリを作成しました。）</p>
@@ -2695,8 +2696,10 @@ ga('send', 'pageview');
         "description": "
 これまで社内サーバーにKUSANAGI仮想マシンを置いて、その中でNode.jsの開発、このブログの執筆を行い、公開していました。
 開発環境は快適で、ブログの公開もデプロイ？SSL？なんて考えず、KUSANAGI配下で簡単に行っていました。
-KUSANAGIのLAMP環境にHexoを構築まだHexoでブログを書き始めたばかりで、正直Node.jsでのWEBアプリ開発はまだ本格的に始めていません。"
-        "wordCount": 205
+
+しかし、如何せん弱小回線のため、このブログのGoogleのPageSpeed Insightsでは遅い！とお叱りを受けていました（泣）
+そこで高機能でパフ"
+        "wordCount": 188
     }
 </script>
 

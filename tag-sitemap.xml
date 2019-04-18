@@ -24,13 +24,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/GitHub/</loc>
-        <lastmod>2019-04-17T23:47:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/Netlify/</loc>
         <lastmod>2019-04-17T23:47:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -193,14 +186,28 @@
 
     <url>
         <loc>https://lancers.work/tags/Node-js/</loc>
-        <lastmod>2019-04-18T02:21:26.000Z</lastmod>
+        <lastmod>2019-04-18T07:01:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://lancers.work/tags/Hexo/</loc>
-        <lastmod>2019-04-18T02:21:26.000Z</lastmod>
+        <lastmod>2019-04-18T07:01:24.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/GitHub/</loc>
+        <lastmod>2019-04-18T07:01:24.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/cron/</loc>
+        <lastmod>2019-04-18T07:01:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -27,7 +27,7 @@
 <meta property="og:description" content="このブログはNetlifyで公開していますが、定期的にjsonファイルを差し替える必要のある記事があります。 毎日、手動で定時に差し替えていましたが、控えめに言って面倒なので、定時になったらcronでGitHubへPUSHして、GitHubの変更を察知したNetlifyが自動でブログに反映させる、という手段に変更しました。 この発想までは良かったのですが、cronのgit push master">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/hexo-git-push-cron.webp">
-<meta property="og:updated_time" content="2019-04-18T07:01:24.000Z">
+<meta property="og:updated_time" content="2019-04-18T22:06:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexoブログをcronで定期的にGitHubにPUSHする方法をまとめてみた">
 <meta name="twitter:description" content="このブログはNetlifyで公開していますが、定期的にjsonファイルを差し替える必要のある記事があります。 毎日、手動で定時に差し替えていましたが、控えめに言って面倒なので、定時になったらcronでGitHubへPUSHして、GitHubの変更を察知したNetlifyが自動でブログに反映させる、という手段に変更しました。 この発想までは良かったのですが、cronのgit push master">
@@ -2624,6 +2624,7 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li><a href="#まとめ">まとめ</a></li>
+<li><a href="#おまけ">おまけ</a></li>
 </ul>
 <!-- tocstop -->
 </div>
@@ -2662,7 +2663,7 @@ ga('send', 'pageview');
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<h2><span id="cron設定">cron設定</span></h2><h3><span id="cronのスクリプトファイルを作成">cronのスクリプトファイルを作成</span></h3><figure class="highlight bash"><figcaption><span>gitpush.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> /home/ローカルリポジトリのディレクトリ/lancers-work; git add -A; git commit -m <span class="string">"Git Push by Cron!"</span>; git push master;</span><br></pre></td></tr></table></figure>
+<h2><span id="cron設定">cron設定</span></h2><h3><span id="cronのスクリプトファイルを作成">cronのスクリプトファイルを作成</span></h3><figure class="highlight bash"><figcaption><span>gitpush.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> /home/ローカルのリポジトリのディレクトリ/lancers-work; git add -A; git commit -m <span class="string">"Git Push by Cron!"</span>; git push master;</span><br></pre></td></tr></table></figure>
 <p>↑<code>/home</code>↓は例ですので、ご自身のパスに読み替えてください。<br><code>&quot;Git Push by Cron!&quot;</code>はコメントですので変更可です。</p>
 <p>このスクリプトを、</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/5 * * * *　/bin/bash /home/・・・・・/gitpush.sh</span><br></pre></td></tr></table></figure>
@@ -2671,6 +2672,9 @@ ga('send', 'pageview');
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[master 61fabab] Git Push Agent by crontab</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br><span class="line">To git@github.com:ユーザーID/リポジトリ名.git</span><br><span class="line">   da43ca9..61fabab  HEAD -&gt; master</span><br><span class="line">[master dcea703] Git Push Agent by crontab</span><br><span class="line"> 1 file changed, 5 deletions(-)</span><br><span class="line"> delete mode 100644 test.md</span><br><span class="line">To git@github.com:ユーザーID/リポジトリ名.git</span><br><span class="line">   61fabab..dcea703  HEAD -&gt; master</span><br></pre></td></tr></table></figure>
 <h2><span id="まとめ">まとめ</span></h2><p>以上が、cronを使ったGitHubへの定期的なPUSHを実現する方法です。</p>
 <p>このHexoブログで使用しているjsonファイルを定期更新したいところから始まりましたが、バックアップやちょちょっと更新したい時にcronを今すぐ実行したりと用途は多そうです。</p>
+<h2><span id="おまけ">おまけ</span></h2><p>この記事を書いた後、当ブログで必要な定期更新は、</p>
+<figure class="highlight bash"><figcaption><span>gitpush.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> /home/ローカルのリポジトリのディレクトリ/lancers-work; hexo d- g</span><br></pre></td></tr></table></figure>
+<p>単純にhexoコマンドを実行するこのスクリプトをcronで実行することでまかなえることがわかりました。</p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -2694,13 +2698,13 @@ ga('send', 'pageview');
         "genre": "ナレッジ",
         "datePublished": "2019-04-18",
         "dateCreated": "2019-04-18",
-        "dateModified": "2019-04-18",
+        "dateModified": "2019-04-19",
         "url": "https://lancers.work/hexo-git-push-cron/",
         "description": "
 このブログはNetlifyで公開していますが、定期的にjsonファイルを差し替える必要のある記事があります。
 毎日、手動で定時に差し替えていましたが、控えめに言って面倒なので、定時になったらcronでGitHubへPUSHして、GitHubの変更を察知したNetlifyが自動でブログに反映させる、という手段に変更しました。
 この発想までは良かったのですが、cronのgit push master"
-        "wordCount": 621
+        "wordCount": 637
     }
 </script>
 

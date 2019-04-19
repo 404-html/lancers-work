@@ -27,7 +27,7 @@
 <meta property="og:description" content="このブログはNetlifyで公開していますが、定期的にjsonファイルを差し替える必要のある記事があります。 毎日、手動で定時に差し替えていましたが、控えめに言って面倒なので、定時になったらcronでGitHubへPUSHして、GitHubの変更を察知したNetlifyが自動でブログに反映させる、という手段に変更しました。 この発想までは良かったのですが、cronのgit push master">
 <meta property="og:locale" content="ja">
 <meta property="og:image" content="https://lancers.work/thumbnail/hexo-git-push-cron.webp">
-<meta property="og:updated_time" content="2019-04-18T22:06:49.000Z">
+<meta property="og:updated_time" content="2019-04-19T06:34:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexoブログをcronで定期的にGitHubにPUSHする方法をまとめてみた">
 <meta name="twitter:description" content="このブログはNetlifyで公開していますが、定期的にjsonファイルを差し替える必要のある記事があります。 毎日、手動で定時に差し替えていましたが、控えめに言って面倒なので、定時になったらcronでGitHubへPUSHして、GitHubの変更を察知したNetlifyが自動でブログに反映させる、という手段に変更しました。 この発想までは良かったのですが、cronのgit push master">
@@ -2646,10 +2646,14 @@ ga('send', 'pageview');
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line"></span><br><span class="line">$ ssh-keygen -t rsa</span><br><span class="line"></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/root/.ssh/id_rsa): id_git_rsa</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> id_git_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> id_git_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:sTWY9lOQQQfu4Io6BPycwmlH47n11lceAsMM/omfVxvV root@node</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+---[RSA 2048]----+</span></span><br><span class="line"><span class="string">|+.   ==+         |</span></span><br><span class="line"><span class="string">|.+  rei++ o .    |</span></span><br><span class="line"><span class="string">|..o+  .E+ o      |</span></span><br><span class="line"><span class="string">|+.oooooc + .     |</span></span><br><span class="line"><span class="string">|Bo   +-oS        |</span></span><br><span class="line"><span class="string">|=BACoo+ .        |</span></span><br><span class="line"><span class="string">|* +o sample      |</span></span><br><span class="line"><span class="string">| Cooo .A.        |</span></span><br><span class="line"><span class="string">|o+=o o..         |</span></span><br><span class="line"><span class="string">+----[SHA256]-----+</span></span><br></pre></td></tr></table></figure>
 <p><strong>id_git_rsa</strong>（秘密鍵）と<strong>id_git_rsa.pub</strong>（公開鍵）が<code>.ssh</code>フォルダに作成されます。</p>
 <h3><span id="sshアクセスの設定githubへの登録">SSHアクセスの設定（GitHubへの登録）</span></h3><p><strong>GitHub SSH Keys</strong>の登録画面</p>
-<a href="https://github.com/settings/keys" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="og-image"><img src="https://github.githubassets.com/images/modules/open_graph/github-logo.png"></div><div class="descriptions"><div class="og-title">Build software better, together</div><div class="og-description">GitHub is where people build software. More than 31 million people use…</div></div></div></a>
+<a href="https://github.com/settings/keys" class="link-preview" target="_blank" rel="nofollow"><div class="link-area"><div class="descriptions"><div class="og-title">Build software better, together</div><div class="og-description">GitHub is where people build software. More than 31 million people use…</div></div></div></a>
 <p><img src="/images/hexo-git-push-cron-1.webp" alt></p>
 <p>上の画像の箇所に公開鍵の情報を登録します。</p>
 <p><strong>Title</strong>は自分のわかりやすい名前とかではなく、公開鍵のファイル名（本記事の例では<strong>id_git_rsa.pub</strong>）を登録します。</p>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
 <h3><span id="sshアクセスの設定configの作成">SSHアクセスの設定（configの作成）</span></h3><p><code>~/.ssh/config</code>ファイルを作成します。</p>
 <p>configファイルの記述内容は色々な情報がありましたが、こちらの記述で落ち着きました。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host github github.com</span><br><span class="line">  HostName github.com</span><br><span class="line">  IdentityFile ~/.ssh/id_git_rsa</span><br><span class="line">  User git</span><br></pre></td></tr></table></figure>
@@ -2662,10 +2666,6 @@ ga('send', 'pageview');
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"></span><br><span class="line">Hi ユーザーID! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
 <p>このような表示になれば、無事にSSH接続できています。</p>
 <p>エラーが出る場合、鍵のパスや鍵の登録を見直してみてください。</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6760690047817155" data-ad-slot="5538845879"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
 <h2><span id="cron設定">cron設定</span></h2><h3><span id="cronのスクリプトファイルを作成">cronのスクリプトファイルを作成</span></h3><figure class="highlight bash"><figcaption><span>gitpush.sh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> /home/ローカルのリポジトリのディレクトリ/lancers-work; git add -A; git commit -m <span class="string">"Git Push by Cron!"</span>; git push master;</span><br></pre></td></tr></table></figure>
 <p>↑<code>/home</code>↓は例ですので、ご自身のパスに読み替えてください。<br><code>&quot;Git Push by Cron!&quot;</code>はコメントですので変更可です。</p>
 <p>このスクリプトを、</p>
@@ -2707,7 +2707,7 @@ ga('send', 'pageview');
 このブログはNetlifyで公開していますが、定期的にjsonファイルを差し替える必要のある記事があります。
 毎日、手動で定時に差し替えていましたが、控えめに言って面倒なので、定時になったらcronでGitHubへPUSHして、GitHubの変更を察知したNetlifyが自動でブログに反映させる、という手段に変更しました。
 この発想までは良かったのですが、cronのgit push master"
-        "wordCount": 637
+        "wordCount": 635
     }
 </script>
 

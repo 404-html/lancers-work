@@ -16,7 +16,7 @@
                 $(this).after('<span class="caption">' + this.alt + '</span>');
             }
 
-            // 对于已经包含在链接内的图片不适用lightGallery
+            // lightGallery
             if ($(this).parent().prop("tagName") !== 'A') {
                 $(this).wrap('<a href="' + this.src + '" title="' + this.alt + '" class="gallery-item"></a>');
             }

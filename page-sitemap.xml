@@ -8,6 +8,34 @@
     </url>
     
     <url>
+        <loc>https://lancers.work/app/</loc>
+        <lastmod>2019-04-26T06:00:36.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://lancers.work/api/</loc>
+        <lastmod>2019-04-26T05:55:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://lancers.work/tags/</loc>
+        <lastmod>2019-04-25T03:36:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://lancers.work/categories/</loc>
+        <lastmod>2019-04-25T03:36:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://lancers.work/404.html</loc>
         <lastmod>2019-04-22T23:32:06.000Z</lastmod>
         <changefreq>weekly</changefreq>

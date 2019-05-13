@@ -514,62 +514,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/json/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/HTML/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E5%B8%82%E5%8C%BA%E7%94%BA%E6%9D%91/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E3%83%97%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/reCAPTCHA/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/PHP/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/VMware/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -627,6 +571,62 @@
 
     <url>
         <loc>https://lancers.work/tags/%E3%81%BE%E3%81%A8%E3%82%81/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/reCAPTCHA/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/PHP/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/json/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/HTML/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E5%B8%82%E5%8C%BA%E7%94%BA%E6%9D%91/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E3%83%97%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -857,20 +857,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/%E5%B0%8F%E5%AD%A6%E6%A0%A1/</loc>
-        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E6%95%99%E7%A7%91%E6%8B%85%E4%BB%BB%E5%88%B6/</loc>
-        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/%E4%BF%9D%E8%82%B2%E7%84%A1%E5%84%9F%E5%8C%96/</loc>
         <lastmod>2019-05-13T04:58:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -879,6 +865,20 @@
 
     <url>
         <loc>https://lancers.work/tags/%E6%B6%88%E8%B2%BB%E5%A2%97%E7%A8%8E/</loc>
+        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E5%B0%8F%E5%AD%A6%E6%A0%A1/</loc>
+        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E6%95%99%E7%A7%91%E6%8B%85%E4%BB%BB%E5%88%B6/</loc>
         <lastmod>2019-05-13T04:58:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -1459,6 +1459,20 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/tags/%E6%82%A0%E4%BB%81%E3%81%95%E3%81%BE/</loc>
+        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E5%B8%9D%E7%8E%8B%E6%95%99%E8%82%B2/</loc>
+        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://lancers.work/tags/%E4%B9%83%E6%9C%A8%E5%9D%8246/</loc>
         <lastmod>2019-05-13T04:58:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1488,20 +1502,6 @@
 
     <url>
         <loc>https://lancers.work/tags/%E5%A5%BD%E8%AA%BF/</loc>
-        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E6%82%A0%E4%BB%81%E3%81%95%E3%81%BE/</loc>
-        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E5%B8%9D%E7%8E%8B%E6%95%99%E8%82%B2/</loc>
         <lastmod>2019-05-13T04:58:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -1599,6 +1599,13 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/tags/%E5%AE%87%E5%9E%A3%E7%BE%8E%E9%87%8C/</loc>
+        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://lancers.work/tags/%E4%BB%B2%E5%B7%9D%E9%81%A5%E9%A6%99/</loc>
         <lastmod>2019-05-13T04:58:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1607,13 +1614,6 @@
 
     <url>
         <loc>https://lancers.work/tags/JKT/</loc>
-        <lastmod>2019-05-13T04:58:18.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E5%AE%87%E5%9E%A3%E7%BE%8E%E9%87%8C/</loc>
         <lastmod>2019-05-13T04:58:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -2054,6 +2054,13 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/tags/%E6%92%AE%E3%82%8A%E9%89%84/</loc>
+        <lastmod>2019-05-13T05:01:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://lancers.work/tags/%E5%B9%B3%E6%84%9B%E6%A2%A8/</loc>
         <lastmod>2019-05-13T05:01:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2069,13 +2076,6 @@
 
     <url>
         <loc>https://lancers.work/tags/%E3%83%88%E3%83%AB%E3%82%B3/</loc>
-        <lastmod>2019-05-13T05:01:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E6%92%AE%E3%82%8A%E9%89%84/</loc>
         <lastmod>2019-05-13T05:01:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -2271,13 +2271,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/%E6%8C%87%E5%8E%9F%E8%8E%89%E4%B9%83/</loc>
-        <lastmod>2019-05-13T05:01:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/%E8%8F%85%E5%8E%9F%E3%82%8A%E3%81%93/</loc>
         <lastmod>2019-05-13T05:01:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2334,6 +2327,13 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/tags/%E7%8B%AC%E3%82%8A%E6%9A%AE%E3%82%89%E3%81%97%E6%94%BB%E7%95%A5%E6%9C%AC/</loc>
+        <lastmod>2019-05-13T05:01:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://lancers.work/tags/%E5%87%BA%E5%B7%9D%E5%93%B2%E6%9C%97/</loc>
         <lastmod>2019-05-13T05:01:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2342,13 +2342,6 @@
 
     <url>
         <loc>https://lancers.work/tags/%E6%B2%B3%E5%8C%97%E9%BA%BB%E5%8F%8B%E5%AD%90/</loc>
-        <lastmod>2019-05-13T05:01:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://lancers.work/tags/%E7%8B%AC%E3%82%8A%E6%9A%AE%E3%82%89%E3%81%97%E6%94%BB%E7%95%A5%E6%9C%AC/</loc>
         <lastmod>2019-05-13T05:01:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -2971,13 +2964,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/tags/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%A1/</loc>
-        <lastmod>2019-05-13T10:33:51.535Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/tags/%E5%B7%9D%E5%B3%B6%E6%B0%B8%E5%97%A3/</loc>
         <lastmod>2019-05-13T10:33:51.535Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -3008,6 +2994,90 @@
     <url>
         <loc>https://lancers.work/tags/%E3%82%B2%E3%83%8E%E3%83%A0%E8%A7%A3%E6%9E%90/</loc>
         <lastmod>2019-05-13T10:35:36.605Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E5%8F%8D%E7%94%BA%E9%9A%86%E5%8F%B2/</loc>
+        <lastmod>2019-05-13T21:32:09.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E6%95%91%E8%AD%B7/</loc>
+        <lastmod>2019-05-13T21:32:09.488Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E6%A9%8B%E6%9C%AC%E7%92%B0%E5%A5%88/</loc>
+        <lastmod>2019-05-13T21:34:08.098Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E7%89%87%E4%BB%98%E3%81%91%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84%E5%A5%B3/</loc>
+        <lastmod>2019-05-13T21:34:08.098Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E3%83%91%E3%83%81%E3%83%B3%E3%82%B3/</loc>
+        <lastmod>2019-05-13T21:39:55.631Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E5%BE%B3%E4%BA%95%E7%BE%A9%E5%AE%9F/</loc>
+        <lastmod>2019-05-13T21:43:28.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E6%9A%B4%E9%9C%B2/</loc>
+        <lastmod>2019-05-13T21:43:28.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%A1/</loc>
+        <lastmod>2019-05-13T21:47:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E6%8C%87%E5%8E%9F%E8%8E%89%E4%B9%83/</loc>
+        <lastmod>2019-05-13T21:47:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E6%81%8B%E6%84%9B/</loc>
+        <lastmod>2019-05-13T21:47:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E9%A3%9F%E6%AC%B2/</loc>
+        <lastmod>2019-05-13T21:47:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/tags/%E3%83%95%E3%82%A1%E3%83%B3%E3%82%AD%E3%83%BC%E5%8A%A0%E8%97%A4/</loc>
+        <lastmod>2019-05-13T21:47:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

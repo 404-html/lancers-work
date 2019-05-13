@@ -8,13 +8,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/categories/%E3%82%A2%E3%83%97%E3%83%AA/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -29,6 +22,13 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/categories/%E3%82%A2%E3%83%97%E3%83%AA/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://lancers.work/categories/API/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,7 +37,7 @@
 
     <url>
         <loc>https://lancers.work/categories/Yahoo-%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%81%BE%E3%81%A8%E3%82%81/</loc>
-        <lastmod>2019-05-13T06:36:24.560Z</lastmod>
+        <lastmod>2019-05-13T10:35:36.605Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

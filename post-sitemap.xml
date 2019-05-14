@@ -144,7 +144,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190502-00000334-oric-ent/</loc>
+        <loc>https://lancers.work/20190502-00010000-jisin-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -152,7 +152,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190502-00010000-jisin-ent/</loc>
+        <loc>https://lancers.work/20190502-00000334-oric-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -416,7 +416,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190506-00000016-pseven-ent/</loc>
+        <loc>https://lancers.work/20190506-00000033-dal-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -424,7 +424,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190506-00000033-dal-ent/</loc>
+        <loc>https://lancers.work/20190506-00000016-pseven-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -504,7 +504,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190507-00000036-sasahi-soci/</loc>
+        <loc>https://lancers.work/20190507-00000036-jnn-bus_all/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -512,7 +512,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190507-00000036-jnn-bus_all/</loc>
+        <loc>https://lancers.work/20190507-00000036-sasahi-soci/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -624,14 +624,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190508-00000001-spnannex-ent/</loc>
-        <lastmod>2019-05-14T04:40:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://lancers.work/20190508-00000003-ykf-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -641,6 +633,14 @@
 
     <url>
         <loc>https://lancers.work/20190508-00000006-ykf-ent/</loc>
+        <lastmod>2019-05-14T04:40:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/20190508-00000001-spnannex-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -728,7 +728,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190509-00000004-wow-asent/</loc>
+        <loc>https://lancers.work/20190508-00011835-bunshun-bus_all/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -736,7 +736,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190508-00011835-bunshun-bus_all/</loc>
+        <loc>https://lancers.work/20190509-00000004-wow-asent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -856,7 +856,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190509-00010005-huffpost-soci/</loc>
+        <loc>https://lancers.work/20190509-00010004-friday-ent/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -864,7 +864,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190509-00010004-friday-ent/</loc>
+        <loc>https://lancers.work/20190509-00010005-huffpost-soci/</loc>
         <lastmod>2019-05-14T04:40:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -992,7 +992,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190513-00000094-dal-ent/</loc>
+        <loc>https://lancers.work/20190513-00000099-sph-ent/</loc>
         <lastmod>2019-05-14T04:39:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1000,7 +1000,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190513-00000099-sph-ent/</loc>
+        <loc>https://lancers.work/20190513-00000094-dal-ent/</loc>
         <lastmod>2019-05-14T04:39:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1032,7 +1032,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190513-00000305-oric-ent/</loc>
+        <loc>https://lancers.work/20190513-00000224-spnannex-ent/</loc>
         <lastmod>2019-05-14T04:39:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1040,7 +1040,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190513-00000224-spnannex-ent/</loc>
+        <loc>https://lancers.work/20190513-00000305-oric-ent/</loc>
         <lastmod>2019-05-14T04:39:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1200,7 +1200,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190509-35136715-cnn-int/</loc>
+        <loc>https://lancers.work/20190509-05090784-nksports-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1208,7 +1208,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190509-05090784-nksports-ent/</loc>
+        <loc>https://lancers.work/20190509-35136715-cnn-int/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1280,7 +1280,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190510-00000167-dal-ent/</loc>
+        <loc>https://lancers.work/20190510-00000164-kyodonews-pol/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1288,7 +1288,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190510-00000164-kyodonews-pol/</loc>
+        <loc>https://lancers.work/20190510-00000167-dal-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1336,7 +1336,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190510-00010006-friday-ent/</loc>
+        <loc>https://lancers.work/20190510-00011562-bunshun-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1344,7 +1344,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190510-00011562-bunshun-ent/</loc>
+        <loc>https://lancers.work/20190510-00010006-friday-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1432,7 +1432,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190511-00000011-nikkeisty-life/</loc>
+        <loc>https://lancers.work/20190511-00000012-pseven-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1440,7 +1440,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190511-00000012-pseven-ent/</loc>
+        <loc>https://lancers.work/20190511-00000011-nikkeisty-life/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1488,7 +1488,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190511-00000151-dal-ent/</loc>
+        <loc>https://lancers.work/20190511-00000160-spnannex-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1496,7 +1496,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190511-00000160-spnannex-ent/</loc>
+        <loc>https://lancers.work/20190511-00000151-dal-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1592,7 +1592,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190512-00000083-sph-ent/</loc>
+        <loc>https://lancers.work/20190512-00000038-dal-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1600,7 +1600,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190512-00000038-dal-ent/</loc>
+        <loc>https://lancers.work/20190512-00000083-sph-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1640,7 +1640,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190512-00010000-nishinpc-sci/</loc>
+        <loc>https://lancers.work/20190512-00010000-bfj-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1648,7 +1648,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190512-00010000-bfj-ent/</loc>
+        <loc>https://lancers.work/20190512-00010000-nishinpc-sci/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1664,7 +1664,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190512-00010003-friday-ent/</loc>
+        <loc>https://lancers.work/20190512-00010004-bfj-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1672,7 +1672,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190512-00010004-bfj-ent/</loc>
+        <loc>https://lancers.work/20190512-00010003-friday-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1776,7 +1776,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190513-00000053-jij-soci/</loc>
+        <loc>https://lancers.work/20190513-00000050-dal-ent/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1784,7 +1784,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/20190513-00000050-dal-ent/</loc>
+        <loc>https://lancers.work/20190513-00000053-jij-soci/</loc>
         <lastmod>2019-05-14T04:39:14.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1896,7 +1896,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-lazyload-do-not-work/</loc>
+        <loc>https://lancers.work/hexo-nodejs-blog/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1912,7 +1912,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-nodejs-blog/</loc>
+        <loc>https://lancers.work/hexo-lazyload-do-not-work/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1928,7 +1928,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/my-home-server-mail-dns/</loc>
+        <loc>https://lancers.work/hexo-plugin-fix-toc/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1936,7 +1936,7 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/hexo-plugin-fix-toc/</loc>
+        <loc>https://lancers.work/my-home-server-mail-dns/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -1992,6 +1992,14 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/numbers-1/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/nodejs-webp-converter/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2001,14 +2009,6 @@
 
     <url>
         <loc>https://lancers.work/numbers-2/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/numbers-1/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -2048,6 +2048,14 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/hexo-lightbox2/</loc>
+        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/vmware-esxi65-realtek-nic/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2073,14 +2081,6 @@
 
     <url>
         <loc>https://lancers.work/yamato-api/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/hexo-lightbox2/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

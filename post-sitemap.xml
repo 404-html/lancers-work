@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/hexo-heap-out-of-memory/</loc>
+        <lastmod>2019-05-15T04:36:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/20190515-00280858-toyo-bus_all/</loc>
         <lastmod>2019-05-15T04:11:12.008Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,14 +50,6 @@
     <url>
         <loc>https://lancers.work/20190515-00000327-oriconbiz-ent/</loc>
         <lastmod>2019-05-15T04:00:59.747Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/hexo-heap-out-of-memory/</loc>
-        <lastmod>2019-05-15T03:58:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

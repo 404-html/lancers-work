@@ -8,6 +8,54 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/20190515-00000081-asahi-soci/</loc>
+        <lastmod>2019-05-15T22:40:01.949Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/20190515-00000134-kyodonews-soci/</loc>
+        <lastmod>2019-05-15T22:38:11.411Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/20190515-10000740-bunshuns-ent/</loc>
+        <lastmod>2019-05-15T22:33:52.923Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
+        <lastmod>2019-05-15T22:16:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/numbers3/</loc>
+        <lastmod>2019-05-15T22:15:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lancers.work/numbers4/</loc>
+        <lastmod>2019-05-15T22:15:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/20190515-00010004-kyt-soci/</loc>
         <lastmod>2019-05-15T14:04:43.981Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2097,30 +2145,6 @@
 
     <url>
         <loc>https://lancers.work/numbers-2/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/numbers3/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/numbers4/</loc>
-        <lastmod>2019-05-13T04:50:01.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/pref-city-form-jquery-json/</loc>
         <lastmod>2019-05-13T04:50:01.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

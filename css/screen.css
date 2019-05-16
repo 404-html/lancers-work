@@ -555,20 +555,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    /*font-size: 5rem;*/
+    font-size: 5rem;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    /*font-size: 3.6rem;*/
+    font-size: 3.6rem;
     letter-spacing: -1px;
-    padding: 10px 0 10px 10px;
-}
-#content h2 {
-    margin-top: 50px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
 }
 
 h3 {
@@ -834,7 +828,7 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     display: table;
     width: 100%;
-    /*height: 100%;*/
+    height: 100%;
     margin-bottom: 5rem;
     text-align: center;
     background: #222 no-repeat center center;
@@ -1018,7 +1012,7 @@ margin on the iframe, cause it breaks stuff. */
 /* The details of your blog. Defined in ghost/settings/ */
 .page-title {
     margin: 10px 0 10px 0;
-    /*font-size: 5rem;*/
+    font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
@@ -1104,7 +1098,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 body:not(.post-template) .post-title {
-    /*font-size: 3.6rem;*/
+    font-size: 3.6rem;
 }
 
 .post-title a {
@@ -1123,7 +1117,7 @@ body:not(.post-template) .post-title {
 
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0!important;
+    margin: 1.75rem 0 0 0;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -1941,7 +1935,7 @@ pre .chunk {
     }
 
     h2 {
-        /*font-size: 3.6rem;*/
+        font-size: 3.6rem;
     }
 
     h3 {
@@ -2138,7 +2132,7 @@ pre .chunk {
     }
 
     h2 {
-        /*font-size: 2.4rem;*/
+        font-size: 2.4rem;
         letter-spacing: 0;
     }
 

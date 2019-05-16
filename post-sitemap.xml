@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://lancers.work/hexo-heap-out-of-memory/</loc>
+        <lastmod>2019-05-16T05:32:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://lancers.work/20190516-00000037-dal-ent/</loc>
         <lastmod>2019-05-16T02:51:37.579Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -82,14 +90,6 @@
     <url>
         <loc>https://lancers.work/20190515-00010004-kyt-soci/</loc>
         <lastmod>2019-05-15T14:04:43.981Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://lancers.work/hexo-heap-out-of-memory/</loc>
-        <lastmod>2019-05-15T08:16:24.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

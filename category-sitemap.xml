@@ -29,13 +29,6 @@
     </url>
 
     <url>
-        <loc>https://lancers.work/categories/%E3%83%A4%E3%83%95%E3%82%B3%E3%83%A1%E3%81%BE%E3%81%A8%E3%82%81/</loc>
-        <lastmod>2019-05-17T00:15:15.534Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lancers.work/categories/API/</loc>
         <lastmod>2019-05-17T02:27:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -45,6 +38,13 @@
     <url>
         <loc>https://lancers.work/categories/%E3%83%8A%E3%83%AC%E3%83%83%E3%82%B8/</loc>
         <lastmod>2019-05-17T03:07:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lancers.work/categories/%E3%83%A4%E3%83%95%E3%82%B3%E3%83%A1%E3%81%BE%E3%81%A8%E3%82%81/</loc>
+        <lastmod>2019-05-17T03:44:30.265Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
